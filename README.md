@@ -2,6 +2,12 @@
 
 A Vagrant box for [Neap](https://github.com/e7d/neap) development.
 
+## Read me first
+
+This project aims to give you the necessary tools to build yourself the Neap Box.  
+If you only want to use the Neap Box, you will never have to build it yourself. Instead, get it from [Atlas by Hashicorp](https://atlas.hashicorp.com/):
+* [Neap Box](https://atlas.hashicorp.com/e7d/boxes/neap-box)
+
 ## About
 
 **Version:** 0.0.1
@@ -12,7 +18,7 @@ A Vagrant box for [Neap](https://github.com/e7d/neap) development.
 
 ## Prerequisites
 
-In order to run the Neap Box effectively, you'll need to have a few tools installed:
+In order to build the Neap Box effectively, you'll need to have a few tools installed:
 1. Install [Git](https://git-scm.com)
 1. Install [VirtualBox](http://virtualbox.org)
 1. Install [Vagrant](http://vagrantup.com)
@@ -29,43 +35,29 @@ In order to run the Neap Box effectively, you'll need to have a few tools instal
 1. Install [Vagrant::VBGuest](https://github.com/dotless-de/vagrant-vbguest), to manage the host's VirtualBox Guest Additions on the guest system  
 `vagrant plugin install vagrant-vbguest`
 
-## Installation ##
+## Build ##
 
 1. `git clone https://github.com/e7d/neap-box.git` to clone the latest version
 1. Change into the directory `neap-box`
 1. Run `vagrant up`
-
-## Update ##
-
-For an "*In-Place*" upgrade of a working environment:
-
-1. `git pull` to get the latest version of the code
-1. Change into the directory `neap-box`
-1. Run `vagrant reload`
-1. Run `vagrant provision`
-
-For a complete update from scratch, destroying and rebuilding everything:
-
-1. `git pull` to get the latest version of the code
-1. Change into the directory `neap-box`
-1. Run `vagrant destroy`
-1. Run `vagrant up`
+1. Run `vagrant package --output neap.box`
+1. Run `vagrant package --output neap.box`
 
 ## What you get ##
 
 ### Software stack ###
 
-Neap uses a mixture of Vagrant's [shell provisioner](https://docs.vagrantup.com/v2/provisioning/shell.html) to kick things off.
+Neap box uses a mixture of Vagrant's [shell provisioner](https://docs.vagrantup.com/v2/provisioning/shell.html) to kick things off.
 
-Once Vagrant is done provisioning the VM, you will have a box running Debian 8 (aka Jessie) containing:
+Once Vagrant is done provisioning the VM, you will have a box running the latest Debian 8 (aka Jessie) containing:
 
 * [Nginx](http://nginx.com/), as web server, with:
   * [Nginx RTMP module](https://github.com/arut/nginx-rtmp-module), as streaming server (RTMP, HLS and DASH protocols)
-  * [PHP 7.0](http://php.net/), as web scripting language, with:
+* [PHP 7.0](http://php.net/), as web scripting language, with:
     * [PHP-FPM](http://php-fpm.org/), as PHP process manager
+    * Soon: [Memcached](http://memcached.org/), as memory object cache
 * [PostgreSQL](http://www.postgresql.org/), as database
 * [UnrealIRCd](https://www.unrealircd.org/), as IRC server daemon, with:
-  * [Anope](https://www.anope.org/), as IRC services
+  * [Anope](https://www.anope.org/), as IRC services daemon
 * Soon: [Let's Encrypt](https://letsencrypt.org/), as SSL certificate generator
 * Soon: [Varnish](http://varnish-cache.org/), as static files cache
-* Soon: [Memcached](http://memcached.org/), as memory object cache
