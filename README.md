@@ -10,7 +10,7 @@ If you only want to use the Neap Box, you will never have to build it yourself. 
 
 ## About
 
-**Version:** 0.0.1
+**Version:** 1.0.0
 
 **Web:** Coming later, [neap.io](http://neap.io)
 
