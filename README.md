@@ -19,6 +19,7 @@ If you only want to use the Neap Box, you will never have to build it yourself. 
 ## Prerequisites
 
 In order to build the Neap Box effectively, you'll need to have a few tools installed:
+
 1. Install [Git](https://git-scm.com)
 1. Install [VirtualBox](http://virtualbox.org)
 1. Install [Vagrant](http://vagrantup.com)
