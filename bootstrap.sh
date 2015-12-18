@@ -28,6 +28,9 @@ echo_warning "Skipped, as long as OpenSSL 1.0.2d is breaking nginx 1.9.* build"
 sleep 5
 #${DIR}/bootstrap/build-openssl.sh
 
+echo_cyan "Generate certificates"
+${DIR}/bootstrap/generate-certificates.sh
+
 echo_cyan "Build nginx"
 ${DIR}/bootstrap/build-nginx.sh
 
