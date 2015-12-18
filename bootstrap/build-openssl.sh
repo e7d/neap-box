@@ -31,5 +31,3 @@ cp -vfr doc/*     /usr/share/doc/openssl-1.0.2e
 
 echo "Cleanup temporary files"
 rm -rf ${SRC}/openssl-${OPENSSL_VERSION}*
-
-exit 0

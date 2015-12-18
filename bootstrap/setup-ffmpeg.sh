@@ -9,5 +9,3 @@ apt-get -y -q update
 
 echo "Install ffmpeg"
 apt-get -y -q install ffmpeg
-
-exit 0

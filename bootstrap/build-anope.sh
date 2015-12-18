@@ -30,5 +30,3 @@ chmod -c +x /etc/init.d/anope
 
 echo "Remove temporary files"
 rm -fr /usr/src/anope*
-
-exit 0

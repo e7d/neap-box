@@ -44,7 +44,10 @@ echo_cyan "Build Anope"
 ${DIR}/bootstrap/build-anope.sh
 
 echo_cyan "Clean up"
-${DIR}/bootstrap/clean.sh
+${DIR}/bootstrap/cleanup.sh
+
+echo_cyan "Zero disk"
+${DIR}/bootstrap/zerodisk.sh
 
 NOW=$(date +%s)
 DIFF=$(($NOW - $BEGIN))

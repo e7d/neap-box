@@ -31,5 +31,3 @@ chmod -c +x /etc/init.d/unrealircd
 
 echo "Remove temporary files"
 rm -fr /usr/src/unrealircd*
-
-exit 0

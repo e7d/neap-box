@@ -68,5 +68,3 @@ service nginx start
 echo "Cleanup temporary files"
 rm -rf ${SRC}/nginx-${NGINX_VERSION}*
 rm -rf ${SRC}/nginx-rtmp-module*
-
-exit 0

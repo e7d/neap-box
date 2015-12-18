@@ -28,5 +28,3 @@ GRUB_CMDLINE_LINUX="debian-installer=en_US"
 EOF
 
 update-grub
-
-exit 0
