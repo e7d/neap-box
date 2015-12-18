@@ -1,2 +1,3 @@
 /.vagrant
 *.box
+!/bootstrap/resources/**/*.cache
