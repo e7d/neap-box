@@ -30,12 +30,16 @@ try
 
     echo "Copy UnrealIRCd service script"
     cp ${DIR}/bootstrap/resources/unrealircd/bin/unrealircd /etc/init.d
-    systemctl daemon-reload
 
     echo "Fix UnrealIRCd permissions"
     chown -cR irc.irc /etc/unrealircd
     chown -c irc.irc /etc/init.d/unrealircd
     chmod -c +x /etc/init.d/unrealircd
+
+    echo "Register UnrealIRCd service script"
+    systemctl enable unrealircd
+    systemctl unmask unrealircd
+    systemctl daemon-reload
 
     echo "Remove temporary files"
     rm -fr /usr/src/unrealircd*

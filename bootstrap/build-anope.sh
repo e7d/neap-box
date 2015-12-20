@@ -29,12 +29,16 @@ try
 
     echo "Copy Anope service script"
     cp ${DIR}/bootstrap/resources/anope/bin/anope /etc/init.d
-    systemctl daemon-reload
 
     echo "Fix Anope permissions"
     chown -cR irc:irc /etc/anope
     chown -c irc:irc /etc/init.d/anope
     chmod -c +x /etc/init.d/anope
+
+    echo "Register Anope service script"
+    systemctl enable anope
+    systemctl unmask anope
+    systemctl daemon-reload
 
     echo "Remove temporary files"
     rm -fr ${SRC}/anope*

@@ -1,5 +1,4 @@
-#!/bin/bash
-
+#!/bin/sh
 ### BEGIN INIT INFO
 # Provides:          unrealircd
 # Required-Start:    $local_fs $remote_fs $network $syslog $named
@@ -23,9 +22,10 @@ test -x $DAEMON || exit 0
 . /lib/init/vars.sh
 . /lib/lsb/init-functions
 
-PID=/etc/unrealircd/tmp/$(sed -ne "s/[\t ]*pidfile \(.*\);/\1/p" /etc/unrealircd/conf/unrealircd.conf)
-if [ -z "$PID" ]
-then
+if [ -r "/etc/unrealircd/conf/unrealircd.conf" ]; then
+	PID=/etc/unrealircd/tmp/$(sed -ne "s/[\t ]*pidfile \(.*\);/\1/p" /etc/unrealircd/conf/unrealircd.conf)
+fi
+if [ -z "$PID" ]; then
 	PID=/etc/unrealircd/tmp/irc.pid
 fi
 
