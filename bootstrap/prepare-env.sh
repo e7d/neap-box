@@ -1,22 +1,26 @@
-#!/bin/sh
+#!/bin/bash
 
-# Update the box
-echo "Update to latest version"
-export DEBIAN_FRONTEND=noninteractive
-apt-get -y -q update
-apt-get -y -q -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
-apt-get -y -q dist-upgrade
-apt-get -y install facter linux-headers-$(uname -r) build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev >/dev/null
+try
+(
+    throwErrors
 
-# Install some useful and universal tools
-echo "Install standard packages"
-apt-get -y -q install curl git unzip
+    # Update the box
+    echo "Update to latest version"
+    export DEBIAN_FRONTEND=noninteractive
+    apt-get -y -q update
+    apt-get -y -q -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
+    apt-get -y -q dist-upgrade
+    apt-get -y install facter linux-headers-$(uname -r) build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev >/dev/null
 
-# Tweak sshd to prevent DNS resolution (speed up logins)
-echo 'UseDNS no' >> /etc/ssh/sshd_config
+    # Install some useful and universal tools
+    echo "Install standard packages"
+    apt-get -y -q install curl git unzip
 
-# Remove 5s grub timeout to speed up booting
-cat <<EOF > /etc/default/grub
+    # Tweak sshd to prevent DNS resolution (speed up logins)
+    echo 'UseDNS no' >> /etc/ssh/sshd_config
+
+    # Remove 5s grub timeout to speed up booting
+    cat <<EOF > /etc/default/grub
 # If you change this file, run 'update-grub' afterwards to update
 # /boot/grub/grub.cfg.
 
@@ -27,4 +31,13 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet"
 GRUB_CMDLINE_LINUX="debian-installer=en_US"
 EOF
 
-update-grub
+    update-grub
+)
+catch || {
+    case $ex_code in
+        *)
+            echox "${text_red}Error:${text_reset} An unexpected exception was thrown"
+            throw $ex_code
+        ;;
+    esac
+}

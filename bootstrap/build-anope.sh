@@ -1,32 +1,49 @@
-#!/bin/sh
+#!/bin/bash
 
-DIR=`dirname $0`
+ANOPE_VERSION=2.0.2 # https://github.com/anope/anope/releases/
 
-echo "Download Anope dependencies"
-apt-get -y -q install cmake
+try
+(
+    throwErrors
 
-echo "Download Anope sources"
-cd /usr/src
-wget https://github.com/anope/anope/releases/download/2.0.2/anope-2.0.2-source.tar.gz
-tar xzvf anope-2.0.2-source.tar.gz
-cd anope*
+    echo "Download Anope dependencies"
+    apt-get -y -q install cmake
 
-echo "Build Anope"
-rm -fr /etc/anope/
-cp -R ${DIR}/resources/anope/src/* .
-./Config -nointro -quick
-cd build
-make
-make install
+    echo "Download Anope sources"
+    cd ${SRC}
+    if [ ! -f ${SRC}/anope-${ANOPE_VERSION}-source.tar.gz ]; then
+        wget https://github.com/anope/anope/releases/download/${ANOPE_VERSION}/anope-${ANOPE_VERSION}-source.tar.gz
+        tar xzvf anope-${ANOPE_VERSION}-source.tar.gz
+    else
+        echo "skipped..."
+    fi
+    cd anope*
 
-echo "Copy Anope service script"
-cp ${DIR}/resources/anope/bin/anope /etc/init.d
-systemctl daemon-reload
+    echo "Build Anope"
+    rm -fr /etc/anope/
+    cp -R ${DIR}/bootstrap/resources/anope/src/* .
+    ./Config -nointro -quick
+    cd build
+    make
+    make install
 
-echo "Fix Anope permissions"
-chown -cR irc:irc /etc/anope
-chown -c irc:irc /etc/init.d/anope
-chmod -c +x /etc/init.d/anope
+    echo "Copy Anope service script"
+    cp ${DIR}/bootstrap/resources/anope/bin/anope /etc/init.d
+    systemctl daemon-reload
 
-echo "Remove temporary files"
-rm -fr /usr/src/anope*
+    echo "Fix Anope permissions"
+    chown -cR irc:irc /etc/anope
+    chown -c irc:irc /etc/init.d/anope
+    chmod -c +x /etc/init.d/anope
+
+    echo "Remove temporary files"
+    rm -fr ${SRC}/anope*
+)
+catch || {
+    case $ex_code in
+        *)
+            echox "${text_red}Error:${text_reset} An unexpected exception was thrown"
+            throw $ex_code
+        ;;
+    esac
+}

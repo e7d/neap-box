@@ -1,33 +1,50 @@
-#!/bin/sh
+#!/bin/bash
 
-DIR=`dirname $0`
+UNREAL_VERSION=3.4-latest # https://www.unrealircd.org/download
 
-echo "Set bash access to 'irc' account"
-chsh -s /bin/bash irc
+try
+(
+    throwErrors
 
-echo "Download UnrealIRCd sources"
-cd /usr/src
-wget --no-check-certificate --trust-server-names https://www.unrealircd.org/downloads/Unreal3.4-latest.tar.gz
-tar xzvf unreal*.tar.gz
-cd unreal*
+    echo "Set bash access to 'irc' account"
+    chsh -s /bin/bash irc
 
-echo "Build UnrealIRCd"
-rm -fr /etc/unrealircd/
-cp -R ${DIR}/resources/unrealircd/src/* .
-chmod +x config.settings
-./config.settings
-./Config -nointro -quick
-make
-make install
+    echo "Download UnrealIRCd sources"
+    cd /usr/src
+    if [ ! -f ${SRC}/unreal*.tar.gz ]; then
+        wget --no-check-certificate --trust-server-names https://www.unrealircd.org/downloads/Unreal${UNREAL_VERSION}.tar.gz
+        tar xzvf unreal*.tar.gz
+    else
+        echo "skipped..."
+    fi
+    cd unreal*
 
-echo "Copy UnrealIRCd service script"
-cp ${DIR}/resources/unrealircd/bin/unrealircd /etc/init.d
-systemctl daemon-reload
+    echo "Build UnrealIRCd"
+    rm -fr /etc/unrealircd/
+    cp -R ${DIR}/bootstrap/resources/unrealircd/src/* .
+    chmod +x config.settings
+    ./config.settings
+    ./Config -nointro -quick
+    make
+    make install
 
-echo "Fix UnrealIRCd permissions"
-chown -cR irc.irc /etc/unrealircd
-chown -c irc.irc /etc/init.d/unrealircd
-chmod -c +x /etc/init.d/unrealircd
+    echo "Copy UnrealIRCd service script"
+    cp ${DIR}/bootstrap/resources/unrealircd/bin/unrealircd /etc/init.d
+    systemctl daemon-reload
 
-echo "Remove temporary files"
-rm -fr /usr/src/unrealircd*
+    echo "Fix UnrealIRCd permissions"
+    chown -cR irc.irc /etc/unrealircd
+    chown -c irc.irc /etc/init.d/unrealircd
+    chmod -c +x /etc/init.d/unrealircd
+
+    echo "Remove temporary files"
+    rm -fr /usr/src/unrealircd*
+)
+catch || {
+    case $ex_code in
+        *)
+            echox "${text_red}Error:${text_reset} An unexpected exception was thrown"
+            throw $ex_code
+        ;;
+    esac
+}

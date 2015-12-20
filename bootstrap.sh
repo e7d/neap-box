@@ -1,61 +1,74 @@
-#!/bin/sh
+#!/bin/bash
 
 # Start stopwatch
-BEGIN=$(date +%s)
+export BEGIN=$(date +%s)
 
 # Store execution directory
-DIR=`dirname $0`
+export DIR=$(dirname `which $0`)
+export SRC=/usr/src
 
 # Load dependencies
 . ${DIR}/bootstrap/resources/colors.sh
+. ${DIR}/bootstrap/resources/trycatch.sh
 
 # This script needs admin rights
-echo_cyan Check admin rights
+echox "${text_cyan}Check admin rights"
 if [ 0 != $(id -u) ]; then
     echo_error "This script must be run as root!"
     exit 1
 fi
-echo_success "OK"
+echox "${text_green}OK"
 
-echo_cyan "Prepare Debian environment"
-${DIR}/bootstrap/prepare-env.sh
+try
+(
+    throwErrors
 
-echo_cyan "Setup ffmpeg"
-${DIR}/bootstrap/setup-ffmpeg.sh
+    echox "${text_cyan}Prepare Debian environment"
+    ${DIR}/bootstrap/prepare-env.sh
 
-echo_cyan "Build OpenSSL"
-echo_warning "Skipped, as long as OpenSSL 1.0.2d is breaking nginx 1.9.* build"
-sleep 5
-#${DIR}/bootstrap/build-openssl.sh
+    echox "${text_cyan}Setup ffmpeg"
+    ${DIR}/bootstrap/setup-ffmpeg.sh
 
-echo_cyan "Generate certificates"
-${DIR}/bootstrap/generate-certificates.sh
+    echox "${text_cyan}Build OpenSSL"
+    echox "${text_yellow}Warning:${text_reset} Skipped, as long as OpenSSL 1.0.2d is breaking nginx 1.9.* build"
+    sleep 5
+    #${DIR}/bootstrap/build-openssl.sh
 
-echo_cyan "Build nginx"
-${DIR}/bootstrap/build-nginx.sh
+    echox "${text_cyan}Generate certificates"
+    ${DIR}/bootstrap/generate-certificates.sh
 
-echo_cyan "Setup PHP"
-${DIR}/bootstrap/setup-php.sh
+    echox "${text_cyan}Build nginx"
+    ${DIR}/bootstrap/build-nginx.sh
 
-echo_cyan "Setup PostgresQL"
-${DIR}/bootstrap/setup-postgresql.sh
+    echox "${text_cyan}Setup PHP"
+    ${DIR}/bootstrap/setup-php.sh
 
-echo_cyan "Build Unreal"
-${DIR}/bootstrap/build-unreal.sh
+    echox "${text_cyan}Setup PostgresQL"
+    ${DIR}/bootstrap/setup-postgresql.sh
 
-echo_cyan "Build Anope"
-${DIR}/bootstrap/build-anope.sh
+    echox "${text_cyan}Build Unreal"
+    ${DIR}/bootstrap/build-unreal.sh
 
-echo_cyan "Clean up"
-${DIR}/bootstrap/cleanup.sh
+    echox "${text_cyan}Build Anope"
+    ${DIR}/bootstrap/build-anope.sh
 
-echo_cyan "Zero disk"
-${DIR}/bootstrap/zerodisk.sh
+    echox "${text_cyan}Clean up"
+    ${DIR}/bootstrap/cleanup.sh
 
-NOW=$(date +%s)
-DIFF=$(($NOW - $BEGIN))
-MINS=$(($DIFF / 60))
-SECS=$(($DIFF % 60))
-echo_info "Bootstrap lasted $MINS mins and $SECS secs"
+    echox "${text_cyan}Zero disk"
+    ${DIR}/bootstrap/zerodisk.sh
 
-exit 0
+    NOW=$(date +%s)
+    DIFF=$(echo "$NOW-$BEGIN" | bc)
+    MINS=$(echo "$DIFF/60" | bc)
+    SECS=$(echo "$DIFF%60" | bc)
+    echox "${text_cyan}Info:${text_reset} Bootstrap lasted $MINS mins and $SECS secs"
+)
+catch || {
+    case $ex_code in
+        *)
+            echox "${text_red}Error:${text_reset} Bootstrap was aborted!"
+            throw $ex_code
+        ;;
+    esac
+}

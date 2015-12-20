@@ -20,12 +20,12 @@ Vagrant.configure(2) do |config|
         end
 
         #  VirtualBox Guest update
-        node.vbguest.auto_update = false
+        node.vbguest.auto_update = true
         node.vbguest.no_remote = true
 
         # Provisioning script
         node.vm.provision "shell" do |s|
-            s.inline = "/bin/sh /vagrant/bootstrap.sh"
+            s.inline = "/bin/bash /vagrant/bootstrap.sh | tee -a /vagrant/bootstrap.log"
             s.keep_color = true
         end
     end
