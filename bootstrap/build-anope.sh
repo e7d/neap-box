@@ -6,10 +6,10 @@ try
 (
     throwErrors
 
-    echo "Download Anope dependencies"
+    echo "Download dependencies"
     apt-get -y -q install cmake
 
-    echo "Download Anope sources"
+    echo "Download sources"
     cd ${SRC}
     if [ ! -f ${SRC}/anope-${ANOPE_VERSION}-source.tar.gz ]; then
         wget https://github.com/anope/anope/releases/download/${ANOPE_VERSION}/anope-${ANOPE_VERSION}-source.tar.gz
@@ -27,15 +27,15 @@ try
     make
     make install
 
-    echo "Copy Anope service script"
+    echo "Copy service script"
     cp ${DIR}/bootstrap/resources/anope/bin/anope /etc/init.d
 
-    echo "Fix Anope permissions"
+    echo "Fix permissions"
     chown -cR irc:irc /etc/anope
     chown -c irc:irc /etc/init.d/anope
     chmod -c +x /etc/init.d/anope
 
-    echo "Register Anope service script"
+    echo "Register service script"
     systemctl enable anope
     systemctl unmask anope
     systemctl daemon-reload

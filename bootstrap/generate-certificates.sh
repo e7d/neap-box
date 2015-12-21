@@ -4,7 +4,6 @@ try
 (
     throwErrors
 
-    # As a backup, generate untrusted local certificate
     echo "Generate self-signed certificate"
     if [ ! -f /etc/ssl/localcerts/self.pem ]; then
         mkdir -p /etc/ssl/localcerts

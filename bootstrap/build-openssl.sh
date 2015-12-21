@@ -10,7 +10,7 @@ try
     apt-get -y -q install build-essential libpcre3-dev libpcre++-dev \
       zlib1g-dev libcurl4-openssl-dev libssl-dev
 
-    echo "Download nginx source code"
+    echo "Download source code"
     cd ${SRC}
     wget https://openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz
     tar -xvzf openssl-${OPENSSL_VERSION}.tar.gz

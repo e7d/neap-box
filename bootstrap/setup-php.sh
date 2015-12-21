@@ -4,7 +4,7 @@ try
 (
     throwErrors
 
-    echo "Update APT definitions"
+    echo "Add 'dotdeb' repository to Aptitude"
     cd /tmp
     wget https://www.dotdeb.org/dotdeb.gpg
     apt-key add dotdeb.gpg
@@ -12,12 +12,14 @@ try
     echo "deb-src http://packages.dotdeb.org jessie all" >>/etc/apt/sources.list.d/dotdeb.list
     apt-get -y -q update
 
-    echo "Install PHP7"
+    echo "Install packages"
     apt-get -y -q install php7.0 php7.0-cli php7.0-common php7.0-curl php7.0-dev php7.0-fpm php7.0-json php7.0-opcache php7.0-pgsql
 
-    echo "Install Xdebug"
+    echo "Download Xdebug sources"
     cd /usr/src
     git clone git://github.com/xdebug/xdebug.git
+
+    echo "Build Xdebug library"
     cd xdebug
     phpize
     ./configure --enable-xdebug
@@ -30,7 +32,7 @@ try
     sed -i '/;opcache.enable=0/c\opcache.enable=0' /etc/php/7.0/cli/php.ini
     sed -i '/;opcache.enable=0/c\opcache.enable=0' /etc/php/7.0/fpm/php.ini
 
-    echo "Restart PHP FPM"
+    echo "Restart PHP-FPM service"
     service php7.0-fpm restart
 
     echo "Remove temporary files"

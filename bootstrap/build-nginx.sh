@@ -9,7 +9,7 @@ try
     echo "Build dependencies"
     apt-get -y -q install build-essential libpcre3-dev libpcre++-dev zlib1g-dev libcurl4-openssl-dev libssl-dev nginx-common
 
-    echo "Download nginx source code"
+    echo "Download source code"
     cd ${SRC}
     if [ ! -f ${SRC}/nginx-${NGINX_VERSION}.tar.gz ]; then
         wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
@@ -54,14 +54,14 @@ try
                 --add-module=${SRC}/nginx-rtmp-module &&
     make
 
-    echo "Restore nginx service binaries"
+    echo "Enable service binaries"
     systemctl unmask nginx.service
     systemctl enable nginx.service
 
-    echo "Stop running nginx service"
+    echo "Stop service"
     service nginx stop
 
-    echo "Install binaries"
+    echo "Install newly built binaries"
     make install
 
     echo "Prepare environment for first start"
@@ -73,7 +73,7 @@ try
     chown -cR www-data:www-data /var/www
     chown -cR www-data:www-data /var/log/nginx
 
-    echo "Restart nginx service"
+    echo "Restart service"
     service nginx start
 
     echo "Cleanup temporary files"

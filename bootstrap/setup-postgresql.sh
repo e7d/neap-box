@@ -4,7 +4,7 @@ try
 (
     throwErrors
 
-    echo "Install PostgreSQL"
+    echo "Install packages"
     apt-get -y -q install postgresql postgresql-contrib
 )
 catch || {

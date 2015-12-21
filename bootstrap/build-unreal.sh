@@ -9,7 +9,7 @@ try
     echo "Set bash access to 'irc' account"
     chsh -s /bin/bash irc
 
-    echo "Download UnrealIRCd sources"
+    echo "Download sources"
     cd /usr/src
     if [ ! -f ${SRC}/unreal*.tar.gz ]; then
         wget --no-check-certificate --trust-server-names https://www.unrealircd.org/downloads/Unreal${UNREAL_VERSION}.tar.gz
@@ -19,7 +19,7 @@ try
     fi
     cd unreal*
 
-    echo "Build UnrealIRCd"
+    echo "Build binaries"
     rm -fr /etc/unrealircd/
     cp -R ${DIR}/bootstrap/resources/unrealircd/src/* .
     chmod +x config.settings
@@ -28,15 +28,15 @@ try
     make
     make install
 
-    echo "Copy UnrealIRCd service script"
+    echo "Copy service script"
     cp ${DIR}/bootstrap/resources/unrealircd/bin/unrealircd /etc/init.d
 
-    echo "Fix UnrealIRCd permissions"
+    echo "Fix permissions"
     chown -cR irc.irc /etc/unrealircd
     chown -c irc.irc /etc/init.d/unrealircd
     chmod -c +x /etc/init.d/unrealircd
 
-    echo "Register UnrealIRCd service script"
+    echo "Register service script"
     systemctl enable unrealircd
     systemctl unmask unrealircd
     systemctl daemon-reload

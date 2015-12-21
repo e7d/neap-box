@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Removing leftover leases and persistent rules
-echo "Cleaning up dhcp leases"
+echo "Cleaning up dhcp leases and rules"
 rm /var/lib/dhcp/*
 
 # Make sure Udev doesn't block our network
