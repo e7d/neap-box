@@ -29,6 +29,9 @@ try
     echox "${text_cyan}Setup ffmpeg"
     ${DIR}/bootstrap/setup-ffmpeg.sh
 
+    echox "${text_cyan}Setup PostgresQL"
+    ${DIR}/bootstrap/setup-postgresql.sh
+
     echox "${text_cyan}Build OpenSSL"
     echox "${text_yellow}Warning:${text_reset} Skipped, as long as OpenSSL 1.0.2d is breaking nginx 1.9.* build"
     sleep 5
@@ -43,8 +46,8 @@ try
     echox "${text_cyan}Setup PHP"
     ${DIR}/bootstrap/setup-php.sh
 
-    echox "${text_cyan}Setup PostgresQL"
-    ${DIR}/bootstrap/setup-postgresql.sh
+    echox "${text_cyan}Setup Composer"
+    ${DIR}/bootstrap/setup-composer.sh
 
     echox "${text_cyan}Build Unreal"
     ${DIR}/bootstrap/build-unreal.sh
