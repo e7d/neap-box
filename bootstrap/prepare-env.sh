@@ -12,7 +12,7 @@ try
     apt-get -y install facter linux-headers-$(uname -r) build-essential zlib1g-dev libssl-dev libreadline-gplv2-dev >/dev/null
 
     echo "Install standard packages"
-    apt-get -y -q install curl git unzip
+    apt-get -y -q install curl git pkg-config unzip
 
     echo "Tweak SSH daemon"
     echo 'UseDNS no' >> /etc/ssh/sshd_config

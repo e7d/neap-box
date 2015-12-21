@@ -15,7 +15,13 @@ echo "Purge old kernels"
 apt-get -y -q remove $(dpkg -l|egrep '^ii  linux-(im|he)'|awk '{print $2}'|grep -v `uname -r`)
 update-grub
 
-echo "Clean Aptitude"
+echo "Update packages to the latest version"
+export DEBIAN_FRONTEND=noninteractive
+apt-get -y -q update
+apt-get -y -q -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
+apt-get -y -q dist-upgrade
+
+echo "Clean packages"
 apt-get -y -q autoremove
 apt-get -y -q clean
 

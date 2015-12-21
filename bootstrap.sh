@@ -46,6 +46,12 @@ try
     echox "${text_cyan}Setup PHP"
     ${DIR}/bootstrap/setup-php.sh
 
+    echox "${text_cyan}Setup Xdebug"
+    ${DIR}/bootstrap/setup-xdebug.sh
+
+    echox "${text_cyan}Setup Memcached"
+    ${DIR}/bootstrap/setup-memcached.sh
+
     echox "${text_cyan}Setup Composer"
     ${DIR}/bootstrap/setup-composer.sh
 

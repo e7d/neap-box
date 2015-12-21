@@ -13,30 +13,14 @@ try
     apt-get -y -q update
 
     echo "Install packages"
-    apt-get -y -q install php7.0 php7.0-cli php7.0-common php7.0-curl php7.0-dev php7.0-fpm php7.0-json php7.0-opcache php7.0-pgsql
+    apt-get -y -q install php7.0 php7.0-cli php7.0-common php7.0-curl php7.0-dev php7.0-fpm php7.0-gd php7.0-intl php7.0-json php7.0-opcache php7.0-pgsql
 
-    echo "Download Xdebug sources"
-    cd /usr/src
-    git clone git://github.com/xdebug/xdebug.git
-
-    echo "Build Xdebug library"
-    cd xdebug
-    phpize
-    ./configure --enable-xdebug
-    make
-    make install
-    echo 'zend_extension="xdebug.so"' >>/etc/php/7.0/cli/php.ini
-    echo 'zend_extension="xdebug.so"' >>/etc/php/7.0/fpm/php.ini
-
-    echo "Disable OP Cache"
+    echo "Disable OPcache"
     sed -i '/;opcache.enable=0/c\opcache.enable=0' /etc/php/7.0/cli/php.ini
     sed -i '/;opcache.enable=0/c\opcache.enable=0' /etc/php/7.0/fpm/php.ini
 
     echo "Restart PHP-FPM service"
     service php7.0-fpm restart
-
-    echo "Remove temporary files"
-    rm -fr /usr/src/xdebug*
 )
 catch || {
 case $ex_code in
