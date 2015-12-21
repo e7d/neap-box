@@ -18,7 +18,7 @@ try
     echo "Write configuration file"
     echo '; configuration for php xdebug module' >/etc/php/mods-available/xdebug.ini
     echo '; priority=20' >>/etc/php/mods-available/xdebug.ini
-    echo 'extension=xdebug.so' >>/etc/php/mods-available/xdebug.ini
+    echo 'zend_extension=xdebug.so' >>/etc/php/mods-available/xdebug.ini
 
     echo "Link configuration file to PHP"
     ln -s /etc/php/mods-available/xdebug.ini /etc/php/7.0/fpm/conf.d/20-xdebug.ini
