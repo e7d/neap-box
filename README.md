@@ -58,7 +58,7 @@ Once Vagrant is done provisioning the VM, you will have a box running the latest
 * [PHP](http://php.net/) 7.0.1, as server-side scripting language, with:
     * [PHP-FPM](http://php-fpm.org/), as PHP process manager
     * [Xdebug](http://xdebug.org/) 2.4, as debugger and profiler tool
-    * [Memcached](http://memcached.org/) 2.2, as memory object cache
+    * [Memcached](http://memcached.org/) 1.4, as memory object cache
     * [Composer](https://getcomposer.org/), as dependency manager
 * [PostgreSQL](http://www.postgresql.org/) 9.4, as database system
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.0-RC6, as IRC server daemon, with:

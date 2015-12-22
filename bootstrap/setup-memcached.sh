@@ -4,8 +4,8 @@ try
 (
     throwErrors
 
-    echo "Install dependency packages"
-    apt-get install -y -q libmemcached-dev
+    echo "Install packages"
+    apt-get install -y -q memcached libmemcached libmemcached-dev
 
     echo "Download sources"
     cd ${SRC}
@@ -37,6 +37,9 @@ try
     echo "Link configuration file to PHP"
     ln -s /etc/php/mods-available/memcached.ini /etc/php/7.0/fpm/conf.d/20-memcached.ini
     ln -s /etc/php/mods-available/memcached.ini /etc/php/7.0/cli/conf.d/20-memcached.ini
+
+    echo "REstart service"
+    service memcached restart
 
     echo "Restart PHP-FPM service"
     service php7.0-fpm restart
