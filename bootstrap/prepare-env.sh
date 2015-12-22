@@ -5,7 +5,7 @@ try
     throwErrors
 
     echo "Install alternative shutdown script"
-    cp ${DIR}/bootstrap/resources/shutdown.sh /usr/local/sbin/shutdown
+    cp ${DIR}/resources/shutdown.sh /usr/local/sbin/shutdown
     chmod +x /usr/local/sbin/shutdown
 
     echo "Update packages to the latest version"

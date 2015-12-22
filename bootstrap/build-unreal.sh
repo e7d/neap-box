@@ -21,7 +21,7 @@ try
 
     echo "Build binaries"
     rm -fr /etc/unrealircd/
-    cp -R ${DIR}/bootstrap/resources/unrealircd/src/* .
+    cp -R ${DIR}/resources/unrealircd/src/* .
     chmod +x config.settings
     ./config.settings
     ./Config -nointro -quick
@@ -29,7 +29,7 @@ try
     make install
 
     echo "Copy service script"
-    cp ${DIR}/bootstrap/resources/unrealircd/bin/unrealircd /etc/init.d
+    cp ${DIR}/resources/unrealircd/bin/unrealircd /etc/init.d
 
     echo "Fix permissions"
     chown -cR irc.irc /etc/unrealircd

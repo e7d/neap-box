@@ -21,14 +21,14 @@ try
 
     echo "Build Anope"
     rm -fr /etc/anope/
-    cp -R ${DIR}/bootstrap/resources/anope/src/* .
+    cp -R ${DIR}/resources/anope/src/* .
     ./Config -nointro -quick
     cd build
     make
     make install
 
     echo "Copy service script"
-    cp ${DIR}/bootstrap/resources/anope/bin/anope /etc/init.d
+    cp ${DIR}/resources/anope/bin/anope /etc/init.d
 
     echo "Fix permissions"
     chown -cR irc:irc /etc/anope
