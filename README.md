@@ -10,7 +10,7 @@ If you only want to use the Neap Box, you will never have to build it yourself. 
 
 ## About
 
-**Version:** 1.0.1
+**Version:** 1.0.2
 
 **Web:** Coming later, [neap.io](http://neap.io)
 
@@ -62,6 +62,6 @@ Once Vagrant is done provisioning the VM, you will have a box running the latest
     * [Composer](https://getcomposer.org/), as dependency manager
 * [PostgreSQL](http://www.postgresql.org/) 9.4, as database system
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.0-RC6, as IRC server daemon, with:
-  * [Anope](https://www.anope.org/) 2.0.0, as IRC services daemon
-* Soon: [Let's Encrypt](https://letsencrypt.org/), as SSL certificate generator
+  * [Anope](https://www.anope.org/) 2.0.2, as IRC services daemon
+* [Let's Encrypt](https://letsencrypt.org/), as SSL certificate generator
 * Considered: [Varnish](http://varnish-cache.org/), as static files cache
