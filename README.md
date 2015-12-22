@@ -54,7 +54,7 @@ Once Vagrant is done provisioning the VM, you will have a box running the latest
 
 * [FFmpeg](https://www.ffmpeg.org/) 2.6.5, as media converter
 * [Nginx](http://nginx.com/) 1.8.0, as web server, with:
-  * [Nginx RTMP module](https://github.com/arut/nginx-rtmp-module), as streaming handler (RTMP, HLS and DASH protocols)
+    * [Nginx RTMP module](https://github.com/arut/nginx-rtmp-module), as streaming handler (RTMP, HLS and DASH protocols)
 * [PHP](http://php.net/) 7.0.1, as server-side scripting language, with:
     * [PHP-FPM](http://php-fpm.org/), as PHP process manager
     * [Xdebug](http://xdebug.org/) 2.4, as debugger and profiler tool
@@ -62,6 +62,6 @@ Once Vagrant is done provisioning the VM, you will have a box running the latest
     * [Composer](https://getcomposer.org/), as dependency manager
 * [PostgreSQL](http://www.postgresql.org/) 9.4, as database system
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.0-RC6, as IRC server daemon, with:
-  * [Anope](https://www.anope.org/) 2.0.2, as IRC services daemon
+    * [Anope](https://www.anope.org/) 2.0.2, as IRC services daemon
 * [Let's Encrypt](https://letsencrypt.org/), as SSL certificate generator
 * Considered: [Varnish](http://varnish-cache.org/), as static files cache
