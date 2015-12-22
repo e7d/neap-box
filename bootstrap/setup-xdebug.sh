@@ -15,7 +15,7 @@ try
     make
     make install
 
-    echo "Write configuration file"
+    echo "Write mod configuration file"
     echo '; configuration for php xdebug module' >/etc/php/mods-available/xdebug.ini
     echo '; priority=20' >>/etc/php/mods-available/xdebug.ini
     echo 'zend_extension=xdebug.so' >>/etc/php/mods-available/xdebug.ini

@@ -52,16 +52,16 @@ Neap box uses a mixture of Vagrant's [shell provisioner](https://docs.vagrantup.
 
 Once Vagrant is done provisioning the VM, you will have a box running the latest Debian 8 (aka Jessie) containing:
 
-* [ffmpeg](https://www.ffmpeg.org/), as media converter
-* [Nginx](http://nginx.com/), as web server, with:
+* [FFmpeg](https://www.ffmpeg.org/) 2.6.5, as media converter
+* [Nginx](http://nginx.com/) 1.8.0, as web server, with:
   * [Nginx RTMP module](https://github.com/arut/nginx-rtmp-module), as streaming handler (RTMP, HLS and DASH protocols)
-* [PHP 7.0](http://php.net/), as server-side scripting language, with:
+* [PHP](http://php.net/) 7.0.1, as server-side scripting language, with:
     * [PHP-FPM](http://php-fpm.org/), as PHP process manager
-    * [Xdebug](http://xdebug.org/), as debugger and profiler tool
-    * [Memcached](http://memcached.org/), as memory object cache
-    * [Composer](https://getcomposer.org/) as dependency manager
-* [PostgreSQL](http://www.postgresql.org/), as database system
-* [UnrealIRCd](https://www.unrealircd.org/), as IRC server daemon, with:
-  * [Anope](https://www.anope.org/), as IRC services daemon
+    * [Xdebug](http://xdebug.org/) 2.4, as debugger and profiler tool
+    * [Memcached](http://memcached.org/) 2.2, as memory object cache
+    * [Composer](https://getcomposer.org/), as dependency manager
+* [PostgreSQL](http://www.postgresql.org/) 9.4, as database system
+* [UnrealIRCd](https://www.unrealircd.org/) 4.0.0-RC6, as IRC server daemon, with:
+  * [Anope](https://www.anope.org/) 2.0.0, as IRC services daemon
 * Soon: [Let's Encrypt](https://letsencrypt.org/), as SSL certificate generator
 * Considered: [Varnish](http://varnish-cache.org/), as static files cache

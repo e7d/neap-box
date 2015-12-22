@@ -15,7 +15,7 @@ try
 
     echo "Generate dhparam file"
     if [ ! -f /etc/ssl/private/dhparam.pem ]; then
-        openssl dhparam -out /etc/ssl/private/dhparam.pem 2048
+        openssl dhparam -out /etc/ssl/private/dhparam.pem 2048 > /dev/null
     else
         echo "skipped..."
     fi

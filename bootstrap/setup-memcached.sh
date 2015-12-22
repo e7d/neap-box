@@ -19,10 +19,20 @@ try
     make
     sudo make install
 
-    echo "Write configuration file"
+    echo "Write mod configuration file"
     echo '; configuration for php memcached module' >/etc/php/mods-available/memcached.ini
     echo '; priority=20' >>/etc/php/mods-available/memcached.ini
     echo 'extension=memcached.so' >>/etc/php/mods-available/memcached.ini
+
+    echo "Write PHP configuration files"
+    echo >>/etc/php/7.0/cli/php.ini
+    echo '[memcached]' >>/etc/php/7.0/cli/php.ini
+    echo 'session.save_handler = memcached' >>/etc/php/7.0/cli/php.ini
+    echo 'session.save_path = "localhost:11211" ' >>/etc/php/7.0/cli/php.ini
+    echo >>/etc/php/7.0/fpm/php.ini
+    echo '[memcached]' >>/etc/php/7.0/fpm/php.ini
+    echo 'session.save_handler = memcached' >>/etc/php/7.0/fpm/php.ini
+    echo 'session.save_path = "localhost:11211" ' >>/etc/php/7.0/fpm/php.ini
 
     echo "Link configuration file to PHP"
     ln -s /etc/php/mods-available/memcached.ini /etc/php/7.0/fpm/conf.d/20-memcached.ini
