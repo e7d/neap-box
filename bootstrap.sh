@@ -37,6 +37,9 @@ try
     sleep 5
     #${DIR}/bootstrap/build-openssl.sh
 
+    echox "${text_cyan}Setup Let's Encrypt"
+    ${DIR}/bootstrap/setup-letsencrypt.sh
+
     echox "${text_cyan}Generate certificates"
     ${DIR}/bootstrap/generate-certificates.sh
 
