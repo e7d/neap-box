@@ -53,6 +53,7 @@ Neap box uses a mixture of Vagrant's [shell provisioner](https://docs.vagrantup.
 Once Vagrant is done provisioning the VM, you will have a box running the latest Debian 8 (aka Jessie) containing:
 
 * [FFmpeg](https://www.ffmpeg.org/) 2.6.5, as media converter
+* [Let's Encrypt](https://letsencrypt.org/), as SSL certificate generator
 * [nginx](http://nginx.org/) 1.8.0, as web server, with:
     * [nginx-rtmp-module](https://github.com/sergey-dryabzhinsky/nginx-rtmp-module), as streaming handler (RTMP, HLS and DASH protocols)
 * [PHP](http://php.net/) 7.0.1, as server-side scripting language, with:
@@ -63,5 +64,4 @@ Once Vagrant is done provisioning the VM, you will have a box running the latest
 * [PostgreSQL](http://www.postgresql.org/) 9.4, as database system
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.0-RC6, as IRC server daemon, with:
     * [Anope](https://www.anope.org/) 2.0.2, as IRC services daemon
-* [Let's Encrypt](https://letsencrypt.org/), as SSL certificate generator
 * Considered: [Varnish](http://varnish-cache.org/), as static files cache
