@@ -5,7 +5,7 @@ try
     throwErrors
 
     echo "Install packages"
-    apt-get install -y -q memcached libmemcached libmemcached-dev
+    apt-get install -y -q memcached libmemcached-dev
 
     echo "Download sources"
     cd ${SRC}
