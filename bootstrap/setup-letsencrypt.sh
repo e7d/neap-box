@@ -5,16 +5,13 @@ try
     throwErrors
 
     echo "Download source code"
-    cd /etc
+    mkdir -p /etc/letsencrypt/src
+    cd /etc/letsencrypt/src
     git clone https://github.com/letsencrypt/letsencrypt
     cd letsencrypt
 
-    echo "Install dependencies"
-    ./bootstrap/install-deps.sh
-    ./bootstrap/dev/venv.sh
-
-    echo "Register binaries"
-    source ./venv/bin/activate
+    echo "First run"
+    ./letsencrypt-auto
 )
 catch || {
 case $ex_code in
