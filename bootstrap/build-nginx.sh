@@ -21,7 +21,8 @@ try
     echo "Download nginx-rtmp-module source code"
     cd ${SRC}
     if [ ! -d ${SRC}/nginx-rtmp-module ]; then
-        git clone --progress https://github.com/arut/nginx-rtmp-module.git
+        # use a fork from https://github.com/arut/nginx-rtmp-module.git
+        git clone --progress https://github.com/sergey-dryabzhinsky/nginx-rtmp-module.git
     else
         echo "skipped..."
     fi
