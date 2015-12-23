@@ -5,7 +5,7 @@ try
     throwErrors
 
     echo "Download source code"
-    cd ${SRC}
+    cd /etc
     git clone https://github.com/letsencrypt/letsencrypt
     cd letsencrypt
 
