@@ -17,6 +17,8 @@ Vagrant.configure(2) do |config|
         node.vm.provider "virtualbox" do |vb|
             # System configuration
             vb.name = "Neap Box"
+            vb.cpus = "4"
+            vb.memory = "1024"
         end
 
         #  VirtualBox Guest update
