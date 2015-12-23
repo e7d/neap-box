@@ -5,15 +5,13 @@ A Vagrant box for [Neap](https://github.com/e7d/neap) development.
 ## Read me first
 
 This project aims to give you the necessary tools to build yourself the Neap Box.  
-If you only want to use the Neap Box, you will never have to build it yourself. Instead, get it from [Atlas by Hashicorp](https://atlas.hashicorp.com/):
+**Note:** If you want to directly use the Neap Box, you will never have to build it yourself! Instead, get it from [releases](./releases) or [Atlas](https://atlas.hashicorp.com/) by [Hashicorp](https://hashicorp.com/):
 * [Neap Box](https://atlas.hashicorp.com/e7d/boxes/neap-box)
 
 ## About
 
-**Version:** 1.0.2
-
-**Web:** Coming later, [neap.io](http://neap.io)
-
+**Version:** 1.0.3  
+**Web:** Coming later, [box.neap.io](http://box.neap.io)  
 **Project Owner:** Michaël "[e7d](https://github.com/e7d)" Ferrand
 
 ## Prerequisites
