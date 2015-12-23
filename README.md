@@ -40,13 +40,14 @@ In order to build the Neap Box effectively, you'll need to have a few tools inst
 1. Change into the directory `neap-box`
 1. Run `vagrant up`
 1. Run `vagrant package --output neap.box`
-1. Run `vagrant package --output neap.box`
 
 ## What you get ##
 
+After the build process is done, you have a file named `neap.box` that can be imported in Vagrant or VirtualBox.
+
 ### Software stack ###
 
-Neap box uses a mixture of Vagrant's [shell provisioner](https://docs.vagrantup.com/v2/provisioning/shell.html) to kick things off.
+Neap box uses Vagrant's [shell provisioner](https://docs.vagrantup.com/v2/provisioning/shell.html) over a large collection of scripts to kick things off.
 
 Once Vagrant is done provisioning the VM, you will have a box running the latest Debian 8 (aka Jessie) containing:
 
