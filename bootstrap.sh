@@ -69,6 +69,7 @@ try
 
     echox "${text_cyan}Zero disk"
     ${DIR}/bootstrap/zerodisk.sh
+    ${DIR}/bootstrap/zerodisk.sh
 
     NOW=$(date +%s)
     DIFF=$(echo "$NOW-$BEGIN" | bc)
