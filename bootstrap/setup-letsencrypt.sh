@@ -4,14 +4,19 @@ try
 (
     throwErrors
 
-    echo "Download source code"
-    mkdir -p /etc/letsencrypt/src
-    cd /etc/letsencrypt/src
-    git clone https://github.com/letsencrypt/letsencrypt
-    cd letsencrypt
+    LETS_ENCRYPT_SRC=/etc/letsencrypt/src
 
-    echo "First run"
-    ./letsencrypt-auto
+    echo "Download source code"
+    mkdir -p ${LETS_ENCRYPT_SRC}
+    git clone https://github.com/letsencrypt/letsencrypt ${LETS_ENCRYPT_SRC}
+    cd ${LETS_ENCRYPT_SRC}
+
+    echo "Install dependencies"
+    ./bootstrap/install-deps.sh
+    ./bootstrap/dev/venv.sh
+
+    echo "Link executable"
+    ln -s ${LETS_ENCRYPT_SRC}/venv/bin/letsencrypt /usr/bin/letsencrypt
 )
 catch || {
 case $ex_code in
