@@ -1,6 +1,6 @@
 #!/bin/bash
 
-UNREAL_VERSION=3.4-latest # https://www.unrealircd.org/download
+UNREAL_VERSION=4.0.0 # https://www.unrealircd.org/download/4.0/
 
 try
 (
@@ -12,8 +12,8 @@ try
     echo "Download sources"
     cd /usr/src
     if [ ! -f ${SRC}/unreal*.tar.gz ]; then
-        wget --no-check-certificate --trust-server-names https://www.unrealircd.org/downloads/Unreal${UNREAL_VERSION}.tar.gz
-        tar xzvf unreal*.tar.gz
+        wget --no-check-certificate --trust-server-names https://www.unrealircd.org/unrealircd4/unrealircd-${UNREAL_VERSION}.tar.gz
+        tar xzvf unrealircd-*.tar.gz
     else
         echo "skipped..."
     fi
