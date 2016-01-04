@@ -38,7 +38,7 @@ try
     ln -s /etc/php/mods-available/memcached.ini /etc/php/7.0/fpm/conf.d/20-memcached.ini
     ln -s /etc/php/mods-available/memcached.ini /etc/php/7.0/cli/conf.d/20-memcached.ini
 
-    echo "REstart service"
+    echo "Restart service"
     service memcached restart
 
     echo "Restart PHP-FPM service"
