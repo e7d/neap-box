@@ -61,6 +61,6 @@ Once Vagrant is done provisioning the VM, you will have a box running the latest
     * [Memcached](http://memcached.org/) 1.4, as memory object cache
     * [Composer](https://getcomposer.org/), as dependency manager
 * [PostgreSQL](http://www.postgresql.org/) 9.4, as database system
-* [UnrealIRCd](https://www.unrealircd.org/) 4.0.0-RC6, as IRC server daemon, with:
+* [UnrealIRCd](https://www.unrealircd.org/) 4.0.0, as IRC server daemon, with:
     * [Anope](https://www.anope.org/) 2.0.2, as IRC services daemon
 * Considered: [Varnish](http://varnish-cache.org/), as static files cache
