@@ -49,18 +49,19 @@ After the build process is done, you have a file named `neap.box` that can be im
 
 Neap box uses Vagrant's [shell provisioner](https://docs.vagrantup.com/v2/provisioning/shell.html) over a large collection of scripts to kick things off.
 
-Once Vagrant is done provisioning the VM, you will have a box running the latest Debian 8 (aka Jessie) containing:
+Once Vagrant is done provisioning the VM, you will have a box containing:
 
+* [Debian](http://debian.org) Jessie 8.2.3, as operating system
 * [FFmpeg](https://www.ffmpeg.org/) 2.6.5, as media converter
 * [Let's Encrypt](https://letsencrypt.org/), as SSL certificate generator
 * [nginx](http://nginx.org/) 1.8.0, as web server, with:
     * [nginx-rtmp-module](https://github.com/sergey-dryabzhinsky/nginx-rtmp-module), as streaming handler (RTMP, HLS and DASH protocols)
-* [PHP](http://php.net/) 7.0.1, as server-side scripting language, with:
+* [PHP](http://php.net/) 7.0.2, as server-side scripting language, with:
     * [PHP-FPM](http://php-fpm.org/), as PHP process manager
     * [Xdebug](http://xdebug.org/) 2.4, as debugger and profiler tool
     * [Memcached](http://memcached.org/) 1.4, as memory object cache
     * [Composer](https://getcomposer.org/), as dependency manager
-* [PostgreSQL](http://www.postgresql.org/) 9.4, as database system
+* [PostgreSQL](http://www.postgresql.org/) 9.5, as database system
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.0, as IRC server daemon, with:
     * [Anope](https://www.anope.org/) 2.0.2, as IRC services daemon
 * Considered: [Varnish](http://varnish-cache.org/), as static files cache
