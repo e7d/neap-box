@@ -51,7 +51,7 @@ Neap box uses Vagrant's [shell provisioner](https://docs.vagrantup.com/v2/provis
 
 Once Vagrant is done provisioning the VM, you will have a box containing:
 
-* [Debian](http://debian.org) Jessie 8.2.3, as operating system
+* [Debian](http://debian.org) Jessie 8.2, as operating system
 * [FFmpeg](https://www.ffmpeg.org/) 2.6.5, as media converter
 * [Let's Encrypt](https://letsencrypt.org/), as SSL certificate generator
 * [nginx](http://nginx.org/) 1.8.0, as web server, with:
