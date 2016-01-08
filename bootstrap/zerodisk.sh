@@ -1,8 +1,13 @@
 #!/bin/bash
 
-echo "Nullify free space"
+echo "Nullify swap free space"
+readonly swapuuid=$(/sbin/blkid -o value -l -s UUID -t TYPE=swap)
+readonly swappart=$(readlink -f /dev/disk/by-uuid/"$swapuuid")
+/sbin/swapoff "$swappart"
+dd if=/dev/zero of="$swappart" bs=1M || echo "dd exit code $? is suppressed"
+/sbin/mkswap -U "$swapuuid" "$swappart"
 
-# Zero out the free space to save space in the final image:
+echo "Nullify system free space"
 dd if=/dev/zero of=/EMPTY bs=1M
 rm -f /EMPTY
 
