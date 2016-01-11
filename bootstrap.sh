@@ -58,6 +58,9 @@ try
 	echox "${text_cyan}Setup Composer"
 	${DIR}/bootstrap/setup-composer.sh
 
+	echox "${text_cyan}Setup NPM"
+	${DIR}/bootstrap/setup-npm.sh
+
 	echox "${text_cyan}Build Unreal"
 	${DIR}/bootstrap/build-unreal.sh
 
