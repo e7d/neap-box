@@ -1,5 +1,8 @@
 #!/bin/bash
 
+. /vagrant/resources/colors.sh
+. /vagrant/resources/trycatch.sh
+
 ANOPE_VERSION=2.0.2 # https://github.com/anope/anope/releases/
 
 try
@@ -10,8 +13,8 @@ try
 	apt-get -y -q install cmake
 
 	echo "Download sources"
-	cd ${SRC}
-	if [ ! -f ${SRC}/anope-${ANOPE_VERSION}-source.tar.gz ]; then
+	cd /usr/src
+	if [ ! -f /usr/src/anope-${ANOPE_VERSION}-source.tar.gz ]; then
 		wget https://github.com/anope/anope/releases/download/${ANOPE_VERSION}/anope-${ANOPE_VERSION}-source.tar.gz
 		tar xzvf anope-${ANOPE_VERSION}-source.tar.gz
 	else
@@ -21,14 +24,14 @@ try
 
 	echo "Build Anope"
 	rm -fr /etc/anope/
-	cp -R ${DIR}/resources/anope/src/* .
+	cp -R /vagrant/resources/anope/src/* .
 	./Config -nointro -quick
 	cd build
 	make
 	make install
 
 	echo "Copy service script"
-	cp ${DIR}/resources/anope/bin/anope /etc/init.d
+	cp /vagrant/resources/anope/bin/anope /etc/init.d
 
 	echo "Fix permissions"
 	chown -cR irc:irc /etc/anope
@@ -41,7 +44,7 @@ try
 	systemctl daemon-reload
 
 	echo "Remove temporary files"
-	rm -fr ${SRC}/anope*
+	rm -fr /usr/src/anope*
 )
 catch || {
 	case $ex_code in

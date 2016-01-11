@@ -1,5 +1,8 @@
 #!/bin/bash
 
+. /vagrant/resources/colors.sh
+. /vagrant/resources/trycatch.sh
+
 NGINX_VERSION=1.8.0 # http://nginx.org/en/download.html
 NGINX_RTMP_VERSION=1.1.7 # https://github.com/arut/nginx-rtmp-module/releases
 
@@ -11,8 +14,8 @@ try
 	apt-get -y -q install build-essential libpcre3-dev libpcre++-dev zlib1g-dev libcurl4-openssl-dev libssl-dev nginx-common
 
 	echo "Download source code"
-	cd ${SRC}
-	if [ ! -f ${SRC}/nginx-${NGINX_VERSION}.tar.gz ]; then
+	cd /usr/src
+	if [ ! -f /usr/src/nginx-${NGINX_VERSION}.tar.gz ]; then
 		wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
 		tar -zxvf nginx-${NGINX_VERSION}.tar.gz
 	else
@@ -20,8 +23,8 @@ try
 	fi
 
 	echo "Download nginx-rtmp-module source code"
-	cd ${SRC}
-	if [ ! -d ${SRC}/nginx-rtmp-module-${NGINX_RTMP_VERSION} ]; then
+	cd /usr/src
+	if [ ! -d /usr/src/nginx-rtmp-module-${NGINX_RTMP_VERSION} ]; then
 		# use a fork from https://github.com/arut/nginx-rtmp-module.git
 		wget https://github.com/arut/nginx-rtmp-module/archive/v${NGINX_RTMP_VERSION}.tar.gz -O nginx-rtmp-module-${NGINX_RTMP_VERSION}.tar.gz
 		tar -zxvf nginx-rtmp-module-${NGINX_RTMP_VERSION}.tar.gz
@@ -30,7 +33,7 @@ try
 	fi
 
 	echo "Build binaries"
-	cd ${SRC}/nginx-${NGINX_VERSION}
+	cd /usr/src/nginx-${NGINX_VERSION}
 	./configure --prefix=/var/www \
 		    --sbin-path=/usr/sbin/nginx \
 		    --conf-path=/etc/nginx/nginx.conf \
@@ -54,7 +57,7 @@ try
 		    --with-ipv6 \
 		    --with-mail \
 		    --with-mail_ssl_module \
-		    --add-module=${SRC}/nginx-rtmp-module-${NGINX_RTMP_VERSION} &&
+		    --add-module=/usr/src/nginx-rtmp-module-${NGINX_RTMP_VERSION} &&
 	make
 
 	echo "Enable service binaries"
@@ -80,8 +83,8 @@ try
 	service nginx start
 
 	echo "Cleanup temporary files"
-	rm -rf ${SRC}/nginx-${NGINX_VERSION}*
-	rm -rf ${SRC}/nginx-rtmp-module*
+	rm -rf /usr/src/nginx-${NGINX_VERSION}*
+	rm -rf /usr/src/nginx-rtmp-module*
 )
 catch || {
 	case $ex_code in

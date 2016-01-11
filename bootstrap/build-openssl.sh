@@ -1,5 +1,8 @@
 #!/bin/bash
 
+. /vagrant/resources/colors.sh
+. /vagrant/resources/trycatch.sh
+
 OPENSSL_VERSION=1.0.2e # http://www.linuxfromscratch.org/blfs/view/svn/postlfs/openssl.html
 
 try
@@ -11,12 +14,12 @@ try
 	  zlib1g-dev libcurl4-openssl-dev libssl-dev
 
 	echo "Download source code"
-	cd ${SRC}
+	cd /usr/src
 	wget https://openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz
 	tar -xvzf openssl-${OPENSSL_VERSION}.tar.gz
 
 	echo "Build binaries"
-	cd ${SRC}/openssl-${OPENSSL_VERSION}
+	cd /usr/src/openssl-${OPENSSL_VERSION}
 	./config --prefix=/usr \
 		 --openssldir=/etc/ssl \
 		 --libdir=lib \
@@ -33,7 +36,7 @@ try
 	cp -vfr doc/*	 /usr/share/doc/openssl-1.0.2e
 
 	echo "Cleanup temporary files"
-	rm -rf ${SRC}/openssl-${OPENSSL_VERSION}*
+	rm -rf /usr/src/openssl-${OPENSSL_VERSION}*
 )
 catch || {
 	case $ex_code in

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+. /vagrant/resources/colors.sh
+. /vagrant/resources/trycatch.sh
+
 try
 (
 	throwErrors
@@ -8,7 +11,7 @@ try
 	apt-get install -y -q memcached libmemcached-dev
 
 	echo "Download sources"
-	cd ${SRC}
+	cd /usr/src
 	git clone https://github.com/php-memcached-dev/php-memcached.git
 
 	echo "Build library"
