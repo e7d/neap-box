@@ -21,10 +21,10 @@ try
 	echo "Build binaries"
 	cd /usr/src/openssl-${OPENSSL_VERSION}
 	./config --prefix=/usr \
-		 --openssldir=/etc/ssl \
-		 --libdir=lib \
-		 shared \
-		 zlib-dynamic &&
+	         --openssldir=/etc/ssl \
+	         --libdir=lib \
+	         shared \
+	         zlib-dynamic &&
 	make
 
 	echo "Install binaries"
