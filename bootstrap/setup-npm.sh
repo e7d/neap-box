@@ -1,9 +1,7 @@
 #!/bin/bash
 
-DIR=$(dirname `which $0`)
-echo /vagrant
-
-exit 0
+. /vagrant/resources/colors.sh
+. /vagrant/resources/trycatch.sh
 
 try
 (
@@ -12,7 +10,7 @@ try
 	echo "Install NPM package manager"
 	cd /tmp
 	curl -sL https://deb.nodesource.com/setup_5.x | bash -
-	apt-get install -y nodejs
+	apt-get install -y -q nodejs
 	npm install -g npm@latest
 
 	echo "Install JS Hint"
@@ -34,9 +32,10 @@ try
 	npm install -g karma-cli
 )
 catch || {
-case $ex_code in
-	*)
-		echox "${text_red}Error:${text_reset} An unexpected exception was thrown"
-		throw $ex_code
-	;;
-esac
+	case $ex_code in
+		*)
+			echox "${text_red}Error:${text_reset} An unexpected exception was thrown"
+			throw $ex_code
+		;;
+	esac
+}

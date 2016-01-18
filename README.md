@@ -64,4 +64,11 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
 * [PostgreSQL](http://www.postgresql.org/) 9.5, as database system
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.0, as IRC server daemon, with:
     * [Anope](https://www.anope.org/) 2.0.2, as IRC services daemon
+* [NPM](https://www.npmjs.com/) 3.5.3, as Package Manager, with:
+    * [JS Hint](http://jshint.com/) 2.9.1, as JavaScript code quality Tool
+    * [Yeoman](http://yeoman.io/) 1.6.0, as JavaScript code generator
+    * [Bower](http://bower.io/) 1.7.2, as web package manager
+    * [Grunt](http://gruntjs.com/) CLI 0.1.13, as JavaScript task runner
+    * [Jasmine](http://jasmine.github.io/) 2.4.1, as JavaScript testing framework
+    * [Karma](http://karma-runner.github.io/) CLI 0.1.2, as JavaScript test runner
 * Considered: [Varnish](http://varnish-cache.org/), as static files cache
