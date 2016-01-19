@@ -71,4 +71,3 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
     * [Grunt](http://gruntjs.com/) CLI 0.1.13, as JavaScript task runner
     * [Jasmine](http://jasmine.github.io/) 2.4.1, as JavaScript testing framework
     * [Karma](http://karma-runner.github.io/) CLI 0.1.2, as JavaScript test runner
-* Considered: [Varnish](http://varnish-cache.org/), as static files cache
