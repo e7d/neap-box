@@ -9,9 +9,6 @@ try
 (
 	throwErrors
 
-	echo "Download dependencies"
-	apt-get -y -q install cmake
-
 	echo "Download sources"
 	cd /usr/src
 	if [ ! -f /usr/src/anope-${ANOPE_VERSION}-source.tar.gz ]; then

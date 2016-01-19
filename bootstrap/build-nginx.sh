@@ -10,9 +10,8 @@ try
 (
 	throwErrors
 
-	echo "Build dependencies"
-	apt-get -y -q install build-essential libpcre3-dev libpcre++-dev \
-	  zlib1g-dev libcurl4-openssl-dev libssl-dev nginx-common
+	echo "Install nginx environment"
+	apt-get -y -q install nginx-common
 
 	echo "Download source code"
 	cd /usr/src
