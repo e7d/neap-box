@@ -74,6 +74,9 @@ try
 	MINS=$(echo "$DIFF/60" | bc)
 	SECS=$(echo "$DIFF%60" | bc)
 	echox "${text_cyan}Info:${text_reset} Bootstrap lasted $MINS mins and $SECS secs"
+
+	echox "${text_cyan}Installed versions:${text_reset}"
+	/vagrant/bootstrap/versions.sh
 )
 catch || {
 	case $ex_code in
