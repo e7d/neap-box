@@ -55,6 +55,7 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
 * [FFmpeg](https://www.ffmpeg.org/) 2.6.5, as media converter
 * [Let's Encrypt](https://letsencrypt.org/) 0.2.0.dev0, as SSL certificate generator
 * [nginx](http://nginx.org/) 1.9.9, as web server, with:
+    * [OpenSSL](https://www.openssl.org/) 1.0.2e, as SSL module
     * [nginx-rtmp-module](https://github.com/sergey-dryabzhinsky/nginx-rtmp-module) 1.1.7, as streaming handler (RTMP, HLS and DASH protocols)
 * [PHP](http://php.net/) 7.0.2, as server-side scripting language, with:
     * [PHP-FPM](http://php-fpm.org/), as PHP process manager
