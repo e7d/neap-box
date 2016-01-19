@@ -34,9 +34,6 @@ try
 	make MANDIR=/usr/share/man MANSUFFIX=ssl install &&
 	install -dv -m755 /usr/share/doc/openssl-1.0.2e  &&
 	cp -vfr doc/*	 /usr/share/doc/openssl-1.0.2e
-
-	echo "Cleanup temporary files"
-	rm -rf /usr/src/openssl-${OPENSSL_VERSION}*
 )
 catch || {
 	case $ex_code in

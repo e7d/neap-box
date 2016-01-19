@@ -39,9 +39,6 @@ try
 	systemctl enable anope
 	systemctl unmask anope
 	systemctl daemon-reload
-
-	echo "Remove temporary files"
-	rm -fr /usr/src/anope*
 )
 catch || {
 	case $ex_code in

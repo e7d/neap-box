@@ -43,9 +43,6 @@ try
 	systemctl enable unrealircd
 	systemctl unmask unrealircd
 	systemctl daemon-reload
-
-	echo "Remove temporary files"
-	rm -fr /usr/src/unrealircd*
 )
 catch || {
 	case $ex_code in

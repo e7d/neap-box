@@ -81,10 +81,6 @@ try
 
 	echo "Restart service"
 	service nginx start
-
-	echo "Cleanup temporary files"
-	rm -rf /usr/src/nginx-${NGINX_VERSION}*
-	rm -rf /usr/src/nginx-rtmp-module*
 )
 catch || {
 	case $ex_code in
