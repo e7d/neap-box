@@ -3,8 +3,9 @@
 . /vagrant/resources/colors.sh
 . /vagrant/resources/trycatch.sh
 
-NGINX_VERSION=1.8.0 # http://nginx.org/en/download.html
+NGINX_VERSION=1.9.9 # http://nginx.org/en/download.html
 NGINX_RTMP_VERSION=1.1.7 # https://github.com/arut/nginx-rtmp-module/releases
+OPENSSL_VERSION=1.0.2e # http://www.linuxfromscratch.org/blfs/view/svn/postlfs/openssl.html
 
 try
 (
@@ -21,6 +22,11 @@ try
 	else
 		echo "skipped..."
 	fi
+
+	echo "Download OpenSSL source code"
+	cd /usr/src
+	wget https://openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz
+	tar -xvzf openssl-${OPENSSL_VERSION}.tar.gz
 
 	echo "Download nginx-rtmp-module source code"
 	cd /usr/src
@@ -42,7 +48,8 @@ try
 	            --http-log-path=/var/log/nginx/access.log \
 	            --with-file-aio \
 	            --with-http_ssl_module \
-	            --with-http_spdy_module \
+		    --with-openssl=/usr/src/openssl-${OPENSSL_VERSION} \
+	            --with-http_v2_module \
 	            --with-http_realip_module \
 	            --with-http_addition_module \
 	            --with-http_sub_module \
