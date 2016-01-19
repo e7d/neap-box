@@ -1,5 +1,8 @@
 #!/bin/bash
 
+. /vagrant/resources/colors.sh
+. /vagrant/resources/trycatch.sh
+
 UNREAL_VERSION=4.0.0 # https://www.unrealircd.org/download/4.0/
 
 try
@@ -11,7 +14,7 @@ try
 
 	echo "Download sources"
 	cd /usr/src
-	if [ ! -f ${SRC}/unreal*.tar.gz ]; then
+	if [ ! -f /usr/src/unreal*.tar.gz ]; then
 		wget --no-check-certificate --trust-server-names https://www.unrealircd.org/unrealircd4/unrealircd-${UNREAL_VERSION}.tar.gz
 		tar xzvf unrealircd-*.tar.gz
 	else
@@ -21,7 +24,7 @@ try
 
 	echo "Build binaries"
 	rm -fr /etc/unrealircd/
-	cp -R ${DIR}/resources/unrealircd/src/* .
+	cp -R /vagrant/resources/unrealircd/src/* .
 	chmod +x config.settings
 	./config.settings
 	./Config -nointro -quick
@@ -29,7 +32,7 @@ try
 	make install
 
 	echo "Copy service script"
-	cp ${DIR}/resources/unrealircd/bin/unrealircd /etc/init.d
+	cp /vagrant/resources/unrealircd/bin/unrealircd /etc/init.d
 
 	echo "Fix permissions"
 	chown -cR irc.irc /etc/unrealircd
@@ -40,9 +43,6 @@ try
 	systemctl enable unrealircd
 	systemctl unmask unrealircd
 	systemctl daemon-reload
-
-	echo "Remove temporary files"
-	rm -fr /usr/src/unrealircd*
 )
 catch || {
 	case $ex_code in

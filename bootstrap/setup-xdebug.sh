@@ -1,11 +1,14 @@
 #!/bin/bash
 
+. /vagrant/resources/colors.sh
+. /vagrant/resources/trycatch.sh
+
 try
 (
 	throwErrors
 
 	echo "Download sources"
-	cd ${SRC}
+	cd /usr/src
 	git clone https://github.com/xdebug/xdebug.git
 
 	echo "Build library"

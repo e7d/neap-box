@@ -1,10 +1,13 @@
 #!/bin/bash
 
+. /vagrant/resources/colors.sh
+. /vagrant/resources/trycatch.sh
+
+LETS_ENCRYPT_SRC=/etc/letsencrypt/src
+
 try
 (
 	throwErrors
-
-	LETS_ENCRYPT_SRC=/etc/letsencrypt/src
 
 	echo "Download source code"
 	mkdir -p ${LETS_ENCRYPT_SRC}

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+. /vagrant/resources/colors.sh
+. /vagrant/resources/trycatch.sh
+
 try
 (
 	throwErrors
@@ -7,7 +10,8 @@ try
 	echo "Generate self-signed certificate"
 	if [ ! -f /etc/ssl/localcerts/self.pem ]; then
 		mkdir -p /etc/ssl/localcerts
-		openssl req -new -x509 -subj "/CN=`uname -n`/O=Neap/C=US" -days 3650 -nodes -out /etc/ssl/localcerts/self.pem -keyout /etc/ssl/localcerts/self.key > /dev/null
+		openssl req -new -x509 -subj "/CN=`uname -n`/O=Neap/C=US" -days 3650 -nodes -out /etc/ssl/localcerts/self.pem -keyout /etc/ssl/localcerts/self.key >/tmp/openssl.log 2>&1
+		cat /tmp/openssl.log
 		chmod -cR 600 /etc/ssl/localcerts/self.*
 	else
 		echo "skipped..."
@@ -15,7 +19,8 @@ try
 
 	echo "Generate dhparam file"
 	if [ ! -f /etc/ssl/private/dhparam.pem ]; then
-		openssl dhparam -out /etc/ssl/private/dhparam.pem 2048 > /dev/null
+		openssl dhparam -out /etc/ssl/private/dhparam.pem 2048 >/tmp/openssl.log 2>&1
+		cat /tmp/openssl.log
 	else
 		echo "skipped..."
 	fi

@@ -3,13 +3,9 @@
 # Start stopwatch
 export BEGIN=$(date +%s)
 
-# Store execution directory
-export DIR=$(dirname `which $0`)
-export SRC=/usr/src
-
 # Load dependencies
-. ${DIR}/resources/colors.sh
-. ${DIR}/resources/trycatch.sh
+. /vagrant/resources/colors.sh
+. /vagrant/resources/trycatch.sh
 
 # This script needs admin rights
 echox "${text_cyan}Check admin rights"
@@ -24,57 +20,63 @@ try
 	throwErrors
 
 	echox "${text_cyan}Prepare Debian environment"
-	${DIR}/bootstrap/prepare-env.sh
+	/vagrant/bootstrap/prepare-env.sh
 
 	echox "${text_cyan}Setup ffmpeg"
-	${DIR}/bootstrap/setup-ffmpeg.sh
+	/vagrant/bootstrap/setup-ffmpeg.sh
 
 	echox "${text_cyan}Setup PostgresQL"
-	${DIR}/bootstrap/setup-postgresql.sh
+	/vagrant/bootstrap/setup-postgresql.sh
 
 	echox "${text_cyan}Build OpenSSL"
-	echox "${text_yellow}Warning:${text_reset} Skipped, as long as OpenSSL 1.0.2d is breaking nginx 1.9.* build"
+	echox "${text_yellow}Warning:${text_reset} Skipped, as long as OpenSSL 1.0.2 is breaking Let's Encrypt"
 	sleep 5
-	#${DIR}/bootstrap/build-openssl.sh
+	#/vagrant/bootstrap/build-openssl.sh
 
 	echox "${text_cyan}Setup Let's Encrypt"
-	${DIR}/bootstrap/setup-letsencrypt.sh
+	/vagrant/bootstrap/setup-letsencrypt.sh
 
 	echox "${text_cyan}Generate certificates"
-	${DIR}/bootstrap/generate-certificates.sh
+	/vagrant/bootstrap/generate-certificates.sh
 
 	echox "${text_cyan}Build nginx"
-	${DIR}/bootstrap/build-nginx.sh
+	/vagrant/bootstrap/build-nginx.sh
 
 	echox "${text_cyan}Setup PHP"
-	${DIR}/bootstrap/setup-php.sh
+	/vagrant/bootstrap/setup-php.sh
 
 	echox "${text_cyan}Setup Xdebug"
-	${DIR}/bootstrap/setup-xdebug.sh
+	/vagrant/bootstrap/setup-xdebug.sh
 
 	echox "${text_cyan}Setup Memcached"
-	${DIR}/bootstrap/setup-memcached.sh
+	/vagrant/bootstrap/setup-memcached.sh
 
 	echox "${text_cyan}Setup Composer"
-	${DIR}/bootstrap/setup-composer.sh
+	/vagrant/bootstrap/setup-composer.sh
+
+	echox "${text_cyan}Setup NPM"
+	/vagrant/bootstrap/setup-npm.sh
 
 	echox "${text_cyan}Build Unreal"
-	${DIR}/bootstrap/build-unreal.sh
+	/vagrant/bootstrap/build-unreal.sh
 
 	echox "${text_cyan}Build Anope"
-	${DIR}/bootstrap/build-anope.sh
+	/vagrant/bootstrap/build-anope.sh
 
 	echox "${text_cyan}Clean up"
-	${DIR}/bootstrap/cleanup.sh
+	/vagrant/bootstrap/cleanup.sh
 
 	echox "${text_cyan}Zero disk"
-	${DIR}/bootstrap/zerodisk.sh
+	/vagrant/bootstrap/zerodisk.sh
 
 	NOW=$(date +%s)
 	DIFF=$(echo "$NOW-$BEGIN" | bc)
 	MINS=$(echo "$DIFF/60" | bc)
 	SECS=$(echo "$DIFF%60" | bc)
 	echox "${text_cyan}Info:${text_reset} Bootstrap lasted $MINS mins and $SECS secs"
+
+	echox "${text_cyan}Installed versions:${text_reset}"
+	/vagrant/bootstrap/versions.sh
 )
 catch || {
 	case $ex_code in
