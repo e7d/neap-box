@@ -10,7 +10,7 @@ This project aims to give you the necessary tools to build yourself the Neap Box
 
 ## About
 
-**Version:** 1.0.6  
+**Version:** 1.1.0  
 **Web:** Coming later, [box.neap.io](http://box.neap.io)  
 **Project Owner:** Michaël "[e7d](https://github.com/e7d)" Ferrand
 
@@ -72,4 +72,3 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
     * [Grunt](http://gruntjs.com/) CLI 0.1.13, as JavaScript task runner
     * [Jasmine](http://jasmine.github.io/) 2.4.1, as JavaScript testing framework
     * [Karma](http://karma-runner.github.io/) CLI 0.1.2, as JavaScript test runner
-* Considered: [Varnish](http://varnish-cache.org/), as static files cache
