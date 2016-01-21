@@ -76,7 +76,7 @@ try
 	echox "${text_cyan}Info:${text_reset} Bootstrap lasted $MINS mins and $SECS secs"
 
 	echox "${text_cyan}Installed versions:${text_reset}"
-	/vagrant/bootstrap/versions.sh
+	/vagrant/bootstrap/check-versions.sh
 )
 catch || {
 	case $ex_code in
