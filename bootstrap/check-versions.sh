@@ -3,6 +3,9 @@
 DEBIAN=$(cat /etc/debian_version)
 echo "Debian: $DEBIAN"
 
+VBOXGUESTADDITIONS=$(echo `modinfo vboxguest` | sed 's/.*\bversion: \([^ ]*\).*/\1/')
+echo "VirtualBox Guest Additions: $VBOXGUESTADDITIONS"
+
 FFMPEG=$(echo `ffmpeg -version` | sed 's/.*ffmpeg version \([^ ]*\).*/\1/')
 echo "FFmpeg: $FFMPEG"
 
