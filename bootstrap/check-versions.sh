@@ -1,60 +1,60 @@
 #!/bin/bash
 
 DEBIAN=$(cat /etc/debian_version)
-echo "Debian: "$DEBIAN
+echo "Debian: $DEBIAN"
 
 FFMPEG=$(echo `ffmpeg -version` | sed 's/.*ffmpeg version \([^ ]*\).*/\1/')
-echo "FFmpeg: "$FFMPEG
+echo "FFmpeg: $FFMPEG"
 
 LETSENCRYPT=$(echo `letsencrypt --version 2>&1` | sed 's/.*letsencrypt \(.*\)/\1/')
-echo "Let's Encrypt: "$LETSENCRYPT
+echo "Let's Encrypt: $LETSENCRYPT"
 
 NGINX=$(echo `nginx -v 2>&1` | sed 's/.*nginx\/\(.*\)/\1/')
-echo "nginx: "$NGINX
+echo "nginx: $NGINX"
 
 NGINX_RTMP=$(echo `nginx -V 2>&1` | sed 's/.*nginx-rtmp-module-\(.*\)/\1/')
-echo "nginx-rtmp-module: "$NGINX_RTMP
+echo "nginx-rtmp-module: $NGINX_RTMP"
 
 PHP=$(echo `php -v` | sed 's/PHP \([^-]*\).*/\1/')
-echo "PHP: "$PHP
+echo "PHP: $PHP"
 
 XDEBUG=$(echo `php -v` | sed 's/.*Xdebug v\([^-]*\).*/\1/')
-echo "Xdebug: "$XDEBUG
+echo "Xdebug: $XDEBUG"
 
 MEMCACHED=$(echo `memcached -i` | sed 's/memcached \([^ ]*\).*/\1/')
-echo "Memcached: "$MEMCACHED
+echo "Memcached: $MEMCACHED"
 
 COMPOSER=$(echo `composer 2>&1` | sed 's/.*Composer version \([^ ]*\).*/\1/')
-echo "Composer: "$COMPOSER
+echo "Composer: $COMPOSER"
 
 POSTGRESQL=$(echo `psql -V` | sed 's/psql (PostgreSQL) \(.*\)/\1/')
-echo "PostgreSQL: "$POSTGRESQL
+echo "PostgreSQL: $POSTGRESQL"
 
 UNREALIRCD=$(echo `sudo -u irc /etc/unrealircd/bin/unrealircd -v 2>&1` | sed 's/.*UnrealIRCd-\([^ ]*\).*/\1/')
-echo "UnrealIRCd: "$UNREALIRCD
+echo "UnrealIRCd: $UNREALIRCD"
 
 ANOPE=$(echo `/etc/anope/bin/services -v` | sed 's/Anope-\([^ ]*\).*/\1/')
-echo "Anope: "$ANOPE
+echo "Anope: $ANOPE"
 
 NPM=$(npm -v)
-echo "NPM: "$NPM
+echo "NPM: $NPM"
 
 NPMPACKAGES=$(echo `npm ls -g --depth 0`)
 
 JSHINT=$(echo $NPMPACKAGES | sed 's/.*jshint@\([^ ]*\).*/\1/')
-echo "JS Hint: "$JSHINT
+echo "JS Hint: $JSHINT"
 
 YEOMAN=$(echo $NPMPACKAGES | sed 's/.*yo@\([^ ]*\).*/\1/')
-echo "Yeoman: "$YEOMAN
+echo "Yeoman: $YEOMAN"
 
 BOWER=$(echo $NPMPACKAGES | sed 's/.*bower@\([^ ]*\).*/\1/')
-echo "Bower: "$BOWER
+echo "Bower: $BOWER"
 
 GRUNT=$(echo $NPMPACKAGES | sed 's/.*grunt-cli@\([^ ]*\).*/\1/')
-echo "Grunt: "$GRUNT
+echo "Grunt: $GRUNT"
 
 JASMINE=$(echo $NPMPACKAGES | sed 's/.*jasmine@\([^ ]*\).*/\1/')
-echo "Jasmine: "$JASMINE
+echo "Jasmine: $JASMINE"
 
 KARMA=$(echo $NPMPACKAGES | sed 's/.*karma-cli@\([^ ]*\).*/\1/')
-echo "Karma: "$KARMA
+echo "Karma: $KARMA"
