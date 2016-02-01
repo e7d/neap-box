@@ -3,7 +3,7 @@
 . /vagrant/resources/colors.sh
 . /vagrant/resources/trycatch.sh
 
-UNREAL_VERSION=4.0.0 # https://www.unrealircd.org/download/4.0/
+UNREAL_VERSION=4.0.1 # https://www.unrealircd.org/download/4.0/
 
 try
 (

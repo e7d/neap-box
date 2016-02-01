@@ -51,12 +51,12 @@ Neap box uses Vagrant's [shell provisioner](https://docs.vagrantup.com/v2/provis
 
 Once Vagrant is done provisioning the VM, you will have a box containing:
 
-* [Debian](https://www.debian.org/) Jessie 8.2, as operating system, with:
+* [Debian](https://www.debian.org/) Jessie 8.3, as operating system, with:
     * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.0.14
 * [FFmpeg](https://www.ffmpeg.org/) 2.6.5, as media converter
-* [Let's Encrypt](https://letsencrypt.org/) 0.2.1.dev0, as SSL certificate generator
-* [nginx](http://nginx.org/) 1.9.9, as web server, with:
-    * [OpenSSL](https://www.openssl.org/) 1.0.2e, as SSL module
+* [Let's Encrypt](https://letsencrypt.org/) 0.4.0.dev0, as SSL certificate generator
+* [nginx](http://nginx.org/) 1.9.10, as web server, with:
+    * [OpenSSL](https://www.openssl.org/) 1.0.2f, as SSL module
     * [nginx-rtmp-module](https://github.com/sergey-dryabzhinsky/nginx-rtmp-module) 1.1.7, as streaming handler (RTMP, HLS and DASH protocols)
 * [PHP](http://php.net/) 7.0.2, as server-side scripting language, with:
     * [PHP-FPM](http://php-fpm.org/), as PHP process manager
@@ -64,12 +64,6 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
     * [Memcached](http://memcached.org/) 1.4.21, as memory object cache
     * [Composer](https://getcomposer.org/) 1.0-dev, as dependency manager
 * [PostgreSQL](http://www.postgresql.org/) 9.5.0, as database system
-* [UnrealIRCd](https://www.unrealircd.org/) 4.0.0, as IRC server daemon, with:
-    * [Anope](https://www.anope.org/) 2.0.2, as IRC services daemon
-* [NPM](https://www.npmjs.com/) 3.5.3, as Package Manager, with:
-    * [JS Hint](http://jshint.com/) 2.9.1, as JavaScript code quality Tool
-    * [Yeoman](http://yeoman.io/) 1.6.0, as JavaScript code generator
-    * [Bower](http://bower.io/) 1.7.2, as web package manager
-    * [Grunt](http://gruntjs.com/) CLI 0.1.13, as JavaScript task runner
-    * [Jasmine](http://jasmine.github.io/) 2.4.1, as JavaScript testing framework
-    * [Karma](http://karma-runner.github.io/) CLI 0.1.2, as JavaScript test runner
+* [UnrealIRCd](https://www.unrealircd.org/) 4.0.1, as IRC server daemon, with:
+    * [Anope](https://www.anope.org/) 2.0.3, as IRC services daemon
+* [NPM](https://www.npmjs.com/) 3.6.0, as JavaScript package Manager
