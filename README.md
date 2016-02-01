@@ -10,7 +10,7 @@ This project aims to give you the necessary tools to build yourself the Neap Box
 
 ## About
 
-**Version:** 1.1.1  
+**Version:** 1.1.2  
 **Web:** Coming later, [box.neap.io](http://box.neap.io)  
 **Project Owner:** Michaël "[e7d](https://github.com/e7d)" Ferrand
 
