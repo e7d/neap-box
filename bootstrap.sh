@@ -28,11 +28,6 @@ try
 	echox "${text_cyan}Setup PostgresQL"
 	/vagrant/bootstrap/setup-postgresql.sh
 
-	echox "${text_cyan}Build OpenSSL"
-	echox "${text_yellow}Warning:${text_reset} Skipped, as long as OpenSSL 1.0.2 is breaking Let's Encrypt"
-	sleep 5
-	#/vagrant/bootstrap/build-openssl.sh
-
 	echox "${text_cyan}Setup Let's Encrypt"
 	/vagrant/bootstrap/setup-letsencrypt.sh
 

@@ -21,7 +21,7 @@ echo "nginx-rtmp-module: $NGINX_RTMP"
 PHP=$(echo `php -v` | sed 's/PHP \([^-]*\).*/\1/')
 echo "PHP: $PHP"
 
-XDEBUG=$(echo `php -v` | sed 's/.*Xdebug v\([^-]*\).*/\1/')
+XDEBUG=$(echo `php -v` | sed 's/.*Xdebug v\([^,]*\).*/\1/')
 echo "Xdebug: $XDEBUG"
 
 MEMCACHED=$(echo `memcached -i` | sed 's/memcached \([^ ]*\).*/\1/')
@@ -41,23 +41,3 @@ echo "Anope: $ANOPE"
 
 NPM=$(npm -v)
 echo "NPM: $NPM"
-
-NPMPACKAGES=$(echo `npm ls -g --depth 0`)
-
-JSHINT=$(echo $NPMPACKAGES | sed 's/.*jshint@\([^ ]*\).*/\1/')
-echo "JS Hint: $JSHINT"
-
-YEOMAN=$(echo $NPMPACKAGES | sed 's/.*yo@\([^ ]*\).*/\1/')
-echo "Yeoman: $YEOMAN"
-
-BOWER=$(echo $NPMPACKAGES | sed 's/.*bower@\([^ ]*\).*/\1/')
-echo "Bower: $BOWER"
-
-GRUNT=$(echo $NPMPACKAGES | sed 's/.*grunt-cli@\([^ ]*\).*/\1/')
-echo "Grunt: $GRUNT"
-
-JASMINE=$(echo $NPMPACKAGES | sed 's/.*jasmine@\([^ ]*\).*/\1/')
-echo "Jasmine: $JASMINE"
-
-KARMA=$(echo $NPMPACKAGES | sed 's/.*karma-cli@\([^ ]*\).*/\1/')
-echo "Karma: $KARMA"

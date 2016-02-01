@@ -3,7 +3,7 @@
 . /vagrant/resources/colors.sh
 . /vagrant/resources/trycatch.sh
 
-ANOPE_VERSION=2.0.2 # https://github.com/anope/anope/releases/
+ANOPE_VERSION=2.0.3 # https://github.com/anope/anope/releases/
 
 try
 (
