@@ -21,7 +21,7 @@ echo "nginx-rtmp-module: $NGINX_RTMP"
 PHP=$(echo `php -v` | sed 's/PHP \([^-]*\).*/\1/')
 echo "PHP: $PHP"
 
-XDEBUG=$(echo `php -v` | sed 's/.*Xdebug v\([^-]*\).*/\1/')
+XDEBUG=$(echo `php -v` | sed 's/.*Xdebug v\([^,]*\).*/\1/')
 echo "Xdebug: $XDEBUG"
 
 MEMCACHED=$(echo `memcached -i` | sed 's/memcached \([^ ]*\).*/\1/')
