@@ -18,6 +18,9 @@ echo "nginx: $NGINX"
 NGINX_RTMP=$(echo `nginx -V 2>&1` | sed 's/.*nginx-rtmp-module-\(.*\)/\1/')
 echo "nginx-rtmp-module: $NGINX_RTMP"
 
+REDIS=$(echo `redis-server -v` | sed 's/Redis server v=\([^ ]*\).*/\1/')
+echo "Redis: $REDIS"
+
 PHP=$(echo `php -v` | sed 's/PHP \([^-]*\).*/\1/')
 echo "PHP: $PHP"
 

@@ -37,14 +37,14 @@ try
 	echox "${text_cyan}Build nginx"
 	/vagrant/bootstrap/build-nginx.sh
 
+	echox "${text_cyan}Build Redis"
+	/vagrant/bootstrap/build-nginx.sh
+
 	echox "${text_cyan}Setup PHP"
 	/vagrant/bootstrap/setup-php.sh
 
 	echox "${text_cyan}Setup Xdebug"
 	/vagrant/bootstrap/setup-xdebug.sh
-
-	echox "${text_cyan}Setup Memcached"
-	/vagrant/bootstrap/setup-memcached.sh
 
 	echox "${text_cyan}Setup Composer"
 	/vagrant/bootstrap/setup-composer.sh
