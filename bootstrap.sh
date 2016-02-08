@@ -38,7 +38,7 @@ try
 	/vagrant/bootstrap/build-nginx.sh
 
 	echox "${text_cyan}Build Redis"
-	/vagrant/bootstrap/build-nginx.sh
+	/vagrant/bootstrap/build-redis.sh
 
 	echox "${text_cyan}Setup PHP"
 	/vagrant/bootstrap/setup-php.sh
