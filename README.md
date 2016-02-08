@@ -58,11 +58,13 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
 * [nginx](http://nginx.org/) 1.9.10, as web server, with:
     * [OpenSSL](https://www.openssl.org/) 1.0.2f, as SSL module
     * [nginx-rtmp-module](https://github.com/sergey-dryabzhinsky/nginx-rtmp-module) 1.1.7, as streaming handler (RTMP, HLS and DASH protocols)
-* [PHP](http://php.net/) 7.0.2, as server-side scripting language, with:
+* [Redis](http://redis.io/) 3.0.7, as data structure store
+* [PHP](http://php.net/) 7.0.3, as server-side scripting language, with:
     * [PHP-FPM](http://php-fpm.org/), as PHP process manager
+    * [PhpRedis](https://github.com/phpredis/phpredis) 2.2.5, as PHP extension for Redis
     * [Xdebug](http://xdebug.org/) 2.4.0RC4, as debugger and profiler tool
     * [Composer](https://getcomposer.org/) 1.0-dev, as dependency manager
 * [PostgreSQL](http://www.postgresql.org/) 9.5.0, as database system
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.1, as IRC server daemon, with:
     * [Anope](https://www.anope.org/) 2.0.3, as IRC services daemon
-* [NPM](https://www.npmjs.com/) 3.6.0, as JavaScript package Manager
+* [NPM](https://www.npmjs.com/) 3.7.1, as JavaScript package Manager
