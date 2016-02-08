@@ -22,7 +22,7 @@ try
 	apt-get -y -q install curl git pkg-config unzip
 
 	echo "Install prerequisite packages"
-	apt-get -y -q install build-essential cmake gcc g+ libcurl4-openssl-dev libpcre++-dev \
+	apt-get -y -q install build-essential cmake gcc g++ libcurl4-openssl-dev libpcre++-dev \
 	              libpcre3-dev libreadline-gplv2-dev libssl-dev make zlib1g-dev
 
 	echo "Tweak SSH daemon"
