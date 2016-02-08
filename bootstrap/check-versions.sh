@@ -24,9 +24,6 @@ echo "PHP: $PHP"
 XDEBUG=$(echo `php -v` | sed 's/.*Xdebug v\([^,]*\).*/\1/')
 echo "Xdebug: $XDEBUG"
 
-MEMCACHED=$(echo `memcached -i` | sed 's/memcached \([^ ]*\).*/\1/')
-echo "Memcached: $MEMCACHED"
-
 COMPOSER=$(echo `composer 2>&1` | sed 's/.*Composer version \([^ ]*\).*/\1/')
 echo "Composer: $COMPOSER"
 
