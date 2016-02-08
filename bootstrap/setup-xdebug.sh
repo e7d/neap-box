@@ -24,8 +24,8 @@ try
 	echo 'zend_extension=xdebug.so' >>/etc/php/mods-available/xdebug.ini
 
 	echo "Link configuration file to PHP"
-	ln -s /etc/php/mods-available/xdebug.ini /etc/php/7.0/fpm/conf.d/20-xdebug.ini
-	ln -s /etc/php/mods-available/xdebug.ini /etc/php/7.0/cli/conf.d/20-xdebug.ini
+	ln -sf /etc/php/mods-available/xdebug.ini /etc/php/7.0/fpm/conf.d/20-xdebug.ini
+	ln -sf /etc/php/mods-available/xdebug.ini /etc/php/7.0/cli/conf.d/20-xdebug.ini
 
 	echo "Restart PHP-FPM service"
 	service php7.0-fpm restart

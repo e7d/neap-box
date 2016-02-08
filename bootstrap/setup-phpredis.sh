@@ -24,6 +24,10 @@ try
 	echo '; priority=20' >>/etc/php/mods-available/redis.ini
 	echo 'extension=redis.so' >>/etc/php/mods-available/redis.ini
 
+	echo "Link configuration file to PHP"
+	ln -sf /etc/php/mods-available/redis.ini /etc/php/7.0/fpm/conf.d/20-redis.ini
+	ln -sf /etc/php/mods-available/redis.ini /etc/php/7.0/cli/conf.d/20-redis.ini
+
 	echo "Write PHP configuration files"
 	echo >>/etc/php/7.0/cli/php.ini
 	echo '[redis]' >>/etc/php/7.0/cli/php.ini
@@ -33,10 +37,6 @@ try
 	echo '[redis]' >>/etc/php/7.0/fpm/php.ini
 	echo 'session.save_handler = redis' >>/etc/php/7.0/fpm/php.ini
 	echo 'session.save_path = "tcp://127.0.0.1:6379" ' >>/etc/php/7.0/fpm/php.ini
-
-	echo "Link configuration file to PHP"
-	ln -s /etc/php/mods-available/redis.ini /etc/php/7.0/fpm/conf.d/20-redis.ini
-	ln -s /etc/php/mods-available/redis.ini /etc/php/7.0/cli/conf.d/20-redis.ini
 
 	echo "Restart service"
 	service redis restart

@@ -19,7 +19,7 @@ try
 	./bootstrap/dev/venv.sh
 
 	echo "Link executable"
-	ln -s ${LETS_ENCRYPT_SRC}/venv/bin/letsencrypt /usr/bin/letsencrypt
+	ln -sf ${LETS_ENCRYPT_SRC}/venv/bin/letsencrypt /usr/bin/letsencrypt
 )
 catch || {
 case $ex_code in
