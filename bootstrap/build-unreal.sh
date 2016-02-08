@@ -40,8 +40,8 @@ try
 	chmod -c +x /etc/init.d/unrealircd
 
 	echo "Register service script"
-	systemctl enable unrealircd
 	systemctl unmask unrealircd
+	systemctl enable unrealircd
 	systemctl daemon-reload
 )
 catch || {
