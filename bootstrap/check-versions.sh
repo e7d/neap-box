@@ -24,6 +24,9 @@ echo "Redis: $REDIS"
 PHP=$(echo `php -v` | sed 's/PHP \([^-]*\).*/\1/')
 echo "PHP: $PHP"
 
+PHPREDIS=$(echo `php -i | grep "Redis Version"` | sed 's/Redis Version => \(.*\)/\1/')
+echo "PhpRedis: $PHPREDIS"
+
 XDEBUG=$(echo `php -v` | sed 's/.*Xdebug v\([^,]*\).*/\1/')
 echo "Xdebug: $XDEBUG"
 

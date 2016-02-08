@@ -43,6 +43,9 @@ try
 	echox "${text_cyan}Setup PHP"
 	/vagrant/bootstrap/setup-php.sh
 
+	echox "${text_cyan}Setup PhpRedis"
+	/vagrant/bootstrap/setup-phpredis.sh
+
 	echox "${text_cyan}Setup Xdebug"
 	/vagrant/bootstrap/setup-xdebug.sh
 
