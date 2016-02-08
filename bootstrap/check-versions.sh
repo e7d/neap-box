@@ -18,14 +18,17 @@ echo "nginx: $NGINX"
 NGINX_RTMP=$(echo `nginx -V 2>&1` | sed 's/.*nginx-rtmp-module-\(.*\)/\1/')
 echo "nginx-rtmp-module: $NGINX_RTMP"
 
+REDIS=$(echo `redis-server -v` | sed 's/Redis server v=\([^ ]*\).*/\1/')
+echo "Redis: $REDIS"
+
 PHP=$(echo `php -v` | sed 's/PHP \([^-]*\).*/\1/')
 echo "PHP: $PHP"
 
+PHPREDIS=$(echo `php -i | grep "Redis Version"` | sed 's/Redis Version => \(.*\)/\1/')
+echo "PhpRedis: $PHPREDIS"
+
 XDEBUG=$(echo `php -v` | sed 's/.*Xdebug v\([^,]*\).*/\1/')
 echo "Xdebug: $XDEBUG"
-
-MEMCACHED=$(echo `memcached -i` | sed 's/memcached \([^ ]*\).*/\1/')
-echo "Memcached: $MEMCACHED"
 
 COMPOSER=$(echo `composer 2>&1` | sed 's/.*Composer version \([^ ]*\).*/\1/')
 echo "Composer: $COMPOSER"

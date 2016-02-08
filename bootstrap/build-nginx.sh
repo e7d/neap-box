@@ -68,8 +68,9 @@ try
 	make
 
 	echo "Enable service binaries"
-	systemctl unmask nginx.service
-	systemctl enable nginx.service
+	systemctl unmask nginx
+	systemctl enable nginx
+	systemctl daemon-reload
 
 	echo "Stop service"
 	service nginx stop

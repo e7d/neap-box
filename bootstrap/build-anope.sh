@@ -36,8 +36,8 @@ try
 	chmod -c +x /etc/init.d/anope
 
 	echo "Register service script"
-	systemctl enable anope
 	systemctl unmask anope
+	systemctl enable anope
 	systemctl daemon-reload
 )
 catch || {
