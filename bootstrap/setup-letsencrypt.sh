@@ -15,11 +15,7 @@ try
 	cd ${LETS_ENCRYPT_SRC}
 
 	echo "Install dependencies"
-	./bootstrap/install-deps.sh
-	./bootstrap/dev/venv.sh
-
-	echo "Link executable"
-	ln -sf ${LETS_ENCRYPT_SRC}/venv/bin/letsencrypt /usr/bin/letsencrypt
+	./letsencrypt-auto
 )
 catch || {
 case $ex_code in
