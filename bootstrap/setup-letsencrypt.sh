@@ -14,8 +14,8 @@ try
 	git clone https://github.com/letsencrypt/letsencrypt ${LETS_ENCRYPT_SRC}
 	cd ${LETS_ENCRYPT_SRC}
 
-	echo "Install dependencies"
-	./letsencrypt-auto
+	echo "Link executable"
+	ln -sf ${LETS_ENCRYPT_SRC}/letsencrypt-auto /usr/bin/letsencrypt
 )
 catch || {
 case $ex_code in
