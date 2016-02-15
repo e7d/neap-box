@@ -55,7 +55,7 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
     * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.0.14
 * [FFmpeg](https://www.ffmpeg.org/) 2.6.5, as media converter
 * [PostgreSQL](http://www.postgresql.org/) 9.5.1, as database system
-* [Let's Encrypt](https://letsencrypt.org/) 0.4.0.dev0, as SSL certificate generator
+* [Let's Encrypt](https://letsencrypt.org/) 0.4.0, as SSL certificate generator
 * [nginx](http://nginx.org/) 1.9.10, as web server, with:
     * [OpenSSL](https://www.openssl.org/) 1.0.2f, as SSL module
     * [nginx-rtmp-module](https://github.com/sergey-dryabzhinsky/nginx-rtmp-module) 1.1.7, as streaming handler (RTMP, HLS and DASH protocols)
@@ -67,4 +67,4 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
     * [Composer](https://getcomposer.org/) 1.0-dev, as dependency manager
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.1, as IRC server daemon, with:
     * [Anope](https://www.anope.org/) 2.0.3, as IRC services daemon
-* [NPM](https://www.npmjs.com/) 3.7.1, as JavaScript package Manager
+* [NPM](https://www.npmjs.com/) 3.7.2, as JavaScript package Manager
