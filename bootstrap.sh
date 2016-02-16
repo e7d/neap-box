@@ -61,11 +61,8 @@ try
 	echox "${text_cyan}Build Anope"
 	/vagrant/bootstrap/build-anope.sh
 
-	echox "${text_cyan}Clean up"
-	/vagrant/bootstrap/cleanup.sh
-
-	echox "${text_cyan}Zero disk"
-	/vagrant/bootstrap/zerodisk.sh
+	echox "${text_cyan}Installed versions:${text_reset}"
+	/vagrant/bootstrap/check-versions.sh
 
 	NOW=$(date +%s)
 	DIFF=$(echo "$NOW-$BEGIN" | bc)
@@ -73,8 +70,11 @@ try
 	SECS=$(echo "$DIFF%60" | bc)
 	echox "${text_cyan}Info:${text_reset} Bootstrap lasted $MINS mins and $SECS secs"
 
-	echox "${text_cyan}Installed versions:${text_reset}"
-	/vagrant/bootstrap/check-versions.sh
+	echox "${text_cyan}Clean up"
+	/vagrant/bootstrap/cleanup.sh
+
+	echox "${text_cyan}Zero disk"
+	/vagrant/bootstrap/zerodisk.sh
 )
 catch || {
 	case $ex_code in
