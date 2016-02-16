@@ -5,7 +5,7 @@ Vagrant.configure(2) do |config|
 
         # General configuration
         node.vm.hostname = "neap-box"
-        node.vm.box = "debian/jessie64"
+        node.vm.box = "debian/contrib-jessie64"
         node.vm.box_version = ">= 8.3"
 
         # Network configuration
