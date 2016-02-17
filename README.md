@@ -25,8 +25,6 @@ In order to build the Neap Box effectively, you'll need to have a few tools inst
 ### Windows-specific ###
 
 1. Add the Git executables to your path
-1. Install [Vagrant::WinNFSd](https://github.com/winnfsd/vagrant-winnfsd), to use NFS on a Windows host  
-`vagrant plugin install vagrant-winnfsd`
 
 ### Recommended
 
