@@ -17,6 +17,9 @@ echo "VirtualBox Guest Additions: $VBOXGUESTADDITIONS"
 FFMPEG=$(echo `ffmpeg -version` | sed 's/.*ffmpeg version \([^ ]*\).*/\1/')
 echo "FFmpeg: $FFMPEG"
 
+MAILCATCHER=$(echo `gem list | grep mailcatcher` | sed -r 's/mailcatcher \((.*)\)/\1/')
+echo "Mailcatcher: $MAILCATCHER"
+
 LETSENCRYPT=$(echo `letsencrypt --version 2>&1` | sed 's/.*letsencrypt \(.*\)/\1/')
 echo "Let's Encrypt: $LETSENCRYPT"
 

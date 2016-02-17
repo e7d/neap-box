@@ -51,7 +51,8 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
 
 * [Debian](https://www.debian.org/) Jessie 8.3, as operating system, with:
     * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.0.14
-* [FFmpeg](https://www.ffmpeg.org/) 2.6.5, as media converter
+* [FFmpeg](https://www.ffmpeg.org/) 2.8.6, as media converter
+* [Mailcatcher](http://mailcatcher.me/) 0.6.4 as mail catching server
 * [PostgreSQL](http://www.postgresql.org/) 9.5.1, as database system
 * [Let's Encrypt](https://letsencrypt.org/) 0.4.0, as SSL certificate generator
 * [nginx](http://nginx.org/) 1.9.10, as web server, with:
