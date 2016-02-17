@@ -1,5 +1,13 @@
 #!/bin/bash
 
+. /vagrant/resources/colors.sh
+
+# This script needs admin rights
+if [ 0 != $(id -u) ]; then
+	echox "${text_red}Error:${text_reset} This script must be run as root!"
+	exit 1
+fi
+
 echo "Nullify swap free space"
 readonly swapuuid=$(/sbin/blkid -o value -l -s UUID -t TYPE=swap)
 readonly swappart=$(readlink -f /dev/disk/by-uuid/"$swapuuid")

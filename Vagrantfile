@@ -5,13 +5,11 @@ Vagrant.configure(2) do |config|
 
         # General configuration
         node.vm.hostname = "neap-box"
-        node.vm.box = "debian/jessie64"
-
-        # Network configuration
-        node.vm.network "private_network", ip: "192.168.32.20"
+        node.vm.box = "debian/contrib-jessie64"
+        node.vm.box_version = ">= 8.3"
 
         # Synced folder configuration
-        node.vm.synced_folder ".", "/vagrant", type: "nfs"
+        node.vm.synced_folder ".", "/vagrant"
 
         # VirtualBox provider
         node.vm.provider "virtualbox" do |vb|

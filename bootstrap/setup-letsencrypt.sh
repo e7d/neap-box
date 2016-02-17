@@ -3,6 +3,12 @@
 . /vagrant/resources/colors.sh
 . /vagrant/resources/trycatch.sh
 
+# This script needs admin rights
+if [ 0 != $(id -u) ]; then
+	echox "${text_red}Error:${text_reset} This script must be run as root!"
+	exit 1
+fi
+
 LETS_ENCRYPT_SRC=/etc/letsencrypt/src
 
 try
@@ -14,12 +20,8 @@ try
 	git clone https://github.com/letsencrypt/letsencrypt ${LETS_ENCRYPT_SRC}
 	cd ${LETS_ENCRYPT_SRC}
 
-	echo "Install dependencies"
-	./bootstrap/install-deps.sh
-	./bootstrap/dev/venv.sh
-
 	echo "Link executable"
-	ln -sf ${LETS_ENCRYPT_SRC}/venv/bin/letsencrypt /usr/bin/letsencrypt
+	ln -sf ${LETS_ENCRYPT_SRC}/letsencrypt-auto /usr/bin/letsencrypt
 )
 catch || {
 case $ex_code in
