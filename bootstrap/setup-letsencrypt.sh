@@ -3,6 +3,12 @@
 . /vagrant/resources/colors.sh
 . /vagrant/resources/trycatch.sh
 
+# This script needs admin rights
+if [ 0 != $(id -u) ]; then
+	echox "${text_red}Error:${text_reset} This script must be run as root!"
+	exit 1
+fi
+
 LETS_ENCRYPT_SRC=/etc/letsencrypt/src
 
 try

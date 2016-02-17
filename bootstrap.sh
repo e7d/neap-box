@@ -8,12 +8,10 @@ export BEGIN=$(date +%s)
 . /vagrant/resources/trycatch.sh
 
 # This script needs admin rights
-echox "${text_cyan}Check admin rights"
 if [ 0 != $(id -u) ]; then
-	echo_error "This script must be run as root!"
+	echox "${text_red}Error:${text_reset} This script must be run as root!"
 	exit 1
 fi
-echox "${text_green}OK"
 
 try
 (

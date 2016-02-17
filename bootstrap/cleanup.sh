@@ -1,5 +1,13 @@
 #!/bin/bash
 
+. /vagrant/resources/colors.sh
+
+# This script needs admin rights
+if [ 0 != $(id -u) ]; then
+	echox "${text_red}Error:${text_reset} This script must be run as root!"
+	exit 1
+fi
+
 # Removing leftover leases and persistent rules
 echo "Cleaning up dhcp leases and rules"
 rm /var/lib/dhcp/*
