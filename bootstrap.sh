@@ -25,6 +25,9 @@ try
 	echox "${text_cyan}Setup ffmpeg"
 	/vagrant/bootstrap/setup-ffmpeg.sh
 
+	echox "${text_cyan}Setup Mailcatcher"
+	/vagrant/bootstrap/setup-mailcatcher.sh
+
 	echox "${text_cyan}Setup PostgresQL"
 	/vagrant/bootstrap/setup-postgresql.sh
 
