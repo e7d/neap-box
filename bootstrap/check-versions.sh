@@ -48,7 +48,7 @@ POSTGRESQL=$(echo `psql -V` | sed 's/psql (PostgreSQL) \(.*\)/\1/')
 echo "PostgreSQL: $POSTGRESQL"
 
 MAILCATCHER=$(echo `gem list | grep mailcatcher` | sed -r 's/mailcatcher \((.*)\)/\1/')
-echo "Mailcatcher: $MAILCATCHER"
+echo "MailCatcher: $MAILCATCHER"
 
 NPM=$(npm -v)
 echo "NPM: $NPM"
