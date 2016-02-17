@@ -21,6 +21,18 @@ try
 
 	echo "Install gem"
 	gem install mailcatcher
+
+	echo "Copy service script"
+	cp /vagrant/resources/mailcatcher/bin/mailcatcher /etc/init.d
+
+	echo "Fix permissions"
+	chown -c mail:mail /etc/init.d/mailcatcher
+	chmod -c +x /etc/init.d/mailcatcher
+
+	echo "Register service script"
+	systemctl unmask mailcatcher
+	systemctl enable mailcatcher
+	systemctl daemon-reload
 )
 catch || {
 	case $ex_code in
