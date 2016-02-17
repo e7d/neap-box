@@ -51,19 +51,19 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
 
 * [Debian](https://www.debian.org/) Jessie 8.3, as operating system, with:
     * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.0.14
-* [FFmpeg](https://www.ffmpeg.org/) 2.8.6, as media converter
-* [Mailcatcher](http://mailcatcher.me/) 0.6.4 as mail catching server
-* [PostgreSQL](http://www.postgresql.org/) 9.5.1, as database system
 * [Let's Encrypt](https://letsencrypt.org/) 0.4.0, as SSL certificate generator
 * [nginx](http://nginx.org/) 1.9.10, as web server, with:
     * [OpenSSL](https://www.openssl.org/) 1.0.2f, as SSL module
     * [nginx-rtmp-module](https://github.com/sergey-dryabzhinsky/nginx-rtmp-module) 1.1.7, as streaming handler (RTMP, HLS and DASH protocols)
 * [Redis](http://redis.io/) 3.0.7, as data structure store
 * [PHP](http://php.net/) 7.0.3, as server-side scripting language, with:
-    * [PHP-FPM](http://php-fpm.org/), as PHP process manager
-    * [PhpRedis](https://github.com/phpredis/phpredis) 2.2.5, as PHP extension for Redis
+    * [PHP-FPM](http://php-fpm.org/) 7.0.3, as PHP process manager
+    * [PhpRedis](https://github.com/phpredis/phpredis) 2.2.8-devphp7, as PHP extension for Redis
     * [Xdebug](http://xdebug.org/) 2.4.0RC4, as debugger and profiler tool
     * [Composer](https://getcomposer.org/) 1.0-dev, as dependency manager
+* [PostgreSQL](http://www.postgresql.org/) 9.5.1, as database system
+* [Mailcatcher](http://mailcatcher.me/) 0.6.4 as mail catching server
+* [NPM](https://www.npmjs.com/) 3.7.2, as JavaScript package Manager
+* [FFmpeg](https://www.ffmpeg.org/) 2.8.6, as media converter
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.1, as IRC server daemon, with:
     * [Anope](https://www.anope.org/) 2.0.3, as IRC services daemon
-* [NPM](https://www.npmjs.com/) 3.7.2, as JavaScript package Manager

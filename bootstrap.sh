@@ -22,15 +22,6 @@ try
 	echox "${text_cyan}Prepare Debian environment"
 	/vagrant/bootstrap/prepare-env.sh
 
-	echox "${text_cyan}Setup ffmpeg"
-	/vagrant/bootstrap/setup-ffmpeg.sh
-
-	echox "${text_cyan}Setup Mailcatcher"
-	/vagrant/bootstrap/setup-mailcatcher.sh
-
-	echox "${text_cyan}Setup PostgresQL"
-	/vagrant/bootstrap/setup-postgresql.sh
-
 	echox "${text_cyan}Setup Let's Encrypt"
 	/vagrant/bootstrap/setup-letsencrypt.sh
 
@@ -55,8 +46,17 @@ try
 	echox "${text_cyan}Setup Composer"
 	/vagrant/bootstrap/setup-composer.sh
 
+	echox "${text_cyan}Setup PostgresQL"
+	/vagrant/bootstrap/setup-postgresql.sh
+
+	echox "${text_cyan}Setup Mailcatcher"
+	/vagrant/bootstrap/setup-mailcatcher.sh
+
 	echox "${text_cyan}Setup NPM"
 	/vagrant/bootstrap/setup-npm.sh
+
+	echox "${text_cyan}Setup ffmpeg"
+	/vagrant/bootstrap/setup-ffmpeg.sh
 
 	echox "${text_cyan}Build Unreal"
 	/vagrant/bootstrap/build-unreal.sh
