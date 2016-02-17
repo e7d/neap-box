@@ -8,9 +8,6 @@ Vagrant.configure(2) do |config|
         node.vm.box = "debian/contrib-jessie64"
         node.vm.box_version = ">= 8.3"
 
-        # Network configuration
-        node.vm.network "private_network", ip: "192.168.32.20"
-
         # Synced folder configuration
         node.vm.synced_folder ".", "/vagrant"
 
