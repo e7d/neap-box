@@ -19,7 +19,7 @@ try
 (
 	throwErrors
 
-	echox "${text_cyan}Info:${text_reset} Bootstrap started at $(date +'%Y-%m-%d % H:%M:%S %Z')"
+	echox "${text_cyan}Info:${text_reset} Bootstrap started at $(date +'%Y-%m-%d %H:%M:%S %Z')"
 
 	echox "${text_cyan}Prepare Debian environment"
 	/vagrant/bootstrap/prepare-env.sh
@@ -79,7 +79,7 @@ try
 	DIFF=$(echo "$NOW-$BEGIN" | bc)
 	MINS=$(echo "$DIFF/60" | bc)
 	SECS=$(echo "$DIFF%60" | bc)
-	echox "${text_cyan}Info:${text_reset} Bootstrap ended at $(date +'%Y-%m-%d % H:%M:%S %Z')"
+	echox "${text_cyan}Info:${text_reset} Bootstrap ended at $(date +'%Y-%m-%d %H:%M:%S %Z')"
 	echox "${text_cyan}Info:${text_reset} Bootstrap lasted $MINS mins and $SECS secs"
 )
 catch || {
