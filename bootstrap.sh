@@ -19,6 +19,8 @@ try
 (
 	throwErrors
 
+	echox "${text_cyan}Info:${text_reset} Bootstrap started at $(date +'%Y-%m-%d % H:%M:%S %Z')"
+
 	echox "${text_cyan}Prepare Debian environment"
 	/vagrant/bootstrap/prepare-env.sh
 
@@ -67,17 +69,18 @@ try
 	echox "${text_cyan}Installed versions:${text_reset}"
 	/vagrant/bootstrap/check-versions.sh
 
-	NOW=$(date +%s)
-	DIFF=$(echo "$NOW-$BEGIN" | bc)
-	MINS=$(echo "$DIFF/60" | bc)
-	SECS=$(echo "$DIFF%60" | bc)
-	echox "${text_cyan}Info:${text_reset} Bootstrap lasted $MINS mins and $SECS secs"
-
 	echox "${text_cyan}Clean up"
 	/vagrant/bootstrap/cleanup.sh
 
 	echox "${text_cyan}Zero disk"
 	/vagrant/bootstrap/zerodisk.sh
+
+	NOW=$(date +%s)
+	DIFF=$(echo "$NOW-$BEGIN" | bc)
+	MINS=$(echo "$DIFF/60" | bc)
+	SECS=$(echo "$DIFF%60" | bc)
+	echox "${text_cyan}Info:${text_reset} Bootstrap ended at $(date +'%Y-%m-%d % H:%M:%S %Z')"
+	echox "${text_cyan}Info:${text_reset} Bootstrap lasted $MINS mins and $SECS secs"
 )
 catch || {
 	case $ex_code in
