@@ -18,7 +18,6 @@ dd if=/dev/zero of="$swappart" bs=1M || echo "dd exit code $? is suppressed"
 echo "Nullify system free space"
 dd if=/dev/zero of=/EMPTY bs=1M
 rm -f /EMPTY
-sleep 1s
 dd if=/dev/zero of=/EMPTY bs=1M
 rm -f /EMPTY
 
