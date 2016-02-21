@@ -10,7 +10,7 @@ This project aims to give you the necessary tools to build yourself the Neap Box
 
 ## About
 
-**Version:** 1.1.3  
+**Version:** 1.2.0  
 **Web:** Coming later, [box.neap.io](http://box.neap.io)  
 **Project Owner:** Michaël "[e7d](https://github.com/e7d)" Ferrand
 
@@ -52,7 +52,7 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
 * [Debian](https://www.debian.org/) Jessie 8.3, as operating system, with:
     * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.0.14
 * [Let's Encrypt](https://letsencrypt.org/) 0.4.0, as SSL certificate generator
-* [nginx](http://nginx.org/) 1.9.10, as web server, with:
+* [nginx](http://nginx.org/) 1.9.11, as web server, with:
     * [OpenSSL](https://www.openssl.org/) 1.0.2f, as SSL module
     * [nginx-rtmp-module](https://github.com/sergey-dryabzhinsky/nginx-rtmp-module) 1.1.7, as streaming handler (RTMP, HLS and DASH protocols)
 * [Redis](http://redis.io/) 3.0.7, as data structure store
@@ -62,7 +62,7 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
     * [Xdebug](http://xdebug.org/) 2.4.0RC4, as debugger and profiler tool
     * [Composer](https://getcomposer.org/) 1.0-dev, as dependency manager
 * [PostgreSQL](http://www.postgresql.org/) 9.5.1, as database system
-* [Mailcatcher](http://mailcatcher.me/) 0.6.4 as mail catching server
+* [MailCatcher](http://mailcatcher.me/) 0.6.4 as mail catching server
 * [NPM](https://www.npmjs.com/) 3.7.2, as JavaScript package Manager
 * [FFmpeg](https://www.ffmpeg.org/) 2.8.6, as media converter
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.1, as IRC server daemon, with:
