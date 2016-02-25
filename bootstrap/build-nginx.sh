@@ -9,7 +9,7 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
-NGINX_VERSION=1.9.11 # http://nginx.org/en/download.html
+NGINX_VERSION=1.9.12 # http://nginx.org/en/download.html
 OPENSSL_VERSION=1.0.2f # http://www.linuxfromscratch.org/blfs/view/svn/postlfs/openssl.html
 NGINX_RTMP_VERSION=1.1.7 # https://github.com/arut/nginx-rtmp-module/releases
 
