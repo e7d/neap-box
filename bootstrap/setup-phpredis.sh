@@ -42,7 +42,7 @@ try
 	echo >>/etc/php/7.0/fpm/php.ini
 	echo '[redis]' >>/etc/php/7.0/fpm/php.ini
 	echo 'session.save_handler = redis' >>/etc/php/7.0/fpm/php.ini
-	echo 'session.save_path = "tcp://127.0.0.1:6379" ' >>/etc/php/7.0/fpm/php.ini
+	echo 'session.save_path = "tcp://127.0.0.1:6379"' >>/etc/php/7.0/fpm/php.ini
 
 	echo "Restart service"
 	service redis restart
