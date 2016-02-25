@@ -25,8 +25,8 @@ try
 	echox "${text_cyan}Setup Let's Encrypt"
 	/vagrant/bootstrap/setup-letsencrypt.sh
 
-	echox "${text_cyan}Generate certificates"
-	/vagrant/bootstrap/generate-certificates.sh
+	echox "${text_cyan}Setup certificates"
+	/vagrant/bootstrap/setup-certificates.sh
 
 	echox "${text_cyan}Build nginx"
 	/vagrant/bootstrap/build-nginx.sh

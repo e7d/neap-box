@@ -23,10 +23,9 @@ try
 		echo "skipped..."
 	fi
 
-	echo "Generate dhparam file"
+	echo "Copy dhparam file"
 	if [ ! -f /etc/ssl/private/dhparam.pem ]; then
-		openssl dhparam -out /etc/ssl/private/dhparam.pem 2048 >/tmp/openssl.log 2>&1
-		cat /tmp/openssl.log
+		cp /vagrant/resources/ssl/private/dhparam.pem /etc/ssl/private
 	else
 		echo "skipped..."
 	fi
