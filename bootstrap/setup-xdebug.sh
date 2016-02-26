@@ -17,11 +17,11 @@ try
 
 	echo "Download sources"
 	cd /usr/src
-	wget https://github.com/xdebug/xdebug/archive/${XDEBUG_TAG}.tar.gz
-	tar -zxvf ${XDEBUG_TAG}.tar.gz
+	git clone https://github.com/xdebug/xdebug.git
+	cd xdebug
+	git checkout tags/${XDEBUG_TAG}
 
 	echo "Build library"
-	cd xdebug*
 	phpize
 	./configure --enable-xdebug
 	make

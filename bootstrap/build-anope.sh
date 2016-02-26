@@ -17,12 +17,8 @@ try
 
 	echo "Download sources"
 	cd /usr/src
-	if [ ! -f /usr/src/anope-${ANOPE_VERSION}-source.tar.gz ]; then
-		wget https://github.com/anope/anope/releases/download/${ANOPE_VERSION}/anope-${ANOPE_VERSION}-source.tar.gz
-		tar xzvf anope-${ANOPE_VERSION}-source.tar.gz
-	else
-		echo "skipped..."
-	fi
+	wget https://github.com/anope/anope/releases/download/${ANOPE_VERSION}/anope-${ANOPE_VERSION}-source.tar.gz
+	tar -zxvf anope-${ANOPE_VERSION}-source.tar.gz
 	cd anope*
 
 	echo "Build Anope"
@@ -45,6 +41,9 @@ try
 	systemctl unmask anope
 	systemctl enable anope
 	systemctl daemon-reload
+
+	echo "Remove temporary files"
+	rm -fr /usr/src/anope*
 )
 catch || {
 	case $ex_code in
