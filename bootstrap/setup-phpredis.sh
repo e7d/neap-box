@@ -19,7 +19,7 @@ try
 
 	echo "Build library"
 	cd phpredis
-	git checkout php7
+	git checkout php7-ipv6
 	phpize
 	./configure
 	make
