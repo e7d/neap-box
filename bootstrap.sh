@@ -17,6 +17,8 @@ try
 (
 	throwErrors
 
+	/vagrant/resources/stats.sh bootstrap start
+
 	echox "${text_cyan}Info:${text_reset} Bootstrap started at $(date +'%Y-%m-%d %H:%M:%S %Z')"
 
 	echox "${text_cyan}Prepare Debian environment"
@@ -79,8 +81,12 @@ try
 	SECS=$(echo "$DIFF%60" | bc)
 	echox "${text_cyan}Info:${text_reset} Bootstrap ended at $(date +'%Y-%m-%d %H:%M:%S %Z')"
 	echox "${text_cyan}Info:${text_reset} Bootstrap lasted $MINS mins and $SECS secs"
+
+	/vagrant/resources/stats.sh bootstrap success $DIFF
 )
 catch || {
+	/vagrant/resources/stats.sh bootstrap fail
+
 	case $ex_code in
 		*)
 			echox "${text_red}Error:${text_reset} Bootstrap was aborted!"
