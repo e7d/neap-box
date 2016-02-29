@@ -17,7 +17,7 @@ try
 (
 	throwErrors
 
-	/vagrant/resources/stats.sh bootstrap start
+	/vagrant/resources/analytics.sh -t=event -ec=bootstrap -ea=start
 
 	echox "${text_cyan}Info:${text_reset} Bootstrap started at $(date +'%Y-%m-%d %H:%M:%S %Z')"
 
@@ -82,10 +82,11 @@ try
 	echox "${text_cyan}Info:${text_reset} Bootstrap ended at $(date +'%Y-%m-%d %H:%M:%S %Z')"
 	echox "${text_cyan}Info:${text_reset} Bootstrap lasted $MINS mins and $SECS secs"
 
-	/vagrant/resources/stats.sh bootstrap success $DIFF
+	/vagrant/resources/analytics.sh -t=event -ec=bootstrap -ea=success
+	/vagrant/resources/analytics.sh -t=timing -utc=bootstrap -utv=duration -utt=$DIFF
 )
 catch || {
-	/vagrant/resources/stats.sh bootstrap fail
+	/vagrant/resources/analytics.sh -t=event -ec=bootstrap -ea=fail
 
 	case $ex_code in
 		*)
