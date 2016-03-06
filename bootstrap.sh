@@ -83,7 +83,7 @@ try
 	echox "${text_cyan}Info:${text_reset} Bootstrap lasted $MINS mins and $SECS secs"
 
 	/vagrant/resources/analytics.sh -t=event -ec=bootstrap -ea=success
-	/vagrant/resources/analytics.sh -t=timing -utc=bootstrap -utv=duration -utt=$DIFF
+	/vagrant/resources/analytics.sh -t=timing -utc=bootstrap -utv=duration -utt=$DIFF"000"
 )
 catch || {
 	/vagrant/resources/analytics.sh -t=event -ec=bootstrap -ea=fail
