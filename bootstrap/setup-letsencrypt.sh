@@ -10,18 +10,23 @@ if [ 0 != $(id -u) ]; then
 fi
 
 LETS_ENCRYPT_SRC=/etc/letsencrypt/src
+LETS_ENCRYPT_TAG=v0.4.0
 
 try
 (
 	throwErrors
 
 	echo "Download source code"
-	mkdir -p ${LETS_ENCRYPT_SRC}
+	rm -rf ${LETS_ENCRYPT_SRC}
 	git clone https://github.com/letsencrypt/letsencrypt ${LETS_ENCRYPT_SRC}
 	cd ${LETS_ENCRYPT_SRC}
+	git checkout tags/${LETS_ENCRYPT_TAG}
 
 	echo "Link executable"
 	ln -sf ${LETS_ENCRYPT_SRC}/letsencrypt-auto /usr/bin/letsencrypt
+
+	echo "Remove useless git files"
+	rm -rf ${LETS_ENCRYPT_SRC}/.git/
 )
 catch || {
 case $ex_code in

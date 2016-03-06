@@ -32,28 +32,33 @@ try
 	make install clean
 
 	echo "Add redis user"
-	useradd -s /bin/false -d /var/lib/redis -M redis
+	ignoreErrors
+	id -u "redis" >/dev/null 2>&1
+	if [ $? -eq 1 ]; then
+		useradd -s /bin/false -d /var/lib/redis -M -U redis
+	fi
+	throwErrors
 
 	echo "Prepare folders"
-	mkdir -p /var/run/redis/ &&
-	chown redis:redis /var/run/redis
-	mkdir -p /var/log/redis/ &&
-	chown -cR redis:redis /var/log/redis/
 	mkdir -p /etc/redis
-	chown -cR redis:redis /etc/redis
+	mkdir -p /var/redis/
+	mkdir -p /var/log/redis/
+	mkdir -p /var/run/redis/
 
 	echo "Prepare configuration"
 	cp redis.conf /etc/redis/redis.conf.default
 	cp /vagrant/resources/redis/conf/6379.conf /etc/redis/6379.conf
-	chown -cR redis:redis /etc/redis
 
 	echo "Copy service script"
 	cp /vagrant/resources/redis/bin/redis /etc/init.d/redis
 
 	echo "Fix permissions"
-	chown -cR redis.redis /etc/redis
-	chown -c redis.redis /etc/init.d/redis
+	chown -c redis:redis /etc/init.d/redis
 	chmod -c +x /etc/init.d/redis
+	chown -cR redis:redis /etc/redis
+	chown -cR redis:redis /var/log/redis
+	chown -cR redis:redis /var/redis
+	chown -cR redis:redis /var/run/redis
 
 	echo "Register service script"
 	systemctl unmask redis

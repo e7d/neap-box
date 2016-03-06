@@ -22,14 +22,11 @@ try
 	apt-get -y -q update
 	apt-get -y -q -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
 	apt-get -y -q dist-upgrade
-	apt-get -y install facter linux-headers-$(uname -r) >/dev/null
-
-	echo "Install standard packages"
-	apt-get -y -q install curl git pkg-config unzip
+	apt-get -y -q upgrade
 
 	echo "Install prerequisite packages"
-	apt-get -y -q install build-essential cmake gcc g++ libcurl4-openssl-dev libpcre++-dev \
-	              libpcre3-dev libreadline-gplv2-dev libssl-dev make zlib1g-dev
+	apt-get -y -q install build-essential cmake curl facter g++ gcc git libcurl4-openssl-dev libpcre++-dev \
+	              libpcre3-dev libreadline-gplv2-dev libssl-dev make pkg-config unzip zlib1g-dev
 
 	echo "Tweak SSH daemon"
 	echo 'UseDNS no' >>/etc/ssh/sshd_config

@@ -17,6 +17,8 @@ try
 (
 	throwErrors
 
+	/vagrant/resources/analytics.sh -t=event -ec=bootstrap -ea=start
+
 	echox "${text_cyan}Info:${text_reset} Bootstrap started at $(date +'%Y-%m-%d %H:%M:%S %Z')"
 
 	echox "${text_cyan}Prepare Debian environment"
@@ -25,8 +27,8 @@ try
 	echox "${text_cyan}Setup Let's Encrypt"
 	/vagrant/bootstrap/setup-letsencrypt.sh
 
-	echox "${text_cyan}Generate certificates"
-	/vagrant/bootstrap/generate-certificates.sh
+	echox "${text_cyan}Setup certificates"
+	/vagrant/bootstrap/setup-certificates.sh
 
 	echox "${text_cyan}Build nginx"
 	/vagrant/bootstrap/build-nginx.sh
@@ -79,8 +81,13 @@ try
 	SECS=$(echo "$DIFF%60" | bc)
 	echox "${text_cyan}Info:${text_reset} Bootstrap ended at $(date +'%Y-%m-%d %H:%M:%S %Z')"
 	echox "${text_cyan}Info:${text_reset} Bootstrap lasted $MINS mins and $SECS secs"
+
+	/vagrant/resources/analytics.sh -t=event -ec=bootstrap -ea=success
+	/vagrant/resources/analytics.sh -t=timing -utc=bootstrap -utv=duration -utt=$DIFF"000"
 )
 catch || {
+	/vagrant/resources/analytics.sh -t=event -ec=bootstrap -ea=fail
+
 	case $ex_code in
 		*)
 			echox "${text_red}Error:${text_reset} Bootstrap was aborted!"

@@ -22,7 +22,7 @@ try
 	cd /usr/src
 	if [ ! -f /usr/src/unreal*.tar.gz ]; then
 		wget --no-check-certificate --trust-server-names https://www.unrealircd.org/unrealircd4/unrealircd-${UNREAL_VERSION}.tar.gz
-		tar xzvf unrealircd-*.tar.gz
+		tar -zxvf unrealircd-*.tar.gz
 	else
 		echo "skipped..."
 	fi
@@ -49,6 +49,9 @@ try
 	systemctl unmask unrealircd
 	systemctl enable unrealircd
 	systemctl daemon-reload
+
+	echo "Remove temporary files"
+	rm -fr /usr/src/unreal*
 )
 catch || {
 	case $ex_code in

@@ -9,8 +9,8 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
-NGINX_VERSION=1.9.11 # http://nginx.org/en/download.html
-OPENSSL_VERSION=1.0.2f # http://www.linuxfromscratch.org/blfs/view/svn/postlfs/openssl.html
+NGINX_VERSION=1.9.12 # http://nginx.org/en/download.html
+OPENSSL_VERSION=1.0.2g # https://openssl.org/source/
 NGINX_RTMP_VERSION=1.1.7 # https://github.com/arut/nginx-rtmp-module/releases
 
 try
@@ -22,27 +22,18 @@ try
 
 	echo "Download source code"
 	cd /usr/src
-	if [ ! -f /usr/src/nginx-${NGINX_VERSION}.tar.gz ]; then
-		wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
-		tar -zxvf nginx-${NGINX_VERSION}.tar.gz
-	else
-		echo "skipped..."
-	fi
+	wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
+	tar -zxvf nginx-${NGINX_VERSION}.tar.gz
 
 	echo "Download OpenSSL source code"
 	cd /usr/src
 	wget https://openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz
-	tar -xvzf openssl-${OPENSSL_VERSION}.tar.gz
+	tar -zxvf openssl-${OPENSSL_VERSION}.tar.gz
 
 	echo "Download nginx-rtmp-module source code"
 	cd /usr/src
-	if [ ! -d /usr/src/nginx-rtmp-module-${NGINX_RTMP_VERSION} ]; then
-		# use a fork from https://github.com/arut/nginx-rtmp-module.git
-		wget https://github.com/arut/nginx-rtmp-module/archive/v${NGINX_RTMP_VERSION}.tar.gz -O nginx-rtmp-module-${NGINX_RTMP_VERSION}.tar.gz
-		tar -zxvf nginx-rtmp-module-${NGINX_RTMP_VERSION}.tar.gz
-	else
-		echo "skipped..."
-	fi
+	wget https://github.com/arut/nginx-rtmp-module/archive/v${NGINX_RTMP_VERSION}.tar.gz -O nginx-rtmp-module-${NGINX_RTMP_VERSION}.tar.gz
+	tar -zxvf nginx-rtmp-module-${NGINX_RTMP_VERSION}.tar.gz
 
 	echo "Build binaries"
 	cd /usr/src/nginx-${NGINX_VERSION}
@@ -95,6 +86,9 @@ try
 
 	echo "Restart service"
 	service nginx start
+
+	echo "Remove temporary files"
+	rm -fr /usr/src/nginx*
 )
 catch || {
 	case $ex_code in

@@ -16,6 +16,7 @@ try
 	echo "Install binary"
 	curl -sS https://getcomposer.org/installer | php
 	mv composer.phar /usr/local/bin/composer
+	composer self-update
 )
 catch || {
 	case $ex_code in

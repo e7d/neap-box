@@ -9,6 +9,8 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
+XDEBUG_TAG=XDEBUG_2_4_0RC4 # https://github.com/xdebug/xdebug/releases
+
 try
 (
 	throwErrors
@@ -16,9 +18,10 @@ try
 	echo "Download sources"
 	cd /usr/src
 	git clone https://github.com/xdebug/xdebug.git
+	cd xdebug
+	git checkout tags/${XDEBUG_TAG}
 
 	echo "Build library"
-	cd xdebug
 	phpize
 	./configure --enable-xdebug
 	make

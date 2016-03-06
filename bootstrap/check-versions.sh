@@ -29,10 +29,10 @@ echo "* nginx-rtmp-module: $NGINX_RTMP"
 REDIS=$(echo `redis-server -v` | sed 's/Redis server v=\([^ ]*\).*/\1/')
 echo "Redis: $REDIS"
 
-PHP=$(echo `php -v` | sed 's/PHP \([^~]*\).*/\1/')
+PHP=$(echo `php -v` | sed 's/PHP \([^-]*\).*/\1/')
 echo "PHP: $PHP, with:"
 
-PHPFPM=$(echo `php-fpm7.0 -v` | sed 's/PHP \([^~]*\).*/\1/')
+PHPFPM=$(echo `php-fpm7.0 -v` | sed 's/PHP \([^-]*\).*/\1/')
 echo "* PHP-FPM: $PHPFPM"
 
 PHPREDIS=$(echo `php -i | grep "Redis Version"` | sed 's/Redis Version => \(.*\)/\1/')
