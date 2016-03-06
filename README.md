@@ -10,7 +10,7 @@ This project aims to give you the necessary tools to build yourself the Neap Box
 
 ## About
 
-**Version:** 1.2.0  
+**Version:** 1.2.1  
 **Web:** Coming later, [box.neap.io](http://box.neap.io)  
 **Project Owner:** Michaël "[e7d](https://github.com/e7d)" Ferrand
 
@@ -53,7 +53,7 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
     * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.0.14
 * [Let's Encrypt](https://letsencrypt.org/) 0.4.0, as SSL certificate generator
 * [nginx](http://nginx.org/) 1.9.12, as web server, with:
-    * [OpenSSL](https://www.openssl.org/) 1.0.2f, as SSL module
+    * [OpenSSL](https://www.openssl.org/) 1.0.2g, as SSL module
     * [nginx-rtmp-module](https://github.com/sergey-dryabzhinsky/nginx-rtmp-module) 1.1.7, as streaming handler (RTMP, HLS and DASH protocols)
 * [Redis](http://redis.io/) 3.0.7, as data structure store
 * [PHP](http://php.net/) 7.0.3, as server-side scripting language, with:
