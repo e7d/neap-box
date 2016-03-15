@@ -9,8 +9,8 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
-LETS_ENCRYPT_SRC=/etc/letsencrypt/src
-LETS_ENCRYPT_TAG=v0.4.0
+LETS_ENCRYPT_SRC=/opt/letsencrypt
+LETS_ENCRYPT_TAG=v0.4.2
 
 try
 (
