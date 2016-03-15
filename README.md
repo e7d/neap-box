@@ -63,7 +63,7 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
     * [Composer](https://getcomposer.org/) 1.0-dev, as dependency manager
 * [PostgreSQL](http://www.postgresql.org/) 9.5.1, as database system
 * [MailCatcher](http://mailcatcher.me/) 0.6.4 as mail catching server
-* [NPM](https://www.npmjs.com/) 3.7.2, as JavaScript package Manager
+* [NPM](https://www.npmjs.com/) 3.8.0, as JavaScript package Manager
 * [FFmpeg](https://www.ffmpeg.org/) 2.8.6, as media converter
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.1, as IRC server daemon, with:
     * [Anope](https://www.anope.org/) 2.0.3, as IRC services daemon
