@@ -61,12 +61,12 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
 * [Redis](http://redis.io/) 3.0.7, as data structure store
 * [PHP](http://php.net/) 7.0.4, as server-side scripting language, with:
     * [PHP-FPM](http://php-fpm.org/) 7.0.4, as PHP process manager
-    * [PhpRedis](https://github.com/phpredis/phpredis) 2.2.8-devphp7, as PHP extension for Redis
-    * [Xdebug](http://xdebug.org/) 2.4.0, as debugger and profiler tool
+    * [PhpRedis](https://github.com/phpredis/phpredis) 2.2.5, as PHP extension for Redis
+    * [Xdebug](http://xdebug.org/) 2.4.0RC4, as debugger and profiler tool
     * [Composer](https://getcomposer.org/) 1.0-dev, as dependency manager
 * [PostgreSQL](http://www.postgresql.org/) 9.5.1, as database system
 * [MailCatcher](http://mailcatcher.me/) 0.6.4 as mail catching server
-* [NPM](https://www.npmjs.com/) 3.8.0, as JavaScript package Manager
+* [NPM](https://www.npmjs.com/) 3.8.1, as JavaScript package Manager
 * [FFmpeg](https://www.ffmpeg.org/) 2.8.6, as media converter
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.1, as IRC server daemon, with:
     * [Anope](https://www.anope.org/) 2.0.3, as IRC services daemon
