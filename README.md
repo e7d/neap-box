@@ -59,7 +59,7 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
 * [PHP](http://php.net/) 7.0.4, as server-side scripting language, with:
     * [PHP-FPM](http://php-fpm.org/) 7.0.4, as PHP process manager
     * [PhpRedis](https://github.com/phpredis/phpredis) 2.2.8-devphp7, as PHP extension for Redis
-    * [Xdebug](http://xdebug.org/) 2.4.0RC4, as debugger and profiler tool
+    * [Xdebug](http://xdebug.org/) 2.4.0, as debugger and profiler tool
     * [Composer](https://getcomposer.org/) 1.0-dev, as dependency manager
 * [PostgreSQL](http://www.postgresql.org/) 9.5.1, as database system
 * [MailCatcher](http://mailcatcher.me/) 0.6.4 as mail catching server
