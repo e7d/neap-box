@@ -8,56 +8,58 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
+echo "Neap Box"
+
 DEBIAN=$(cat /etc/debian_version)
-echo "Debian: $DEBIAN, with:"
+echo "└─┬ Debian: $DEBIAN"
 
 VBOXGUESTADDITIONS=$(echo `modinfo vboxguest` | sed 's/.*\bversion: \([^ ]*\).*/\1/')
-echo "* VirtualBox Guest Additions: $VBOXGUESTADDITIONS"
+echo "  ├── VirtualBox Guest Additions: $VBOXGUESTADDITIONS"
 
 LETSENCRYPT=$(echo `letsencrypt --version 2>&1` | sed 's/.*letsencrypt \(.*\)/\1/')
-echo "Let's Encrypt: $LETSENCRYPT"
+echo "  ├── Let's Encrypt: $LETSENCRYPT"
 
 NGINX=$(echo `nginx -v 2>&1` | sed 's/.*nginx\/\(.*\)/\1/')
-echo "nginx: $NGINX, with:"
+echo "  ├─┬ nginx: $NGINX"
 
 OPENSSL=$(echo `nginx -V 2>&1` | sed 's/.*openssl-\([^ ]*\).*/\1/')
-echo "* OpenSSL: $OPENSSL"
+echo "  │ ├── OpenSSL: $OPENSSL"
 
 NGINX_RTMP=$(echo `nginx -V 2>&1` | sed 's/.*nginx-rtmp-module-\(.*\)/\1/')
-echo "* nginx-rtmp-module: $NGINX_RTMP"
+echo "  │ └── nginx-rtmp-module: $NGINX_RTMP"
 
 REDIS=$(echo `redis-server -v` | sed 's/Redis server v=\([^ ]*\).*/\1/')
-echo "Redis: $REDIS"
+echo "  ├── Redis: $REDIS"
 
 PHP=$(echo `php -v` | sed 's/PHP \([^-]*\).*/\1/')
-echo "PHP: $PHP, with:"
+echo "  ├─┬ PHP: $PHP"
 
 PHPFPM=$(echo `php-fpm7.0 -v` | sed 's/PHP \([^-]*\).*/\1/')
-echo "* PHP-FPM: $PHPFPM"
+echo "  │ ├── PHP-FPM: $PHPFPM"
 
 PHPREDIS=$(echo `php -i | grep "Redis Version"` | sed 's/Redis Version => \(.*\)/\1/')
-echo "* PhpRedis: $PHPREDIS"
+echo "  │ ├── PhpRedis: $PHPREDIS"
 
 XDEBUG=$(echo `php -v` | sed 's/.*Xdebug v\([^,]*\).*/\1/')
-echo "* Xdebug: $XDEBUG"
+echo "  │ ├── Xdebug: $XDEBUG"
 
 COMPOSER=$(echo `composer 2>&1` | sed 's/.*Composer version \([^ ]*\).*/\1/')
-echo "* Composer: $COMPOSER"
+echo "  │ └── Composer: $COMPOSER"
 
 POSTGRESQL=$(echo `psql -V` | sed 's/psql (PostgreSQL) \(.*\)/\1/')
-echo "PostgreSQL: $POSTGRESQL"
+echo "  ├── PostgreSQL: $POSTGRESQL"
 
 MAILCATCHER=$(echo `gem list | grep mailcatcher` | sed -r 's/mailcatcher \((.*)\)/\1/')
-echo "MailCatcher: $MAILCATCHER"
+echo "  ├── MailCatcher: $MAILCATCHER"
 
 NPM=$(npm -v)
-echo "NPM: $NPM"
+echo "  ├── NPM: $NPM"
 
 FFMPEG=$(echo `ffmpeg -version` | sed 's/.*ffmpeg version \([^ ]*\).*/\1/')
-echo "FFmpeg: $FFMPEG"
+echo "  ├── FFmpeg: $FFMPEG"
 
 UNREALIRCD=$(echo `sudo -u irc /etc/unrealircd/bin/unrealircd -v 2>&1` | sed 's/.*UnrealIRCd-\([^ ]*\).*/\1/')
-echo "UnrealIRCd: $UNREALIRCD, with:"
+echo "  └─┬ UnrealIRCd: $UNREALIRCD"
 
 ANOPE=$(echo `/etc/anope/bin/services -v` | sed 's/Anope-\([^ ]*\).*/\1/')
-echo "* Anope: $ANOPE"
+echo "    └── Anope: $ANOPE"
