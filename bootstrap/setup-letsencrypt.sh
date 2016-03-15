@@ -9,8 +9,8 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
-LETS_ENCRYPT_SRC=/etc/letsencrypt/src
-LETS_ENCRYPT_TAG=v0.4.0
+LETS_ENCRYPT_SRC=/opt/letsencrypt
+LETS_ENCRYPT_TAG=v0.4.2
 
 try
 (
@@ -24,6 +24,9 @@ try
 
 	echo "Link executable"
 	ln -sf ${LETS_ENCRYPT_SRC}/letsencrypt-auto /usr/bin/letsencrypt
+
+	echo "Prepare first time launch"
+	/usr/bin/letsencrypt --version 2>&1 /dev/null
 
 	echo "Remove useless git files"
 	rm -rf ${LETS_ENCRYPT_SRC}/.git/

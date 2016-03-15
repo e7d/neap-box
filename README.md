@@ -5,8 +5,9 @@ A Vagrant box for [Neap](https://github.com/e7d/neap) development.
 ## Read me first
 
 This project aims to give you the necessary tools to build yourself the Neap Box.  
-**Note:** If you want to directly use the Neap Box, you will never have to build it yourself! Instead, get it from [releases](./releases) or [Atlas](https://atlas.hashicorp.com/) by [Hashicorp](https://hashicorp.com/):
-* [Neap Box](https://atlas.hashicorp.com/e7d/boxes/neap-box)
+**Note:** If you only intend to use the Neap Box, you will never have to build it yourself! Instead, get it from:
+* [GitHub releases](./releases)
+* [Atlas by HashiCorp](https://atlas.hashicorp.com/e7d/boxes/neap-box)
 
 ## About
 
@@ -35,9 +36,11 @@ In order to build the Neap Box effectively, you'll need to have a few tools inst
 ## Build ##
 
 1. `git clone https://github.com/e7d/neap-box.git` to clone the latest version
-1. Change into the directory `neap-box`
-1. Run `vagrant up`
-1. Run `vagrant package --output neap.box`
+2. Change into the directory `neap-box`
+3. Run `vagrant up`
+4. Run `vagrant package --output neap.box`
+
+**Note**: Steps 3. and 4. can be replaced with a call to `build.sh` on bash available environments.
 
 ## What you get ##
 
@@ -59,11 +62,11 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
 * [PHP](http://php.net/) 7.0.4, as server-side scripting language, with:
     * [PHP-FPM](http://php-fpm.org/) 7.0.4, as PHP process manager
     * [PhpRedis](https://github.com/phpredis/phpredis) 2.2.8-devphp7, as PHP extension for Redis
-    * [Xdebug](http://xdebug.org/) 2.4.0, as debugger and profiler tool
+    * [Xdebug](http://xdebug.org/) 2.4.0RC4, as debugger and profiler tool
     * [Composer](https://getcomposer.org/) 1.0-dev, as dependency manager
 * [PostgreSQL](http://www.postgresql.org/) 9.5.1, as database system
 * [MailCatcher](http://mailcatcher.me/) 0.6.4 as mail catching server
-* [NPM](https://www.npmjs.com/) 3.8.0, as JavaScript package Manager
+* [NPM](https://www.npmjs.com/) 3.8.1, as JavaScript package Manager
 * [FFmpeg](https://www.ffmpeg.org/) 2.8.6, as media converter
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.1, as IRC server daemon, with:
     * [Anope](https://www.anope.org/) 2.0.3, as IRC services daemon
