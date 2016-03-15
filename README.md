@@ -36,9 +36,11 @@ In order to build the Neap Box effectively, you'll need to have a few tools inst
 ## Build ##
 
 1. `git clone https://github.com/e7d/neap-box.git` to clone the latest version
-1. Change into the directory `neap-box`
-1. Run `vagrant up`
-1. Run `vagrant package --output neap.box`
+2. Change into the directory `neap-box`
+3. Run `vagrant up`
+4. Run `vagrant package --output neap.box`
+
+**Note**: Steps 3. and 4. can be replaced with a call to `build.sh` on bash available environments.
 
 ## What you get ##
 
