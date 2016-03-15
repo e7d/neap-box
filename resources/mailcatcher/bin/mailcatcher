@@ -18,7 +18,7 @@ DESC=mailcatcher
 DAEMON="/usr/local/bin/mailcatcher"
 DAEMON_OPTS="--foreground --http-ip=$IP --smtp-port=$SMTP_PORT --http-port=$HTTP_PORT"
 RUNAS=mail:mail
-PID=/var/run/mailcatcher.pid
+PID=/run/mailcatcher.pid
 
 STOP_SCHEDULE="${STOP_SCHEDULE:-QUIT/5/TERM/5/KILL/5}"
 

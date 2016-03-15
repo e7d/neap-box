@@ -43,7 +43,7 @@ try
 	mkdir -p /etc/redis
 	mkdir -p /var/redis/
 	mkdir -p /var/log/redis/
-	mkdir -p /var/run/redis/
+	mkdir -p /run/redis/
 
 	echo "Prepare configuration"
 	cp redis.conf /etc/redis/redis.conf.default
@@ -58,7 +58,7 @@ try
 	chown -cR redis:redis /etc/redis
 	chown -cR redis:redis /var/log/redis
 	chown -cR redis:redis /var/redis
-	chown -cR redis:redis /var/run/redis
+	chown -cR redis:redis /run/redis
 
 	echo "Register service script"
 	systemctl unmask redis

@@ -2,7 +2,7 @@
 
 EXEC=/usr/local/bin/redis-server
 CLIEXEC=/usr/local/bin/redis-cli
-PIDFILE=/var/run/redis/6379.pid
+PIDFILE=/run/redis/6379.pid
 CONF="/etc/redis/6379.conf"
 REDISPORT="6379"
 RUNAS=redis
