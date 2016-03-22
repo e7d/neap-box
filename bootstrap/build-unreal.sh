@@ -29,7 +29,7 @@ try
 	cd unreal*
 
 	echo "Build binaries"
-	rm -fr /etc/unrealircd/
+	rm -rf /etc/unrealircd/
 	cp -R /vagrant/resources/unrealircd/src/* .
 	chmod +x config.settings
 	./config.settings
@@ -51,7 +51,7 @@ try
 	systemctl daemon-reload
 
 	echo "Remove temporary files"
-	rm -fr /usr/src/unreal*
+	rm -rf /usr/src/unreal*
 )
 catch || {
 	case $ex_code in

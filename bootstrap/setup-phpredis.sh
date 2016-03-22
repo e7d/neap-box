@@ -51,7 +51,7 @@ try
 	service php7.0-fpm restart
 
 	echo "Remove temporary files"
-	rm -fr /usr/src/phpredis
+	rm -rf /usr/src/phpredis
 )
 catch || {
 case $ex_code in

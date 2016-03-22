@@ -40,7 +40,7 @@ try
 	service php7.0-fpm restart
 
 	echo "Remove temporary files"
-	rm -fr /usr/src/xdebug
+	rm -rf /usr/src/xdebug
 )
 catch || {
 case $ex_code in

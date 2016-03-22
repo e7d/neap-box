@@ -22,7 +22,7 @@ try
 	cd anope*
 
 	echo "Build Anope"
-	rm -fr /etc/anope/
+	rm -rf /etc/anope/
 	cp -R /vagrant/resources/anope/src/* .
 	./Config -nointro -quick
 	cd build
@@ -43,7 +43,7 @@ try
 	systemctl daemon-reload
 
 	echo "Remove temporary files"
-	rm -fr /usr/src/anope*
+	rm -rf /usr/src/anope*
 )
 catch || {
 	case $ex_code in
