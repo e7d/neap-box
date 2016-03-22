@@ -9,7 +9,7 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
-XDEBUG_TAG=XDEBUG_2_4_0RC4 # https://github.com/xdebug/xdebug/releases
+XDEBUG_TAG=XDEBUG_2_4_0 # https://github.com/xdebug/xdebug/releases
 
 try
 (
