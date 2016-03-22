@@ -66,14 +66,14 @@ try
 	echox "${text_cyan}Build Anope"
 	/vagrant/bootstrap/build-anope.sh
 
-	echox "${text_cyan}Installed versions:${text_reset}"
-	/vagrant/bootstrap/check-versions.sh
-
 	echox "${text_cyan}Clean up"
 	/vagrant/bootstrap/cleanup.sh
 
 	echox "${text_cyan}Zero disk"
 	/vagrant/bootstrap/zerodisk.sh
+
+	echox "${text_cyan}Installed versions:${text_reset}"
+	/vagrant/bootstrap/check-versions.sh
 
 	NOW=$(date +%s)
 	DIFF=$(echo "$NOW-$BEGIN" | bc)
