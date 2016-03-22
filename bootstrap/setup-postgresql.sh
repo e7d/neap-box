@@ -19,7 +19,8 @@ try
     apt-get -y -q update
 
     echo "Install packages"
-    apt-get -y -q install postgresql-9.5 postgresql-client-9.5 postgresql-client-common postgresql-common postgresql-contrib-9.5
+    apt-get -y -q install postgresql-9.5 postgresql-client-9.5 postgresql-client-common postgresql-common \
+                          postgresql-contrib-9.5
 )
 catch || {
     case $ex_code in

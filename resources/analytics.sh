@@ -2,7 +2,7 @@
 
 . /vagrant/resources/colors.sh
 
-ANALYTICS=UA-66226242-6
+ANALYTICS=UA-66226242-7
 DOMAIN="box.neap.io"
 if [ ! -f ~/.analytics ]; then
 	cat /proc/sys/kernel/random/uuid > ~/.analytics

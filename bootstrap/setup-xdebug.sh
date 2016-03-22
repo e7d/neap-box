@@ -9,7 +9,7 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
-XDEBUG_TAG=XDEBUG_2_4_0RC4 # https://github.com/xdebug/xdebug/releases
+XDEBUG_TAG=XDEBUG_2_4_0 # https://github.com/xdebug/xdebug/releases
 
 try
 (
@@ -40,7 +40,7 @@ try
 	service php7.0-fpm restart
 
 	echo "Remove temporary files"
-	rm -fr /usr/src/xdebug
+	rm -rf /usr/src/xdebug
 )
 catch || {
 case $ex_code in

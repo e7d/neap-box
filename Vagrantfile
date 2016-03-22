@@ -25,7 +25,7 @@ Vagrant.configure(2) do |config|
 
         # Provisioning script
         node.vm.provision "shell" do |s|
-            s.inline = "/vagrant/bootstrap.sh | tee /vagrant/bootstrap.log"
+            s.inline = "/vagrant/bootstrap/bootstrap.sh | tee /vagrant/bootstrap/bootstrap.log"
             s.keep_color = true
         end
     end

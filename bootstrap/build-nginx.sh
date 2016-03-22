@@ -88,7 +88,7 @@ try
 	service nginx start
 
 	echo "Remove temporary files"
-	rm -fr /usr/src/nginx*
+	rm -rf /usr/src/nginx*
 )
 catch || {
 	case $ex_code in
