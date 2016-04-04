@@ -52,21 +52,21 @@ Neap box uses Vagrant's [shell provisioner](https://docs.vagrantup.com/v2/provis
 
 Once Vagrant is done provisioning the VM, you will have a box containing:
 
-* [Debian](https://www.debian.org/) Jessie 8.3, as operating system, with:
+* [Debian](https://www.debian.org/) Jessie 8.4, as operating system, with:
     * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.0.16
 * [Let's Encrypt](https://letsencrypt.org/) 0.4.2, as SSL certificate generator
-* [nginx](http://nginx.org/) 1.9.12, as web server, with:
+* [nginx](http://nginx.org/) 1.9.13, as web server, with:
     * [OpenSSL](https://www.openssl.org/) 1.0.2g, as SSL module
     * [nginx-rtmp-module](https://github.com/sergey-dryabzhinsky/nginx-rtmp-module) 1.1.7, as streaming handler (RTMP, HLS and DASH protocols)
 * [Redis](http://redis.io/) 3.0.7, as data structure store
-* [PHP](http://php.net/) 7.0.4, as server-side scripting language, with:
-    * [PHP-FPM](http://php-fpm.org/) 7.0.4, as PHP process manager
+* [PHP](http://php.net/) 7.0.5, as server-side scripting language, with:
+    * [PHP-FPM](http://php-fpm.org/) 7.054, as PHP process manager
     * [PhpRedis](https://github.com/phpredis/phpredis) 2.2.8-devphp7, as PHP extension for Redis
     * [Xdebug](http://xdebug.org/) 2.4.0, as debugger and profiler tool
-    * [Composer](https://getcomposer.org/) 1.0-dev, as dependency manager
-* [PostgreSQL](http://www.postgresql.org/) 9.5.1, as database system
+    * [Composer](https://getcomposer.org/) 1.0-beta2, as dependency manager
+* [PostgreSQL](http://www.postgresql.org/) 9.5.2, as database system
 * [MailCatcher](http://mailcatcher.me/) 0.6.4 as mail catching server
-* [NPM](https://www.npmjs.com/) 3.8.2, as JavaScript package Manager
+* [NPM](https://www.npmjs.com/) 3.8.5, as JavaScript package Manager
 * [FFmpeg](https://www.ffmpeg.org/) 2.8.6, as media converter
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.2, as IRC server daemon, with:
     * [Anope](https://www.anope.org/) 2.0.3, as IRC services daemon
