@@ -49,9 +49,6 @@ try
 	systemctl unmask unrealircd
 	systemctl enable unrealircd
 	systemctl daemon-reload
-
-	echo "Remove temporary files"
-	rm -rf /usr/src/unreal*
 )
 catch || {
 	case $ex_code in
@@ -61,3 +58,6 @@ catch || {
 		;;
 	esac
 }
+
+echo "Remove temporary files"
+rm -rf /usr/src/unreal*
