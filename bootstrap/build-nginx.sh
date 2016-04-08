@@ -86,9 +86,6 @@ try
 
 	echo "Restart service"
 	service nginx start
-
-	echo "Remove temporary files"
-	rm -rf /usr/src/nginx*
 )
 catch || {
 	case $ex_code in
@@ -98,3 +95,6 @@ catch || {
 		;;
 	esac
 }
+
+echo "Remove temporary files"
+rm -rf /usr/src/nginx*
