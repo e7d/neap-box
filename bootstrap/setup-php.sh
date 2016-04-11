@@ -26,6 +26,9 @@ try
 	echo "Remove unused additional packages"
 	apt-get -y -q autoremove --purge php5-*
 
+	echo "Disable OPcache"
+	sed -i 's/;\?opcache.enable=.\+/opcache.enable=0/g' /etc/php/7.0/fpm/php.ini
+
 	echo "Restart PHP-FPM service"
 	service php7.0-fpm restart
 )
