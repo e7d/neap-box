@@ -55,7 +55,7 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
 * [Debian](https://www.debian.org/) Jessie 8.4, as operating system, with:
     * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.0.16
 * [Let's Encrypt](https://letsencrypt.org/) 0.5.0, as SSL certificate generator
-* [nginx](http://nginx.org/) 1.9.13, as web server, with:
+* [nginx](http://nginx.org/) 1.9.14, as web server, with:
     * [OpenSSL](https://www.openssl.org/) 1.0.2g, as SSL module
     * [nginx-rtmp-module](https://github.com/sergey-dryabzhinsky/nginx-rtmp-module) 1.1.7, as streaming handler (RTMP, HLS and DASH protocols)
 * [Redis](http://redis.io/) 3.0.7, as data structure store
