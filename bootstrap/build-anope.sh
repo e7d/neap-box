@@ -41,9 +41,6 @@ try
 	systemctl unmask anope
 	systemctl enable anope
 	systemctl daemon-reload
-
-	echo "Remove temporary files"
-	rm -rf /usr/src/anope*
 )
 catch || {
 	case $ex_code in
@@ -53,3 +50,6 @@ catch || {
 		;;
 	esac
 }
+
+echo "Remove temporary files"
+rm -rf /usr/src/anope*
