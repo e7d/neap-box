@@ -17,6 +17,12 @@ try
 	curl -sS https://getcomposer.org/installer | php
 	mv composer.phar /usr/local/bin/composer
 	composer self-update
+
+	echo "Install global packages"
+	composer global require phpunit/phpunit
+
+	echo "Add vendor binaries to the path"
+	echo 'export PATH="$PATH:$HOME/.composer/vendor/bin"' >> /home/vagrant/.bashrc
 )
 catch || {
 	case $ex_code in
