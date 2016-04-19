@@ -8,7 +8,7 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
-NEAPBOX=1.2.2
+NEAPBOX=$(cat /etc/neap_box_version)
 DEBIAN=$(cat /etc/debian_version)
 VBOXGUESTADDITIONS=$(echo `modinfo vboxguest` | sed 's/.*\bversion: \([^ ]*\).*/\1/')
 LETSENCRYPT=$(echo `letsencrypt --version 2>&1` | sed 's/.*letsencrypt \(.*\)/\1/')

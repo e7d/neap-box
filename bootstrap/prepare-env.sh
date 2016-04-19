@@ -43,6 +43,9 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet"
 GRUB_CMDLINE_LINUX="debian-installer=en_US"
 EOF
 	update-grub
+
+	echo "Copy Neap version file"
+	cp /vagrant/resources/neap_box_version /etc/neap_box_version
 )
 catch || {
 	case $ex_code in
