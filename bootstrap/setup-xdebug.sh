@@ -38,9 +38,6 @@ try
 
 	echo "Restart PHP-FPM service"
 	service php7.0-fpm restart
-
-	echo "Remove temporary files"
-	rm -rf /usr/src/xdebug
 )
 catch || {
 case $ex_code in
@@ -50,3 +47,6 @@ case $ex_code in
 	;;
 esac
 }
+
+echo "Remove temporary files"
+rm -rf /usr/src/xdebug

@@ -9,7 +9,7 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
-UNREAL_VERSION=4.0.2 # https://www.unrealircd.org/download/4.0/
+UNREAL_VERSION=4.0.3 # https://www.unrealircd.org/download/4.0/
 
 try
 (
@@ -49,9 +49,6 @@ try
 	systemctl unmask unrealircd
 	systemctl enable unrealircd
 	systemctl daemon-reload
-
-	echo "Remove temporary files"
-	rm -rf /usr/src/unreal*
 )
 catch || {
 	case $ex_code in
@@ -61,3 +58,6 @@ catch || {
 		;;
 	esac
 }
+
+echo "Remove temporary files"
+rm -rf /usr/src/unreal*

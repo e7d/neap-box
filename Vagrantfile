@@ -6,7 +6,7 @@ Vagrant.configure(2) do |config|
         # General configuration
         node.vm.hostname = "neap-box"
         node.vm.box = "debian/contrib-jessie64"
-        node.vm.box_version = ">= 8.3"
+        node.vm.box_version = ">= 8.4"
 
         # Synced folder configuration
         node.vm.synced_folder ".", "/vagrant"
