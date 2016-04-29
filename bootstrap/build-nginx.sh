@@ -45,7 +45,7 @@ try
 	            --http-log-path=/var/log/nginx/access.log \
 	            --with-file-aio \
 	            --with-http_ssl_module \
-		    --with-openssl=/usr/src/openssl-${OPENSSL_VERSION} \
+	            --with-openssl=/usr/src/openssl-${OPENSSL_VERSION} \
 	            --with-http_v2_module \
 	            --with-http_realip_module \
 	            --with-http_addition_module \
@@ -98,3 +98,4 @@ catch || {
 
 echo "Remove temporary files"
 rm -rf /usr/src/nginx*
+rm -rf /usr/src/openssl*
