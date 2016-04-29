@@ -40,7 +40,7 @@ try
 	./configure --prefix=/var/www \
 	            --sbin-path=/usr/sbin/nginx \
 	            --conf-path=/etc/nginx/nginx.conf \
-	            --pid-path=/run/nginx.pid \
+	            --pid-path=/var/run/nginx.pid \
 	            --error-log-path=/var/log/nginx/error.log \
 	            --http-log-path=/var/log/nginx/access.log \
 	            --with-file-aio \
