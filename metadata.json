@@ -1,0 +1,14 @@
+{
+    "description": "The base box to develop on Neap",
+    "short_description": "The base box to develop on Neap",
+    "name": "e7d/neap-box",
+    "versions": [
+        {
+            "version": "1.2.6",
+            "providers": [{
+                "name": "virtualbox",
+                "url": "neap.box"
+            }]
+        }
+    ]
+}
