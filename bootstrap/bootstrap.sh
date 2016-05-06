@@ -30,11 +30,20 @@ try
 	echox "${text_cyan}Setup certificates"
 	/vagrant/bootstrap/setup-certificates.sh
 
-	echox "${text_cyan}Build nginx"
-	/vagrant/bootstrap/build-nginx.sh
+	echox "${text_cyan}Setup jq"
+	/vagrant/bootstrap/setup-jq.sh
+
+	echox "${text_cyan}Setup PostgresQL"
+	/vagrant/bootstrap/setup-postgresql.sh
 
 	echox "${text_cyan}Build Redis"
 	/vagrant/bootstrap/build-redis.sh
+
+	echox "${text_cyan}Setup Mailcatcher"
+	/vagrant/bootstrap/setup-mailcatcher.sh
+
+	echox "${text_cyan}Build nginx"
+	/vagrant/bootstrap/build-nginx.sh
 
 	echox "${text_cyan}Setup PHP"
 	/vagrant/bootstrap/setup-php.sh
@@ -47,12 +56,6 @@ try
 
 	echox "${text_cyan}Setup Composer"
 	/vagrant/bootstrap/setup-composer.sh
-
-	echox "${text_cyan}Setup PostgresQL"
-	/vagrant/bootstrap/setup-postgresql.sh
-
-	echox "${text_cyan}Setup Mailcatcher"
-	/vagrant/bootstrap/setup-mailcatcher.sh
 
 	echox "${text_cyan}Setup NPM"
 	/vagrant/bootstrap/setup-npm.sh

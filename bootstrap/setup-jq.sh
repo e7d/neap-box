@@ -9,14 +9,18 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
+JQ_VERSION=1.5 # https://stedolan.github.io/jq/download/
+
 try
 (
 	throwErrors
 
-	echo "Install NPM package manager"
-	curl -sL https://deb.nodesource.com/setup_5.x | bash -
-	apt-get -y -q install nodejs
-	npm install -g npm@latest
+	echo "Install binary"
+	cd /tmp
+	wget https://github.com/stedolan/jq/releases/download/jq-${JQ_VERSION}/jq-linux64
+	chmod +x jq-linux64
+	mv jq-linux64 /usr/bin/jq
+
 )
 catch || {
 	case $ex_code in

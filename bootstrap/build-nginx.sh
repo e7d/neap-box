@@ -10,7 +10,7 @@ if [ 0 != $(id -u) ]; then
 fi
 
 NGINX_VERSION=1.9.10 # http://nginx.org/en/download.html
-OPENSSL_VERSION=1.0.2g # https://openssl.org/source/
+OPENSSL_VERSION=1.0.2h # https://openssl.org/source/
 NGINX_RTMP_VERSION=1.1.7 # https://github.com/arut/nginx-rtmp-module/releases
 
 try
@@ -40,12 +40,12 @@ try
 	./configure --prefix=/var/www \
 	            --sbin-path=/usr/sbin/nginx \
 	            --conf-path=/etc/nginx/nginx.conf \
-	            --pid-path=/run/nginx.pid \
+	            --pid-path=/var/run/nginx.pid \
 	            --error-log-path=/var/log/nginx/error.log \
 	            --http-log-path=/var/log/nginx/access.log \
 	            --with-file-aio \
 	            --with-http_ssl_module \
-		    --with-openssl=/usr/src/openssl-${OPENSSL_VERSION} \
+	            --with-openssl=/usr/src/openssl-${OPENSSL_VERSION} \
 	            --with-http_v2_module \
 	            --with-http_realip_module \
 	            --with-http_addition_module \
@@ -98,3 +98,4 @@ catch || {
 
 echo "Remove temporary files"
 rm -rf /usr/src/nginx*
+rm -rf /usr/src/openssl*
