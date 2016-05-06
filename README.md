@@ -53,17 +53,17 @@ Neap box uses Vagrant's [shell provisioner](https://docs.vagrantup.com/v2/provis
 Once Vagrant is done provisioning the VM, you will have a box containing:
 
 * [Debian](https://www.debian.org/) Jessie 8.4, as operating system, with:
-    * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.0.18
+    * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.0.20
 * [Let's Encrypt](https://letsencrypt.org/) 0.5.0, as SSL certificate generator
 * [jq](https://stedolan.github.io/jq/) 1.5, as JSON processor
 * [PostgreSQL](http://www.postgresql.org/) 9.5.2, as database system
 * [Redis](http://redis.io/) 3.0.7, as data structure store
 * [MailCatcher](http://mailcatcher.me/) 0.6.4 as mail catching server
 * [nginx](http://nginx.org/) 1.9.10, as web server, with:
-    * [OpenSSL](https://www.openssl.org/) 1.0.2g, as SSL module
+    * [OpenSSL](https://www.openssl.org/) 1.0.hg, as SSL module
     * [nginx-rtmp-module](https://github.com/sergey-dryabzhinsky/nginx-rtmp-module) 1.1.7, as streaming handler (RTMP, HLS and DASH protocols)
-* [PHP](http://php.net/) 7.0.5, as server-side scripting language, with:
-    * [PHP-FPM](http://php-fpm.org/) 7.0.5, as PHP process manager
+* [PHP](http://php.net/) 7.0.6, as server-side scripting language, with:
+    * [PHP-FPM](http://php-fpm.org/) 7.0.9, as PHP process manager
     * [PhpRedis](https://github.com/phpredis/phpredis) 2.2.8-devphp7, as PHP extension for Redis
     * [Xdebug](http://xdebug.org/) 2.4.0, as debugger and profiler tool
     * [Composer](https://getcomposer.org/) 1.0.2, as dependency manager
