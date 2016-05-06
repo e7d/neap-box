@@ -68,6 +68,6 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
     * [Xdebug](http://xdebug.org/) 2.4.0, as debugger and profiler tool
     * [Composer](https://getcomposer.org/) 1.0.2, as dependency manager
 * [NPM](https://www.npmjs.com/) 3.8.7, as JavaScript package Manager
-* [FFmpeg](https://www.ffmpeg.org/) 2.8.6, as media converter
+* [FFmpeg](https://www.ffmpeg.org/) 2.8.7, as media converter
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.3, as IRC server daemon, with:
     * [Anope](https://www.anope.org/) 2.0.3, as IRC services daemon
