@@ -9,7 +9,7 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
-REDIS_VERSION=3.0.7 # http://redis.io/download
+REDIS_VERSION=3.2.0 # http://redis.io/download
 
 try
 (
