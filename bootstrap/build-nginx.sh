@@ -9,9 +9,9 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
-NGINX_VERSION=1.9.10 # http://nginx.org/en/download.html
+NGINX_VERSION=1.10.0 # http://nginx.org/en/download.html
 OPENSSL_VERSION=1.0.2h # https://openssl.org/source/
-NGINX_RTMP_VERSION=v1.1.7 # https://github.com/arut/nginx-rtmp-module/releases
+NGINX_RTMP_VERSION=1.1.7 # https://github.com/arut/nginx-rtmp-module/releases
 
 try
 (
@@ -32,8 +32,8 @@ try
 
 	echo "Download nginx-rtmp-module source code"
 	cd /usr/src
-	wget https://github.com/arut/nginx-rtmp-module/archive/${NGINX_RTMP_VERSION}.tar.gz -O nginx-rtmp-module-${NGINX_RTMP_VERSION}.tar.gz
-	tar -zxvf nginx-rtmp-module-${NGINX_RTMP_VERSION}.tar.gz
+	wget https://github.com/arut/nginx-rtmp-module/archive/v${NGINX_RTMP_VERSION}.tar.gz -O nginx-rtmp-module-v${NGINX_RTMP_VERSION}.tar.gz
+	tar -zxvf nginx-rtmp-module-v${NGINX_RTMP_VERSION}.tar.gz
 
 	echo "Build binaries"
 	cd /usr/src/nginx-${NGINX_VERSION}
@@ -43,6 +43,7 @@ try
 	            --pid-path=/var/run/nginx.pid \
 	            --error-log-path=/var/log/nginx/error.log \
 	            --http-log-path=/var/log/nginx/access.log \
+	            --with-debug \
 	            --with-file-aio \
 	            --with-http_ssl_module \
 	            --with-openssl=/usr/src/openssl-${OPENSSL_VERSION} \
