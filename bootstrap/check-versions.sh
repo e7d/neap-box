@@ -24,6 +24,7 @@ PHPFPM=$(echo `php-fpm7.0 -v` | sed 's/PHP \([^-]*\).*/\1/')
 PHPREDIS=$(echo `php -i | grep 'Redis Version'` | sed 's/Redis Version => \(.*\)/\1/')
 XDEBUG=$(echo `php -v` | sed 's/.*Xdebug v\([^,]*\).*/\1/')
 COMPOSER=$(echo `composer 2>&1` | sed 's/.*Composer version \([^ ]*\).*/\1/')
+NODEJS=$(echo `node -v` | sed 's/v\([^,]*\).*/\1/')
 NPM=$(npm -v)
 FFMPEG=$(echo `ffmpeg -version` | sed 's/.*ffmpeg version \([^ ]*\).*/\1/')
 UNREALIRCD=$(echo `sudo -u irc /etc/unrealircd/bin/unrealircd -v 2>&1` | sed 's/.*UnrealIRCd-\([^ ]*\).*/\1/')
@@ -45,7 +46,8 @@ echo '  | +-- PHP-FPM: '$PHPFPM
 echo '  | +-- PhpRedis: '$PHPREDIS
 echo '  | +-- Xdebug: '$XDEBUG
 echo '  | `-- Composer: '$COMPOSER
-echo '  +-- NPM: '$NPM
+echo '  +-- NodeJS: '$NODEJS
+echo '  | +-- NPM: '$NPM
 echo '  +-- FFmpeg: '$FFMPEG
 echo '  `-- UnrealIRCd: '$UNREALIRCD
 echo '    `-- Anope: '$ANOPE
