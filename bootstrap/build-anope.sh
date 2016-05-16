@@ -26,7 +26,7 @@ try
 	cp -R /vagrant/resources/anope/src/* .
 	./Config -nointro -quick
 	cd build
-	make -j4
+	make -j$(nproc)
 	make install
 
 	echo "Copy service script"

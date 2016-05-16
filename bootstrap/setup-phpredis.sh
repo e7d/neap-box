@@ -22,7 +22,7 @@ try
 	git checkout php7
 	phpize
 	./configure
-	make -j4
+	make -j$(nproc)
 	make install
 
 	echo "Write mod configuration file"

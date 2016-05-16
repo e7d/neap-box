@@ -63,7 +63,7 @@ try
 	            --with-mail \
 	            --with-mail_ssl_module \
 	            --add-module=/usr/src/nginx-rtmp-module-${NGINX_RTMP_VERSION} &&
-	make -j4
+	make -j$(nproc)
 
 	echo "Enable service binaries"
 	systemctl unmask nginx
