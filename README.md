@@ -54,7 +54,7 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
 
 * [Debian](https://www.debian.org/) Jessie 8.4, as operating system, with:
     * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.0.20
-* [Let's Encrypt](https://letsencrypt.org/) 0.5.0, as SSL certificate generator
+* [Let's Encrypt](https://letsencrypt.org/) 0.6.0, as SSL certificate generator
 * [jq](https://stedolan.github.io/jq/) 1.5, as JSON processor
 * [PostgreSQL](http://www.postgresql.org/) 9.5.3, as database system
 * [Redis](http://redis.io/) 3.2.0, as data structure store
