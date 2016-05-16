@@ -22,8 +22,8 @@ try
 	git checkout php7
 	phpize
 	./configure
-	make
-	sudo make install
+	make -j4
+	make install
 
 	echo "Write mod configuration file"
 	echo '; configuration for php redis module' >/etc/php/mods-available/redis.ini

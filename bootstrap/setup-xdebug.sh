@@ -24,7 +24,7 @@ try
 	echo "Build library"
 	phpize
 	./configure --enable-xdebug
-	make
+	make -j4
 	make install
 
 	echo "Write mod configuration file"

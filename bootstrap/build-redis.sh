@@ -26,7 +26,7 @@ try
 
 	echo "Build binaries"
 	cd /usr/src/redis-${REDIS_VERSION}
-	make
+	make -j4
 
 	echo "Install newly built binaries"
 	make install clean

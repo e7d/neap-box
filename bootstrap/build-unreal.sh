@@ -34,7 +34,7 @@ try
 	chmod +x config.settings
 	./config.settings
 	./Config -nointro -quick
-	make
+	make -j4
 	make install
 
 	echo "Copy service script"
