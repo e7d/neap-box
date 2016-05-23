@@ -10,7 +10,7 @@ if [ 0 != $(id -u) ]; then
 fi
 
 LETS_ENCRYPT_SRC=/opt/letsencrypt
-LETS_ENCRYPT_TAG=v0.4.2
+LETS_ENCRYPT_TAG=v0.6.0
 
 try
 (
@@ -18,7 +18,7 @@ try
 
 	echo "Download source code"
 	rm -rf ${LETS_ENCRYPT_SRC}
-	git clone https://github.com/letsencrypt/letsencrypt ${LETS_ENCRYPT_SRC}
+	git clone https://github.com/certbot/certbot ${LETS_ENCRYPT_SRC}
 	cd ${LETS_ENCRYPT_SRC}
 	git checkout tags/${LETS_ENCRYPT_TAG}
 

@@ -54,9 +54,9 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
 
 * [Debian](https://www.debian.org/) Jessie 8.4, as operating system, with:
     * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.0.20
-* [Let's Encrypt](https://letsencrypt.org/) 0.5.0, as SSL certificate generator
+* [Let's Encrypt](https://letsencrypt.org/) 0.6.0, as SSL certificate generator
 * [jq](https://stedolan.github.io/jq/) 1.5, as JSON processor
-* [PostgreSQL](http://www.postgresql.org/) 9.5.2, as database system
+* [PostgreSQL](http://www.postgresql.org/) 9.5.3, as database system
 * [Redis](http://redis.io/) 3.2.0, as data structure store
 * [MailCatcher](http://mailcatcher.me/) 0.6.4 as mail catching server
 * [nginx](http://nginx.org/) 1.10.0, as web server, with:
@@ -67,7 +67,8 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
     * [PhpRedis](https://github.com/phpredis/phpredis) 2.2.8-devphp7, as PHP extension for Redis
     * [Xdebug](http://xdebug.org/) 2.4.0, as debugger and profiler tool
     * [Composer](https://getcomposer.org/) 1.1.0, as dependency manager
-* [NPM](https://www.npmjs.com/) 3.8.9, as JavaScript package Manager
+* [NodeJS](https://nodejs.org/) 6.1.0, as JavaScript runtime
+    * [NPM](https://www.npmjs.com/) 3.9.0, as JavaScript package Manager
 * [FFmpeg](https://www.ffmpeg.org/) 2.8.7, as media converter
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.3, as IRC server daemon, with:
     * [Anope](https://www.anope.org/) 2.0.3, as IRC services daemon

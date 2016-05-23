@@ -1,4 +1,14 @@
 Vagrant.configure(2) do |config|
+    # Collect data about the host
+    host = RbConfig::CONFIG['host_os']
+    if host =~ /darwin/
+        cpus = `sysctl -n hw.ncpu`.to_i
+    elsif host =~ /linux/
+        cpus = `nproc`.to_i
+    else
+        cpus = `wmic cpu get NumberOfCores`.split("\n")[2].to_i
+    end
+
     config.vm.define "Neap Box" do |node|
         # For a complete reference, please see the online documentation at
         # https://docs.vagrantup.com.
@@ -15,7 +25,7 @@ Vagrant.configure(2) do |config|
         node.vm.provider "virtualbox" do |vb|
             # System configuration
             vb.name = "Neap Box"
-            vb.cpus = "4"
+            vb.cpus = cpus
             vb.memory = "1024"
         end
 

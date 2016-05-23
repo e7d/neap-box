@@ -34,7 +34,7 @@ try
 	chmod +x config.settings
 	./config.settings
 	./Config -nointro -quick
-	make
+	make -j$(nproc)
 	make install
 
 	echo "Copy service script"

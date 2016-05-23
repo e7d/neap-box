@@ -14,7 +14,7 @@ try
 	throwErrors
 
 	echo "Install NPM package manager"
-	curl -sL https://deb.nodesource.com/setup_5.x | bash -
+	curl -sL https://deb.nodesource.com/setup_6.x | bash -
 	apt-get -y -q install nodejs
 	npm install -g npm@latest
 )
