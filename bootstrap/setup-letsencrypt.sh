@@ -10,7 +10,7 @@ if [ 0 != $(id -u) ]; then
 fi
 
 LETS_ENCRYPT_SRC=/opt/letsencrypt
-LETS_ENCRYPT_TAG=v0.6.0
+LETS_ENCRYPT_TAG=v0.7.0
 
 try
 (
