@@ -47,7 +47,7 @@ echo '  | +-- PhpRedis: '$PHPREDIS
 echo '  | +-- Xdebug: '$XDEBUG
 echo '  | `-- Composer: '$COMPOSER
 echo '  +-- NodeJS: '$NODEJS
-echo '  | +-- NPM: '$NPM
+echo '  | `-- NPM: '$NPM
 echo '  +-- FFmpeg: '$FFMPEG
 echo '  `-- UnrealIRCd: '$UNREALIRCD
 echo '    `-- Anope: '$ANOPE
