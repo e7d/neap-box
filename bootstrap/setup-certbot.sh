@@ -9,27 +9,24 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
-LETS_ENCRYPT_SRC=/opt/letsencrypt
-LETS_ENCRYPT_TAG=v0.7.0
+LETS_ENCRYPT_PATH=/opt/letsencrypt
 
 try
 (
 	throwErrors
 
-	echo "Download source code"
-	rm -rf ${LETS_ENCRYPT_SRC}
-	git clone https://github.com/certbot/certbot ${LETS_ENCRYPT_SRC}
-	cd ${LETS_ENCRYPT_SRC}
-	git checkout tags/${LETS_ENCRYPT_TAG}
+	echo "Download program"
+	rm -rf ${LETS_ENCRYPT_PATH}
+	mkdir -p ${LETS_ENCRYPT_PATH}
+	cd ${LETS_ENCRYPT_PATH}
+	wget https://dl.eff.org/certbot-auto
+	chmod a+x certbot-auto
 
 	echo "Link executable"
-	ln -sf ${LETS_ENCRYPT_SRC}/letsencrypt-auto /usr/bin/letsencrypt
+	ln -sf ${LETS_ENCRYPT_PATH}/certbot-auto /usr/bin/certbot-auto
 
 	echo "Prepare first time launch"
-	/usr/bin/letsencrypt --version 2>&1 /dev/null
-
-	echo "Remove useless git files"
-	rm -rf ${LETS_ENCRYPT_SRC}/.git/
+	/usr/bin/certbot-auto --noninteractive --version 2>&1 /dev/null
 )
 catch || {
 case $ex_code in
