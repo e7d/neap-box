@@ -13,9 +13,6 @@ try
 (
 	throwErrors
 
-	echo "Install apt dependencies"
-	apt-get -y -q install libsqlite3-dev ruby-dev
-
 	echo "Update Ruby environment"
 	gem update --system
 
