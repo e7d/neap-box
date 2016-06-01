@@ -11,7 +11,7 @@ fi
 NEAPBOX=$(cat /etc/neap_box_version)
 DEBIAN=$(cat /etc/debian_version)
 VBOXGUESTADDITIONS=$(echo `modinfo vboxguest` | sed 's/.*\bversion: \([^ ]*\).*/\1/')
-CERTBOT=$(echo `certbot-auto --version 2>&1` | sed 's/.*letsencrypt \(.*\)/\1/')
+CERTBOT=$(cat /opt/letsencrypt/certbot-auto | grep LE_AUTO_VERSION= | sed 's/.*LE_AUTO_VERSION="\(.*\)"/\1/')
 JQ=$(echo `jq -V` | sed 's/.*jq-\(.*\)/\1/')
 POSTGRESQL=$(echo `psql -V` | sed 's/psql (PostgreSQL) \(.*\)/\1/')
 REDIS=$(echo `redis-server -v` | sed 's/Redis server v=\([^ ]*\).*/\1/')

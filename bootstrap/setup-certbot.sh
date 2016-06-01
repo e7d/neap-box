@@ -24,9 +24,6 @@ try
 
 	echo "Link executable"
 	ln -sf ${LETS_ENCRYPT_PATH}/certbot-auto /usr/bin/certbot-auto
-
-	echo "Prepare first time launch"
-	/usr/bin/certbot-auto --noninteractive --version 2>&1 /dev/null
 )
 catch || {
 case $ex_code in
