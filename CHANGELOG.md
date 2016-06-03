@@ -2,9 +2,10 @@
 * added newman in version 2.0.9
 * updated Let's Encrypt Certbot to version 0.7.0
 * updated PHP and PHP-FPM to version 7.0.7
-* updated Composer to version 1.1.1
-* updated NodeJS to version 6.2.0
+* updated Composer to version 1.1.2
+* updated NodeJS to version 6.2.1
 * updated NPM to version 3.9.5
+* updated nginx to version 1.10.1, fixing [CVE-2016-4450](http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-4450)
 * improved tree display in check version
 * centralized apt packages dependencies from MailCatcher
 
