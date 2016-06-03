@@ -24,8 +24,8 @@ try
 	echox "${text_cyan}Prepare Debian environment"
 	/vagrant/bootstrap/prepare-env.sh
 
-	echox "${text_cyan}Setup Let's Encrypt"
-	/vagrant/bootstrap/setup-letsencrypt.sh
+	echox "${text_cyan}Setup Let's Encrypt Certbot"
+	/vagrant/bootstrap/setup-certbot.sh
 
 	echox "${text_cyan}Setup certificates"
 	/vagrant/bootstrap/setup-certificates.sh
@@ -59,6 +59,9 @@ try
 
 	echox "${text_cyan}Setup NPM"
 	/vagrant/bootstrap/setup-npm.sh
+
+	echox "${text_cyan}Setup Newman"
+	/vagrant/bootstrap/setup-newman.sh
 
 	echox "${text_cyan}Setup ffmpeg"
 	/vagrant/bootstrap/setup-ffmpeg.sh

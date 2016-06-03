@@ -11,7 +11,7 @@ fi
 NEAPBOX=$(cat /etc/neap_box_version)
 DEBIAN=$(cat /etc/debian_version)
 VBOXGUESTADDITIONS=$(echo `modinfo vboxguest` | sed 's/.*\bversion: \([^ ]*\).*/\1/')
-LETSENCRYPT=$(echo `letsencrypt --version 2>&1` | sed 's/.*letsencrypt \(.*\)/\1/')
+CERTBOT=$(cat /opt/letsencrypt/certbot-auto | grep LE_AUTO_VERSION= | sed 's/.*LE_AUTO_VERSION="\(.*\)"/\1/')
 JQ=$(echo `jq -V` | sed 's/.*jq-\(.*\)/\1/')
 POSTGRESQL=$(echo `psql -V` | sed 's/psql (PostgreSQL) \(.*\)/\1/')
 REDIS=$(echo `redis-server -v` | sed 's/Redis server v=\([^ ]*\).*/\1/')
@@ -33,7 +33,7 @@ ANOPE=$(echo `/etc/anope/bin/services -v` | sed 's/Anope-\([^ ]*\).*/\1/')
 echo 'Neap Box: '$NEAPBOX
 echo '+-- Debian: '$DEBIAN
 echo '  +-- VirtualBox Guest Additions: '$VBOXGUESTADDITIONS
-echo '  +-- Lets Encrypt: '$LETSENCRYPT
+echo '  +-- Lets Encrypt Certbot: '$CERTBOT
 echo '  +-- jq: '$JQ
 echo '  +-- PostgreSQL: '$POSTGRESQL
 echo '  +-- Redis: '$REDIS
@@ -47,7 +47,7 @@ echo '  | +-- PhpRedis: '$PHPREDIS
 echo '  | +-- Xdebug: '$XDEBUG
 echo '  | `-- Composer: '$COMPOSER
 echo '  +-- NodeJS: '$NODEJS
-echo '  | +-- NPM: '$NPM
+echo '  | `-- NPM: '$NPM
 echo '  +-- FFmpeg: '$FFMPEG
 echo '  `-- UnrealIRCd: '$UNREALIRCD
 echo '    `-- Anope: '$ANOPE

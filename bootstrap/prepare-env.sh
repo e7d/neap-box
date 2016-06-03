@@ -26,7 +26,8 @@ try
 
 	echo "Install prerequisite packages"
 	apt-get -y -q install build-essential cmake curl facter g++ gcc git libcurl4-openssl-dev libpcre++-dev \
-	              libpcre3-dev libreadline-gplv2-dev libssl-dev make pkg-config unzip zlib1g-dev
+	                      libpcre3-dev libreadline-gplv2-dev libsqlite3-dev libssl-dev make pkg-config \
+	                      ruby-dev unzip zlib1g-dev
 
 	echo "Tweak SSH daemon"
 	echo 'UseDNS no' >>/etc/ssh/sshd_config
