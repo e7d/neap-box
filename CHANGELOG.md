@@ -1,3 +1,5 @@
+## v1.2.9
+
 ## v1.2.8 (2016-06-03)
 * added newman in version 2.0.9
 * updated Let's Encrypt Certbot to version 0.7.0
