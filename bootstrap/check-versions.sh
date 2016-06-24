@@ -31,7 +31,7 @@ UNREALIRCD=$(echo `sudo -u irc /etc/unrealircd/bin/unrealircd -v 2>&1` | sed 's/
 ANOPE=$(echo `/etc/anope/bin/services -v` | sed 's/Anope-\([^ ]*\).*/\1/')
 
 echo 'Neap Box: '$NEAPBOX
-echo '+-- Debian: '$DEBIAN
+echo '`-- Debian: '$DEBIAN
 echo '  +-- VirtualBox Guest Additions: '$VBOXGUESTADDITIONS
 echo '  +-- Lets Encrypt Certbot: '$CERTBOT
 echo '  +-- jq: '$JQ
