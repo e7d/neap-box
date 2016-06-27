@@ -10,6 +10,7 @@ if [ 0 != $(id -u) ]; then
 fi
 
 XDEBUG_TAG=XDEBUG_2_4_0 # https://github.com/xdebug/xdebug/releases
+XDEBUG_VERSION=2.4.0
 
 try
 (
@@ -17,24 +18,24 @@ try
 
 	echo "Download sources"
 	cd /usr/src
-	git clone https://github.com/xdebug/xdebug.git
-	cd xdebug
-	git checkout tags/${XDEBUG_TAG}
+	wget https://github.com/xdebug/xdebug/archive/XDEBUG_2_4_0.tar.gz -O xdebug-${XDEBUG_VERSION}.tar.gz
+	tar -zxvf xdebug-${XDEBUG_VERSION}.tar.gz
 
 	echo "Build library"
+	cd xdebug-${XDEBUG_TAG}
 	phpize
 	./configure --enable-xdebug
 	make -j$(nproc)
 	make install
 
 	echo "Write mod configuration file"
-	echo '; configuration for php xdebug module' >/etc/php/mods-available/xdebug.ini
-	echo '; priority=20' >>/etc/php/mods-available/xdebug.ini
-	echo 'zend_extension=xdebug.so' >>/etc/php/mods-available/xdebug.ini
+	echo '; configuration for php xdebug module' >/etc/php/7.0/mods-available/xdebug.ini
+	echo '; priority=20' >>/etc/php/7.0/mods-available/xdebug.ini
+	echo 'zend_extension=xdebug.so' >>/etc/php/7.0/mods-available/xdebug.ini
 
 	echo "Link configuration file to PHP"
-	ln -sf /etc/php/mods-available/xdebug.ini /etc/php/7.0/fpm/conf.d/20-xdebug.ini
-	ln -sf /etc/php/mods-available/xdebug.ini /etc/php/7.0/cli/conf.d/20-xdebug.ini
+	ln -sf /etc/php/7.0/mods-available/xdebug.ini /etc/php/7.0/fpm/conf.d/20-xdebug.ini
+	ln -sf /etc/php/7.0/mods-available/xdebug.ini /etc/php/7.0/cli/conf.d/20-xdebug.ini
 
 	echo "Restart PHP-FPM service"
 	service php7.0-fpm restart
