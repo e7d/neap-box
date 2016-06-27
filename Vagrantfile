@@ -1,12 +1,18 @@
 Vagrant.configure(2) do |config|
     # Collect data about the host
-    host = RbConfig::CONFIG['host_os']
-    if host =~ /darwin/
-        cpus = `sysctl -n hw.ncpu`.to_i
-    elsif host =~ /linux/
-        cpus = `nproc`.to_i
-    else
-        cpus = `wmic cpu get NumberOfCores`.split("\n")[2].to_i
+    case RbConfig::CONFIG['host_os']
+        when /cygwin|mswin|msys|mingw|bccwin|wince|emc|emx|windows/i
+            # Windows
+            cpus = `wmic cpu get NumberOfLogicalProcessors`.split("\n")[2].to_i
+        when /linux|arch/i
+            # linux
+            cpus = `nproc`.to_i
+        when /darwin|mac os/i
+            # MacOS
+            cpus = `sysctl -n hw.ncpu`.to_i
+        else
+            # Others...
+            cpus = 2
     end
 
     config.vm.define "Neap Box" do |node|
