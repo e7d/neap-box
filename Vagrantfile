@@ -20,7 +20,7 @@ Vagrant.configure(2) do |config|
         # https://docs.vagrantup.com.
 
         # General configuration
-        node.vm.hostname = "neap-box"
+        node.vm.hostname = "box.neap.dev"
         node.vm.box = "debian/contrib-jessie64"
         node.vm.box_version = ">= 8.5"
 
