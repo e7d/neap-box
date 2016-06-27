@@ -70,5 +70,5 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
 * [NodeJS](https://nodejs.org/) 6.2.2, as JavaScript runtime
     * [NPM](https://www.npmjs.com/) 3.10.2, as JavaScript package Manager
 * [FFmpeg](https://www.ffmpeg.org/) 2.8.7, as media converter
-* [UnrealIRCd](https://www.unrealircd.org/) 4.0.3, as IRC server daemon, with:
+* [UnrealIRCd](https://www.unrealircd.org/) 4.0.4, as IRC server daemon, with:
     * [Anope](https://www.anope.org/) 2.0.3, as IRC services daemon
