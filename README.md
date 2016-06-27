@@ -6,12 +6,12 @@ A Vagrant box for [Neap](https://github.com/e7d/neap) development.
 
 This project aims to give you the necessary tools to build yourself the Neap Box.  
 **Note:** If you only intend to use the Neap Box, you will never have to build it yourself! Instead, get it from:
-* [GitHub releases](./releases)
+* [GitHub releases](https://github.com/e7d/neap-box/releases)
 * [Atlas by HashiCorp](https://atlas.hashicorp.com/e7d/boxes/neap-box)
 
 ## About
 
-**Version:** 1.2.8  
+**Version:** 1.2.9  
 **Web:** Coming later, [box.neap.io](http://box.neap.io)  
 **Project Owner:** Michaël "[e7d](https://github.com/e7d)" Ferrand
 
@@ -52,23 +52,23 @@ Neap box uses Vagrant's [shell provisioner](https://docs.vagrantup.com/v2/provis
 
 Once Vagrant is done provisioning the VM, you will have a box containing:
 
-* [Debian](https://www.debian.org/) Jessie 8.4, as operating system, with:
-    * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.0.20
-* [Let's Encrypt](https://letsencrypt.org/) 0.7.0, as SSL certificate generator
+* [Debian](https://www.debian.org/) Jessie 8.5, as operating system, with:
+    * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.0.22
+* [Let's Encrypt Certbot](https://certbot.eff.org/) 0.8.1, as SSL certificate generator
 * [jq](https://stedolan.github.io/jq/) 1.5, as JSON processor
 * [PostgreSQL](http://www.postgresql.org/) 9.5.3, as database system
-* [Redis](http://redis.io/) 3.2.0, as data structure store
+* [Redis](http://redis.io/) 3.2.1, as data structure store
 * [MailCatcher](https://mailcatcher.me/) 0.6.4 as mail catching server
 * [nginx](http://nginx.org/) 1.10.1, as web server, with:
     * [OpenSSL](https://www.openssl.org/) 1.0.2h, as SSL module
     * [nginx-rtmp-module](https://github.com/arut/nginx-rtmp-module) 1.1.7, as streaming handler (RTMP, HLS and DASH protocols)
-* [PHP](http://php.net/) 7.0.7, as server-side scripting language, with:
-    * [PHP-FPM](http://php-fpm.org/) 7.0.7, as PHP process manager
-    * [PhpRedis](https://github.com/phpredis/phpredis) 2.2.8-devphp7, as PHP extension for Redis
+* [PHP](http://php.net/) 7.0.8, as server-side scripting language, with:
+    * [PHP-FPM](http://php-fpm.org/) 7.0.8, as PHP process manager
+    * [PhpRedis](https://github.com/phpredis/phpredis) 3.0.0, as PHP extension for Redis
     * [Xdebug](http://xdebug.org/) 2.4.0, as debugger and profiler tool
-    * [Composer](https://getcomposer.org/) 1.1.2, as dependency manager
-* [NodeJS](https://nodejs.org/) 6.2.1, as JavaScript runtime
-    * [NPM](https://www.npmjs.com/) 3.9.5, as JavaScript package Manager
+    * [Composer](https://getcomposer.org/) 1.1.3, as dependency manager
+* [NodeJS](https://nodejs.org/) 6.2.2, as JavaScript runtime
+    * [NPM](https://www.npmjs.com/) 3.10.2, as JavaScript package Manager
 * [FFmpeg](https://www.ffmpeg.org/) 2.8.7, as media converter
-* [UnrealIRCd](https://www.unrealircd.org/) 4.0.3, as IRC server daemon, with:
+* [UnrealIRCd](https://www.unrealircd.org/) 4.0.4, as IRC server daemon, with:
     * [Anope](https://www.anope.org/) 2.0.3, as IRC services daemon
