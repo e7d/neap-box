@@ -46,7 +46,7 @@ EOF
 	update-grub
 
 	echo "Copy Neap version file"
-	cp /vagrant/resources/neap_box_version /etc/neap_box_version
+	cp /vagrant/VERSION /etc/neap_box_version
 )
 catch || {
 	case $ex_code in
