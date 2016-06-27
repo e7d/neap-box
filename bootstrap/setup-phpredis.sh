@@ -9,7 +9,8 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
-PHPREDIS_VERSION=3.0.0 # https://github.com/phpredis/phpredis/releases
+PHPREDIS_TAG=3.0.0 # https://github.com/phpredis/phpredis/releases
+PHPREDIS_VERSION=3.0.0
 
 try
 (
@@ -17,24 +18,24 @@ try
 
 	echo "Download sources"
 	cd /usr/src
-	wget https://github.com/phpredis/phpredis/archive/${PHPREDIS_VERSION}.tar.gz
+	wget https://github.com/phpredis/phpredis/archive/${PHPREDIS_TAG}.tar.gz -O phpredis-${PHPREDIS_VERSION}.tar.gz
 	tar -zxvf phpredis-${PHPREDIS_VERSION}.tar.gz
 
 	echo "Build library"
-	cd phpredis-${PHP_REDIS_VERSION}
+	cd phpredis-${PHPREDIS_TAG}
 	phpize
 	./configure
 	make -j$(nproc)
 	make install
 
 	echo "Write mod configuration file"
-	echo '; configuration for php redis module' >/etc/php/mods-available/redis.ini
-	echo '; priority=20' >>/etc/php/mods-available/redis.ini
-	echo 'extension=redis.so' >>/etc/php/mods-available/redis.ini
+	echo '; configuration for php redis module' >/etc/php/7.0/mods-available/redis.ini
+	echo '; priority=20' >>/etc/php/7.0/mods-available/redis.ini
+	echo 'extension=redis.so' >>/etc/php/7.0/mods-available/redis.ini
 
 	echo "Link configuration file to PHP"
-	ln -sf /etc/php/mods-available/redis.ini /etc/php/7.0/fpm/conf.d/20-redis.ini
-	ln -sf /etc/php/mods-available/redis.ini /etc/php/7.0/cli/conf.d/20-redis.ini
+	ln -sf /etc/php/7.0/mods-available/redis.ini /etc/php/7.0/fpm/conf.d/20-redis.ini
+	ln -sf /etc/php/7.0/mods-available/redis.ini /etc/php/7.0/cli/conf.d/20-redis.ini
 
 	echo "Write PHP configuration files"
 	echo >>/etc/php/7.0/cli/php.ini
