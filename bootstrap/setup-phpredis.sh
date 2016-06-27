@@ -9,17 +9,19 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
+PHPREDIS_VERSION=3.0.0 # https://github.com/phpredis/phpredis/releases
+
 try
 (
 	throwErrors
 
 	echo "Download sources"
 	cd /usr/src
-	git clone https://github.com/phpredis/phpredis.git
+	wget https://github.com/phpredis/phpredis/archive/${PHPREDIS_VERSION}.tar.gz
+	tar -zxvf phpredis-${PHPREDIS_VERSION}.tar.gz
 
 	echo "Build library"
-	cd phpredis
-	git checkout php7
+	cd phpredis-${PHP_REDIS_VERSION}
 	phpize
 	./configure
 	make -j$(nproc)
