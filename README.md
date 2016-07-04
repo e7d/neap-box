@@ -11,7 +11,7 @@ This project aims to give you the necessary tools to build yourself the Neap Box
 
 ## About
 
-**Version:** 1.2.9  
+**Version:** 1.2.10  
 **Web:** Coming later, [box.neap.io](http://box.neap.io)  
 **Project Owner:** Michaël "[e7d](https://github.com/e7d)" Ferrand
 
@@ -53,7 +53,7 @@ Neap box uses Vagrant's [shell provisioner](https://docs.vagrantup.com/v2/provis
 Once Vagrant is done provisioning the VM, you will have a box containing:
 
 * [Debian](https://www.debian.org/) Jessie 8.5, as operating system, with:
-    * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.0.22
+    * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.0.24
 * [Let's Encrypt Certbot](https://certbot.eff.org/) 0.8.1, as SSL certificate generator
 * [jq](https://stedolan.github.io/jq/) 1.5, as JSON processor
 * [PostgreSQL](http://www.postgresql.org/) 9.5.3, as database system
@@ -68,8 +68,8 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
     * [Xdebug](http://xdebug.org/) 2.4.0, as debugger and profiler tool
     * [Composer](https://getcomposer.org/) 1.1.3, as dependency manager
 * [NodeJS](https://nodejs.org/) 6.2.2, as JavaScript runtime
-    * [NPM](https://www.npmjs.com/) 3.10.2, as JavaScript package Manager
-    * [Newman](https://github.com/postmanlabs/newman) 2.1.1, as [Postman](http://getpostman.com/) collection runner
+    * [NPM](https://www.npmjs.com/) 3.10.3, as JavaScript package Manager
+    * [Newman](https://github.com/postmanlabs/newman) 2.1.2, as [Postman](http://getpostman.com/) collection runner
 * [FFmpeg](https://www.ffmpeg.org/) 2.8.7, as media converter
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.4, as IRC server daemon, with:
     * [Anope](https://www.anope.org/) 2.0.3, as IRC services daemon

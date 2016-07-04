@@ -1,4 +1,23 @@
-## v1.2.9
+## v1.2.10 (2016-07-04)
+* fixed Debian reference box to version 8.5.0 as 8.5.1 is not usable as is
+* updated VirtualBox Gust additions to version 5.0.24
+* updated NPM to version 3.10.3
+* updated Newman to version 2.1.2
+
+## v1.2.9 (2016-06-27)
+* updated Debian Jessie to version 8.5
+* updated Let's Encrypt Certbot to version 0.8.1
+* updated Redis to version 3.2.1
+* updated PHP and PHP-FPM to version 7.0.8
+* added missing PHP modules for PHP 7.0.8
+* updated PhpRedis to version 3.0.0
+* updated Composer to version 1.1.3
+* updated NodeJS to version 6.2.2
+* updated NPM to version 3.10.2
+* updated Newman to version 2.1.1
+* updated UnrealIRCd to version 4.0.4
+* improved Vagrantfile for better CPU use
+* fixed PhpRedis and Xdebug bootstrap scripts
 
 ## v1.2.8 (2016-06-03)
 * added newman in version 2.0.9
