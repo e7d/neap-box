@@ -1,4 +1,10 @@
-## v1.2.9
+## v1.2.10 (2016-07-04)
+* fixed Debian reference box to version 8.5.0 as 8.5.1 is not usable as is
+* updated VirtualBox Gust additions to version 5.0.24
+* updated NPM to version 3.10.3
+* updated Newman to version 2.1.2
+
+## v1.2.9 (2016-06-27)
 * updated Debian Jessie to version 8.5
 * updated Let's Encrypt Certbot to version 0.8.1
 * updated Redis to version 3.2.1
