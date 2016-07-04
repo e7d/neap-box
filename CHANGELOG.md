@@ -1,3 +1,5 @@
+## v1.2.11
+
 ## v1.2.10 (2016-07-04)
 * fixed Debian reference box to version 8.5.0 as 8.5.1 is not usable as is
 * updated VirtualBox Gust additions to version 5.0.24
