@@ -20,8 +20,8 @@ This project aims to give you the necessary tools to build yourself the Neap Box
 In order to build the Neap Box effectively, you'll need to have a few tools installed:
 
 1. Install [Git](https://git-scm.com)
-1. Install [VirtualBox](http://virtualbox.org)
-1. Install [Vagrant](http://vagrantup.com)
+2. Install [VirtualBox](http://virtualbox.org)
+3. Install [Vagrant](http://vagrantup.com)
 
 ### Windows-specific ###
 
@@ -30,7 +30,7 @@ In order to build the Neap Box effectively, you'll need to have a few tools inst
 ### Recommended
 
 1. Use a development workstation with at least 2 cores and 8GB of RAM, as Vagrant should be allocated 1GB of RAM
-1. Install [Vagrant::VBGuest](https://github.com/dotless-de/vagrant-vbguest), to manage the host's VirtualBox Guest Additions on the guest system  
+2. Install [Vagrant::VBGuest](https://github.com/dotless-de/vagrant-vbguest), to manage the host's VirtualBox Guest Additions on the guest system  
 `vagrant plugin install vagrant-vbguest`
 
 ## Build ##
@@ -67,7 +67,7 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
     * [PhpRedis](https://github.com/phpredis/phpredis) 3.0.0, as PHP extension for Redis
     * [Xdebug](http://xdebug.org/) 2.4.0, as debugger and profiler tool
     * [Composer](https://getcomposer.org/) 1.1.3, as dependency manager
-* [NodeJS](https://nodejs.org/) 6.2.2, as JavaScript runtime
+* [NodeJS](https://nodejs.org/) 6.3.0, as JavaScript runtime
     * [NPM](https://www.npmjs.com/) 3.10.3, as JavaScript package Manager
     * [Newman](https://github.com/postmanlabs/newman) 2.1.2, as [Postman](http://getpostman.com/) collection runner
 * [FFmpeg](https://www.ffmpeg.org/) 2.8.7, as media converter
