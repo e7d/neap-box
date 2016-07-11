@@ -1,4 +1,5 @@
 ## v1.2.11 (unreleased)
+* updated nginx-rtmp-module to version 1.1.8
 * updated NodeJS to version 6.3.0
 
 ## v1.2.10 (2016-07-04)
