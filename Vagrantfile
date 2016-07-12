@@ -39,6 +39,25 @@ Vagrant.configure(2) do |config|
         node.vbguest.auto_update = true
         node.vbguest.no_remote = true
 
+        # Digital Ocean provider
+        node.vm.provider "digital_ocean" do |provider, override|
+            override.nfs.functional = false
+            override.ssh.private_key_path = 'resources/digital-ocean/id_rsa'
+            override.vm.box = 'digital_ocean'
+            override.vm.box_url = 'https://github.com/devopsgroup-io/vagrant-digitalocean/raw/master/box/digital_ocean.box'
+
+            token = ''
+            File.open("resources/digital-ocean/token", "r") do |infile|
+                while (line = infile.gets)
+                    token = line
+                end
+            end
+            provider.token = token
+            provider.image = 'debian-8-x64'
+            provider.region = 'lon1'
+            provider.size = '512mb'
+        end
+
         # Provisioning script
         node.vm.provision "shell" do |s|
             s.inline = "/vagrant/bootstrap.sh | tee /vagrant/bootstrap.log"

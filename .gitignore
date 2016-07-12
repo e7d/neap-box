@@ -1,4 +1,5 @@
 /.vagrant
+/resources/digital-ocean/*
 *.box
 *.log
 !/resources/**/*.cache
