@@ -17,12 +17,10 @@ build() {
 	fi
 	vagrant destroy --force
 	vagrant up --provider=$1 --install-provider --destroy-on-error
-	echo
 }
 package() {
 	rm -rf neap.box
 	vagrant package --output neap.box
-	echo
 }
 
 # VirtualBox
@@ -33,6 +31,7 @@ config_virtualbox() {
 build_virtualbox() {
 	echo "Build VirtualBox"
 	build virtualbox
+	package
 }
 
 # Digital Ocean
