@@ -97,7 +97,6 @@ QUERY="${QUERY} --data-urlencode \"z=${EPOCH}\""
 QUERY="${QUERY} --user-agent \"${USER_AGENT}\""
 QUERY="${QUERY} --compressed --silent --output /dev/null"
 QUERY="\"http://www.google-analytics.com/collect\" ${QUERY}"
-export toto=$QUERY
 
 if [ ! -z $HELP ]; then
 	display_help
