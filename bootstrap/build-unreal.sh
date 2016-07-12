@@ -21,7 +21,7 @@ try
 	echo "Download sources"
 	cd /usr/src
 	if [ ! -f /usr/src/unreal*.tar.gz ]; then
-		wget --no-check-certificate --trust-server-names https://www.unrealircd.org/unrealircd4/unrealircd-${UNREAL_VERSION}.tar.gz
+		wget -nv --no-check-certificate --trust-server-names https://www.unrealircd.org/unrealircd4/unrealircd-${UNREAL_VERSION}.tar.gz
 		tar -zxvf unrealircd-*.tar.gz
 	else
 		echo "skipped..."

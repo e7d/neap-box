@@ -18,7 +18,7 @@ try
 
 	echo "Download sources"
 	cd /usr/src
-	wget https://github.com/xdebug/xdebug/archive/XDEBUG_2_4_0.tar.gz -O xdebug-${XDEBUG_VERSION}.tar.gz
+	wget -nv https://github.com/xdebug/xdebug/archive/XDEBUG_2_4_0.tar.gz -O xdebug-${XDEBUG_VERSION}.tar.gz
 	tar -zxvf xdebug-${XDEBUG_VERSION}.tar.gz
 
 	echo "Build library"

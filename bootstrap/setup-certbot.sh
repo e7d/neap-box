@@ -19,7 +19,7 @@ try
 	rm -rf ${LETS_ENCRYPT_PATH}
 	mkdir -p ${LETS_ENCRYPT_PATH}
 	cd ${LETS_ENCRYPT_PATH}
-	wget https://dl.eff.org/certbot-auto
+	wget -nv https://dl.eff.org/certbot-auto
 	chmod a+x certbot-auto
 
 	echo "Link executable in environment"

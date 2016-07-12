@@ -15,7 +15,7 @@ try
 
 	echo "Add 'deb-multimedia' repository to Aptitude"
 	cd /tmp
-	wget http://www.deb-multimedia.org/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.3.7_all.deb
+	wget -nv http://www.deb-multimedia.org/pool/main/d/deb-multimedia-keyring/deb-multimedia-keyring_2016.3.7_all.deb
 	dpkg -i deb-multimedia-keyring_2016.3.7_all.deb
 	echo "deb http://www.deb-multimedia.org jessie main non-free"   >/etc/apt/sources.list.d/ffmpeg.list
 	echo "deb http://www.deb-multimedia.org jessie-backports main" >>/etc/apt/sources.list.d/ffmpeg.list

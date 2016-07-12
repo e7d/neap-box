@@ -11,7 +11,7 @@ fi
 
 NGINX_VERSION=1.10.1 # http://nginx.org/en/download.html
 OPENSSL_VERSION=1.0.2h # https://openssl.org/source/
-NGINX_RTMP_VERSION=1.1.7 # https://github.com/arut/nginx-rtmp-module/releases
+NGINX_RTMP_VERSION=1.1.8 # https://github.com/arut/nginx-rtmp-module/releases
 
 try
 (
@@ -22,17 +22,17 @@ try
 
 	echo "Download source code"
 	cd /usr/src
-	wget http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
+	wget -nv http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz
 	tar -zxvf nginx-${NGINX_VERSION}.tar.gz
 
 	echo "Download OpenSSL source code"
 	cd /usr/src
-	wget https://openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz
+	wget -nv https://openssl.org/source/openssl-${OPENSSL_VERSION}.tar.gz
 	tar -zxvf openssl-${OPENSSL_VERSION}.tar.gz
 
 	echo "Download nginx-rtmp-module source code"
 	cd /usr/src
-	wget https://github.com/arut/nginx-rtmp-module/archive/v${NGINX_RTMP_VERSION}.tar.gz -O nginx-rtmp-module-v${NGINX_RTMP_VERSION}.tar.gz
+	wget -nv https://github.com/arut/nginx-rtmp-module/archive/v${NGINX_RTMP_VERSION}.tar.gz -O nginx-rtmp-module-v${NGINX_RTMP_VERSION}.tar.gz
 	tar -zxvf nginx-rtmp-module-v${NGINX_RTMP_VERSION}.tar.gz
 
 	echo "Build binaries"
