@@ -15,24 +15,24 @@ Vagrant.configure(2) do |config|
             cpus = 2
     end
 
-    config.vm.define "Neap Box" do |node|
+    config.vm.define 'Neap Box' do |node|
         # For a complete reference, please see the online documentation at
         # https://docs.vagrantup.com.
 
         # General configuration
-        node.vm.hostname = "box.neap.dev"
-        node.vm.box = "debian/contrib-jessie64"
-        node.vm.box_version = "= 8.5.2"
+        node.vm.hostname = 'box.neap.dev'
+        node.vm.box = 'debian/contrib-jessie64'
+        node.vm.box_version = '= 8.5.2'
 
         # Synced folder configuration
-        node.vm.synced_folder ".", "/vagrant"
+        node.vm.synced_folder '.', '/vagrant'
 
         # VirtualBox provider
-        node.vm.provider "virtualbox" do |provider|
+        node.vm.provider 'virtualbox' do |provider|
             # System configuration
-            provider.name = "Neap Box"
+            provider.name = 'Neap Box'
             provider.cpus = cpus
-            provider.memory = "1024"
+            provider.memory = '1024'
         end
 
         #  VirtualBox Guest update
@@ -41,7 +41,7 @@ Vagrant.configure(2) do |config|
         node.vbguest.no_remote = true
 
         # Digital Ocean provider
-        node.vm.provider "digital_ocean" do |provider, override|
+        node.vm.provider 'digital_ocean' do |provider, override|
             override.nfs.functional = false
             override.ssh.private_key_path = 'resources/digital-ocean/id_rsa'
             override.vm.box = 'digital_ocean'
@@ -64,8 +64,8 @@ Vagrant.configure(2) do |config|
         end
 
         # Provisioning script
-        node.vm.provision "shell" do |s|
-            s.inline = "/vagrant/bootstrap.sh | tee /vagrant/bootstrap.log"
+        node.vm.provision 'shell' do |s|
+            s.inline = '/vagrant/bootstrap.sh | tee /vagrant/bootstrap.log'
             s.keep_color = true
         end
     end
