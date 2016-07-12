@@ -1,6 +1,7 @@
 ## v1.2.11 (unreleased)
 * updated nginx-rtmp-module to version 1.1.8
 * updated NodeJS to version 6.3.0
+* updated NPM to version 3.10.5
 
 ## v1.2.10 (2016-07-04)
 * fixed Debian reference box to version 8.5.0 as 8.5.1 is not usable as is
