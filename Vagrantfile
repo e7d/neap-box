@@ -47,10 +47,14 @@ Vagrant.configure(2) do |config|
             override.vm.box_url = 'https://github.com/devopsgroup-io/vagrant-digitalocean/raw/master/box/digital_ocean.box'
 
             token = ''
-            File.open("resources/digital-ocean/token", "r") do |infile|
-                while (line = infile.gets)
-                    token = line
+            begin
+                File.open('resources/digital-ocean/token', 'r') do |file|
+                    while (line = file.gets)
+                        token = line
+                        break
+                    end
                 end
+            rescue SystemCallError
             end
             provider.token = token
             provider.image = 'debian-8-x64'
