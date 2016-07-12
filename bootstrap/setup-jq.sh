@@ -17,7 +17,7 @@ try
 
 	echo "Install binary"
 	cd /tmp
-	wget https://github.com/stedolan/jq/releases/download/jq-${JQ_VERSION}/jq-linux64
+	wget -nv https://github.com/stedolan/jq/releases/download/jq-${JQ_VERSION}/jq-linux64
 	chmod +x jq-linux64
 	mv jq-linux64 /usr/bin/jq
 

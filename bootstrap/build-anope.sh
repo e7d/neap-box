@@ -17,7 +17,7 @@ try
 
 	echo "Download sources"
 	cd /usr/src
-	wget https://github.com/anope/anope/releases/download/${ANOPE_VERSION}/anope-${ANOPE_VERSION}-source.tar.gz
+	wget -nv https://github.com/anope/anope/releases/download/${ANOPE_VERSION}/anope-${ANOPE_VERSION}-source.tar.gz
 	tar -zxvf anope-${ANOPE_VERSION}-source.tar.gz
 	cd anope*
 

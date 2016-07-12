@@ -18,7 +18,7 @@ try
 	echo "Download source code"
 	cd /usr/src
 	if [ ! -f /usr/src/redis-${REDIS_VERSION}.tar.gz ]; then
-		wget http://download.redis.io/releases/redis-${REDIS_VERSION}.tar.gz
+		wget -nv http://download.redis.io/releases/redis-${REDIS_VERSION}.tar.gz
 		tar -zxvf redis-${REDIS_VERSION}.tar.gz
 	else
 		echo "skipped..."

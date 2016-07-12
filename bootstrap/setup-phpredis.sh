@@ -18,7 +18,7 @@ try
 
 	echo "Download sources"
 	cd /usr/src
-	wget https://github.com/phpredis/phpredis/archive/${PHPREDIS_TAG}.tar.gz -O phpredis-${PHPREDIS_VERSION}.tar.gz
+	wget -nv https://github.com/phpredis/phpredis/archive/${PHPREDIS_TAG}.tar.gz -O phpredis-${PHPREDIS_VERSION}.tar.gz
 	tar -zxvf phpredis-${PHPREDIS_VERSION}.tar.gz
 
 	echo "Build library"
