@@ -25,7 +25,7 @@ In order to build the Neap Box effectively, you'll need to have a few tools inst
 
 ### Windows-specific ###
 
-1. Add the Git executables to your path
+1. Add the Git binaries to your path
 
 ### Recommended
 
@@ -37,7 +37,8 @@ In order to build the Neap Box effectively, you'll need to have a few tools inst
 
 1. `git clone https://github.com/e7d/neap-box.git` to clone the latest version
 2. Change into the directory `neap-box`
-3. Run `build.sh`
+3. Run `vagrant up`
+4. Run `vagrant package --output neap.box`
 
 **Note**: Steps 3. and 4. can be replaced with a call to `build.sh` on bash available environments.
 
