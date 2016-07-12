@@ -28,11 +28,11 @@ Vagrant.configure(2) do |config|
         node.vm.synced_folder ".", "/vagrant"
 
         # VirtualBox provider
-        node.vm.provider "virtualbox" do |vb|
+        node.vm.provider "virtualbox" do |provider|
             # System configuration
-            vb.name = "Neap Box"
-            vb.cpus = cpus
-            vb.memory = "1024"
+            provider.name = "Neap Box"
+            provider.cpus = cpus
+            provider.memory = "1024"
         end
 
         #  VirtualBox Guest update
