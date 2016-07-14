@@ -1,5 +1,5 @@
 ## v1.2.12 (unreleased)
-
+* added php7.0-mbstring extension
 
 ## v1.2.11 (2016-07-13)
 * improved build script
