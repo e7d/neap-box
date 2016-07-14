@@ -1,3 +1,6 @@
+## v1.2.12 (unreleased)
+
+
 ## v1.2.11 (2016-07-13)
 * improved build script
 * updated nginx-rtmp-module to version 1.1.8
