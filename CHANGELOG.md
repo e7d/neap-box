@@ -1,5 +1,14 @@
 ## v1.2.12 (unreleased)
+* added bash alias to run composer without Xdebug
+* updated VirtualBox Guest additions to version 5.1.2
+* updated Redis to version 3.2.3
+* updated PHP and PHP-FPM to version 7.0.9
 * added php7.0-mbstring extension
+* added php7.0-zip extension
+* updated Composer to version 1.2.0
+* updated NodeJS to version 6.3.1
+* updated UnrealIRCd to version 4.0.5
+* updated Anope to version 2.0.4
 
 ## v1.2.11 (2016-07-13)
 * improved build script
