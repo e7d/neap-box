@@ -1,4 +1,5 @@
 ## v1.2.12 (unreleased)
+* fixed Debian reference box to use edge version again (8.5.2)
 * added bash alias to run composer without Xdebug
 * updated VirtualBox Guest additions to version 5.1.2
 * updated Redis to version 3.2.3
