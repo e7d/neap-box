@@ -57,13 +57,13 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
 * [Let's Encrypt Certbot](https://certbot.eff.org/) 0.8.1, as SSL certificate generator
 * [jq](https://stedolan.github.io/jq/) 1.5, as JSON processor
 * [PostgreSQL](http://www.postgresql.org/) 9.5.3, as database system
-* [Redis](http://redis.io/) 3.2.1, as data structure store
+* [Redis](http://redis.io/) 3.2.3, as data structure store
 * [MailCatcher](https://mailcatcher.me/) 0.6.4 as mail catching server
 * [nginx](http://nginx.org/) 1.10.1, as web server, with:
     * [OpenSSL](https://www.openssl.org/) 1.0.2h, as SSL module
     * [nginx-rtmp-module](https://github.com/arut/nginx-rtmp-module) 1.1.8, as streaming handler (RTMP, HLS and DASH protocols)
-* [PHP](http://php.net/) 7.0.8, as server-side scripting language, with:
-    * [PHP-FPM](http://php-fpm.org/) 7.0.8, as PHP process manager
+* [PHP](http://php.net/) 7.0.9, as server-side scripting language, with:
+    * [PHP-FPM](http://php-fpm.org/) 7.0.9, as PHP process manager
     * [PhpRedis](https://github.com/phpredis/phpredis) 3.0.0, as PHP extension for Redis
     * [Xdebug](http://xdebug.org/) 2.4.0, as debugger and profiler tool
     * [Composer](https://getcomposer.org/) 1.1.3, as dependency manager
