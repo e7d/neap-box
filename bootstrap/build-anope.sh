@@ -9,7 +9,7 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
-ANOPE_VERSION=2.0.3 # https://github.com/anope/anope/releases/
+ANOPE_VERSION=2.0.4 # https://github.com/anope/anope/releases/
 
 try
 (
