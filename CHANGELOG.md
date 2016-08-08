@@ -6,6 +6,7 @@
 * updated PHP and PHP-FPM to version 7.0.9
 * added php7.0-mbstring extension
 * added php7.0-zip extension
+* updated Xdebug to version 2.4.1
 * updated Composer to version 1.2.0
 * updated NodeJS to version 6.3.1
 * updated UnrealIRCd to version 4.0.5
