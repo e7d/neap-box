@@ -9,6 +9,7 @@
 * updated Xdebug to version 2.4.1
 * updated Composer to version 1.2.0
 * updated NodeJS to version 6.3.1
+* fixed ffmpeg repository (deb-multimedia) keyring
 * updated UnrealIRCd to version 4.0.5
 * updated Anope to version 2.0.4
 
