@@ -9,8 +9,8 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
-XDEBUG_TAG=XDEBUG_2_4_0 # https://github.com/xdebug/xdebug/releases
-XDEBUG_VERSION=2.4.0
+XDEBUG_TAG=XDEBUG_2_4_1 # https://github.com/xdebug/xdebug/releases
+XDEBUG_VERSION=2.4.1
 
 try
 (
@@ -18,7 +18,7 @@ try
 
 	echo "Download sources"
 	cd /usr/src
-	wget -nv https://github.com/xdebug/xdebug/archive/XDEBUG_2_4_0.tar.gz -O xdebug-${XDEBUG_VERSION}.tar.gz
+	wget -nv https://github.com/xdebug/xdebug/archive/${XDEBUG_TAG}.tar.gz -O xdebug-${XDEBUG_VERSION}.tar.gz
 	tar -zxvf xdebug-${XDEBUG_VERSION}.tar.gz
 
 	echo "Build library"

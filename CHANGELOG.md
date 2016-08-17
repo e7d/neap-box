@@ -1,5 +1,17 @@
-## v1.2.12 (unreleased)
+## v1.2.12 (2016-08-08)
+* fixed Debian reference box to use edge version again (8.5.2)
+* added bash alias to run composer without Xdebug
+* updated VirtualBox Guest additions to version 5.1.2
+* updated Redis to version 3.2.3
+* updated PHP and PHP-FPM to version 7.0.9
 * added php7.0-mbstring extension
+* added php7.0-zip extension
+* updated Xdebug to version 2.4.1
+* updated Composer to version 1.2.0
+* updated NodeJS to version 6.3.1
+* fixed ffmpeg repository (deb-multimedia) keyring
+* updated UnrealIRCd to version 4.0.5
+* updated Anope to version 2.0.4
 
 ## v1.2.11 (2016-07-13)
 * improved build script
