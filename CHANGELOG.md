@@ -1,4 +1,5 @@
 ## v1.2.13 (unreleased)
+* updated VirtualBox Guest additions to version 5.1.4
 
 ## v1.2.12 (2016-08-08)
 * fixed Debian reference box to use edge version again (8.5.2)
