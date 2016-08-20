@@ -68,7 +68,7 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
     * [PhpRedis](https://github.com/phpredis/phpredis) 3.0.0, as PHP extension for Redis
     * [Composer](https://getcomposer.org/) 1.2.0, as dependency manager
 * [NodeJS](https://nodejs.org/) 6.4.0, as JavaScript runtime
-    * [NPM](https://www.npmjs.com/) 3.10.5, as JavaScript package Manager
+    * [NPM](https://www.npmjs.com/) 3.10.6, as JavaScript package Manager
     * [Newman](https://github.com/postmanlabs/newman) 2.1.2, as [Postman](http://getpostman.com/) collection runner
 * [FFmpeg](https://www.ffmpeg.org/) 2.8.7, as media converter
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.5, as IRC server daemon, with:
