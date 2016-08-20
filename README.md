@@ -61,7 +61,7 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
 * [MailCatcher](https://mailcatcher.me/) 0.6.4 as mail catching server
 * [nginx](http://nginx.org/) 1.10.1, as web server, with:
     * [OpenSSL](https://www.openssl.org/) 1.0.2h, as SSL module
-    * [nginx-rtmp-module](https://github.com/arut/nginx-rtmp-module) 1.1.8, as streaming handler (RTMP, HLS and DASH protocols)
+    * [nginx-rtmp-module](https://github.com/arut/nginx-rtmp-module) 1.1.9, as streaming handler (RTMP, HLS and DASH protocols)
 * [PHP](http://php.net/) 7.0.9, as server-side scripting language, with:
     * [PHP-FPM](http://php-fpm.org/) 7.0.9, as PHP process manager
     * [PhpRedis](https://github.com/phpredis/phpredis) 3.0.0, as PHP extension for Redis
