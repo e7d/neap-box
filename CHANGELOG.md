@@ -4,6 +4,7 @@
 * updated nginx-rtmp-module to version 1.1.9
 * updated PHP and PHP-FPM to version 7.0.10
 * updated PHP setup to get Xdebug from repository instead of building it
+* updated NodeJS to version 6.4.0
 
 ## v1.2.12 (2016-08-08)
 * fixed Debian reference box to use edge version again (8.5.2)
