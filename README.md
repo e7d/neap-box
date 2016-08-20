@@ -63,9 +63,9 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
     * [OpenSSL](https://www.openssl.org/) 1.0.2h, as SSL module
     * [nginx-rtmp-module](https://github.com/arut/nginx-rtmp-module) 1.1.9, as streaming handler (RTMP, HLS and DASH protocols)
 * [PHP](http://php.net/) 7.0.10, as server-side scripting language, with:
+    * [Xdebug](http://xdebug.org/) 2.4.1, as debugger and profiler tool
     * [PHP-FPM](http://php-fpm.org/) 7.0.10, as PHP process manager
     * [PhpRedis](https://github.com/phpredis/phpredis) 3.0.0, as PHP extension for Redis
-    * [Xdebug](http://xdebug.org/) 2.4.1, as debugger and profiler tool
     * [Composer](https://getcomposer.org/) 1.2.0, as dependency manager
 * [NodeJS](https://nodejs.org/) 6.3.1, as JavaScript runtime
     * [NPM](https://www.npmjs.com/) 3.10.5, as JavaScript package Manager
