@@ -17,7 +17,7 @@ try
 	gem update --system
 
 	echo "Install gem"
-	gem install mailcatcher
+	gem install --no-ri --no-rdoc mailcatcher
 
 	echo "Copy service script"
 	cp /vagrant/resources/mailcatcher/bin/mailcatcher /etc/init.d

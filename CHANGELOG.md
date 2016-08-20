@@ -7,6 +7,7 @@
 * updated NodeJS to version 6.4.0
 * updated NPM to version 3.10.6
 * updated Newman to version 3.0.1
+* updated mailcatcher setup by removing ri and rdoc from installation
 
 ## v1.2.12 (2016-08-08)
 * fixed Debian reference box to use edge version again (8.5.2)
