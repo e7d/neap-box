@@ -6,6 +6,7 @@
 * updated PHP setup to get Xdebug from repository instead of building it
 * updated NodeJS to version 6.4.0
 * updated NPM to version 3.10.6
+* updated Newman to version 3.0.1
 
 ## v1.2.12 (2016-08-08)
 * fixed Debian reference box to use edge version again (8.5.2)
