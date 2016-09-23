@@ -8,7 +8,7 @@
 * fixed bash alias that runs Composer without Xdebug
 * updated NodeJS to version 6.6.0
 * updated NPM to version 3.10.8
-* updated Newman to version 3.0.1
+* updated Newman to version 3.1.1
 * updated mailcatcher setup by removing ri and rdoc from installation
 * updated UnrealIRCd to version 4.0.6
 
