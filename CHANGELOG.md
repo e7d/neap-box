@@ -1,5 +1,5 @@
 ## v1.2.13 (unreleased)
-* updated VirtualBox Guest additions to version 5.1.4
+* updated VirtualBox Guest additions to version 5.1.6
 * updated PostgreSQL to version 9.5.4
 * updated nginx-rtmp-module to version 1.1.9
 * updated PHP and PHP-FPM to version 7.0.11
