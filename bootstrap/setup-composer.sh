@@ -13,14 +13,14 @@ try
 (
 	throwErrors
 
-	echo "Install binary"
-	curl -sS https://getcomposer.org/installer | php
-	mv composer.phar /usr/local/bin/composer
-
 	echo "Setup no-Xdebug alias"
 	cp -f /vagrant/resources/composer.bashrc /etc/composer.bashrc
 	echo ". /etc/composer.bashrc" >>/etc/bash.bashrc
 	. /etc/composer.bashrc
+
+	echo "Install binary"
+	curl -sS https://getcomposer.org/installer | php
+	mv composer.phar /usr/local/bin/composer
 
 	echo "Update Composer"
 	composer self-update

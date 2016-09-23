@@ -1,6 +1,20 @@
+## v1.2.13 (unreleased)
+* updated VirtualBox Guest additions to version 5.1.6
+* updated PostgreSQL to version 9.5.4
+* updated nginx-rtmp-module to version 1.1.9
+* updated PHP and PHP-FPM to version 7.0.11
+* updated PHP setup to get Xdebug from repository instead of building it
+* updated Composer to version 1.2.1
+* fixed bash alias that runs Composer without Xdebug
+* updated NodeJS to version 6.6.0
+* updated NPM to version 3.10.8
+* updated Newman to version 3.1.1
+* updated mailcatcher setup by removing ri and rdoc from installation
+* updated UnrealIRCd to version 4.0.6
+
 ## v1.2.12 (2016-08-08)
 * fixed Debian reference box to use edge version again (8.5.2)
-* added bash alias to run composer without Xdebug
+* added bash alias to run Composer without Xdebug
 * updated VirtualBox Guest additions to version 5.1.2
 * updated Redis to version 3.2.3
 * updated PHP and PHP-FPM to version 7.0.9

@@ -4,7 +4,7 @@
     "name": "e7d/neap-box",
     "versions": [
         {
-            "version": "1.2.12",
+            "version": "1.2.13",
             "providers": [{
                 "name": "virtualbox",
                 "url": "neap.box"
