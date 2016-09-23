@@ -9,6 +9,10 @@ indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
+[**.bashrc]
+indent_style = tab
+tab_width = 8
+
 [**.c]
 indent_size = 4
 
