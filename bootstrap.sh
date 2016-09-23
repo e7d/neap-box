@@ -17,12 +17,12 @@ try
 (
 	throwErrors
 
-	/vagrant/resources/analytics.sh -t=event -ec=bootstrap -ea=start
-
 	echox "${text_cyan}Info:${text_reset} Bootstrap started at $(date +'%Y-%m-%d %H:%M:%S %Z')"
 
 	echox "${text_cyan}Prepare Debian environment"
 	/vagrant/bootstrap/prepare-env.sh
+
+	/vagrant/resources/analytics.sh -t=event -ec=bootstrap -ea=start
 
 	echox "${text_cyan}Setup Let's Encrypt Certbot"
 	/vagrant/bootstrap/setup-certbot.sh
