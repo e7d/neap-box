@@ -1,4 +1,4 @@
-## v1.2.13 (unreleased)
+## v1.2.13 (2016-09-23)
 * updated VirtualBox Guest additions to version 5.1.6
 * updated PostgreSQL to version 9.5.4
 * updated nginx-rtmp-module to version 1.1.9
