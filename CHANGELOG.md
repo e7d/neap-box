@@ -1,3 +1,7 @@
+## v1.3.0 (unreleased)
+* updated Debian Jessie to version 8.6
+* cleaned Vagrantfile
+
 ## v1.2.13 (2016-09-23)
 * updated VirtualBox Guest additions to version 5.1.6
 * updated PostgreSQL to version 9.5.4
