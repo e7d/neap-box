@@ -30,6 +30,7 @@ Vagrant.configure(2) do |config|
         # VirtualBox provider
         node.vm.provider 'virtualbox' do |vb|
             # System configuration
+            vb.groups = "/Neap"
             vb.name = 'Neap Box'
             vb.cpus = cpus
             vb.memory = '1024'
