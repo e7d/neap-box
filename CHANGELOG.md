@@ -5,6 +5,7 @@
 * updated Redis to version 3.2.4
 * updated nginx to version 1.11.4
 * updated OpenSSL to version 1.1.0b
+* updated nginx-rtmp-module to version 1.1.10
 * cleaned Vagrantfile
 
 ## v1.2.13 (2016-09-23)

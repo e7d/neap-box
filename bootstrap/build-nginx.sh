@@ -11,7 +11,7 @@ fi
 
 NGINX_VERSION=1.11.4 # http://nginx.org/en/download.html
 OPENSSL_VERSION=1.1.0b # https://openssl.org/source/
-NGINX_RTMP_VERSION=1.1.9 # https://github.com/arut/nginx-rtmp-module/releases
+NGINX_RTMP_VERSION=1.1.10 # https://github.com/arut/nginx-rtmp-module/releases
 
 try
 (
