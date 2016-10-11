@@ -1,4 +1,5 @@
 ## v1.3.0 (unreleased)
+* updated Lets Encrypt Certbot to version 0.9.1
 * updated Debian Jessie to version 8.6
 * cleaned Vagrantfile
 
