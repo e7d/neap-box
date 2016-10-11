@@ -47,6 +47,10 @@ Vagrant.configure(2) do |config|
             s.keep_color = true
         end
     end
+
+    config.push.define "atlas" do |push|
+        push.app = "e7d/neap-box"
+    end
 end
 
 class DebianVbguest < VagrantVbguest::Installers::Debian
