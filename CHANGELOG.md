@@ -9,6 +9,7 @@
 * updated NodeJS to version 6.7.0
 * updated Newman to version 3.1.2
 * updated FFmpeg to version 2.8.8
+* updated UnrealIRCd to version 4.0.7
 * cleaned Vagrantfile
 
 ## v1.2.13 (2016-09-23)
