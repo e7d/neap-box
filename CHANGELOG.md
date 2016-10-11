@@ -1,6 +1,7 @@
 ## v1.3.0 (unreleased)
-* updated Lets Encrypt Certbot to version 0.9.1
 * updated Debian Jessie to version 8.6
+* updated Lets Encrypt Certbot to version 0.9.1
+* updated PostgreSQL to version 9.6.0
 * cleaned Vagrantfile
 
 ## v1.2.13 (2016-09-23)
