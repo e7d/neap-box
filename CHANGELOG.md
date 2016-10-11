@@ -3,8 +3,7 @@
 * updated Lets Encrypt Certbot to version 0.9.1
 * updated PostgreSQL to version 9.6.0
 * updated Redis to version 3.2.4
-* updated nginx to version 1.11.4
-* updated OpenSSL to version 1.1.0b
+* updated OpenSSL to version 1.0.2j
 * updated nginx-rtmp-module to version 1.1.10
 * updated NodeJS to version 6.7.0
 * updated Newman to version 3.1.2
