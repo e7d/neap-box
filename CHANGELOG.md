@@ -7,6 +7,7 @@
 * updated OpenSSL to version 1.1.0b
 * updated nginx-rtmp-module to version 1.1.10
 * updated NodeJS to version 6.7.0
+* updated Newman to version 3.1.2
 * cleaned Vagrantfile
 
 ## v1.2.13 (2016-09-23)
