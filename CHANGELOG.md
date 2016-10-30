@@ -1,5 +1,6 @@
 ## v1.3.0 (unreleased)
 * updated Debian Jessie to version 8.6
+* updated VirtualBox Guest additions to version 5.1.8
 * updated Lets Encrypt Certbot to version 0.9.3
 * updated PostgreSQL to version 9.6.1
 * updated MailCatcher to version 0.6.5
