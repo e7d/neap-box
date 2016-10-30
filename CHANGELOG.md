@@ -5,6 +5,7 @@
 * updated PostgreSQL to version 9.6.1
 * updated MailCatcher to version 0.6.5
 * updated Redis to version 3.2.4
+* updated nginx to version 1.10.2
 * updated OpenSSL to version 1.0.2j
 * updated nginx-rtmp-module to version 1.1.10
 * updated PHP and PHP-FPM to version 7.0.12
