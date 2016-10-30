@@ -58,7 +58,7 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
 * [jq](https://stedolan.github.io/jq/) 1.5, as JSON processor
 * [PostgreSQL](http://www.postgresql.org/) 9.6.1, as database system
 * [Redis](http://redis.io/) 3.2.4, as data structure store
-* [MailCatcher](https://mailcatcher.me/) 0.6.4 as mail catching server
+* [MailCatcher](https://mailcatcher.me/) 0.6.5 as mail catching server
 * [nginx](http://nginx.org/) 1.11.4, as web server, with:
     * [OpenSSL](https://www.openssl.org/) 1.1.0b, as SSL module
     * [nginx-rtmp-module](https://github.com/arut/nginx-rtmp-module) 1.1.10, as streaming handler (RTMP, HLS and DASH protocols)
