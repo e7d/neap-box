@@ -9,7 +9,7 @@
 * updated PHP and PHP-FPM to version 7.0.12
 * updated NodeJS to version 6.9.1
 * updated NPM to version 3.10.9
-* updated Newman to version 3.1.2
+* updated Newman to version 3.2.0
 * updated FFmpeg to version 2.8.8
 * updated UnrealIRCd to version 4.0.7
 * cleaned Vagrantfile
