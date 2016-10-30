@@ -1,6 +1,6 @@
 ## v1.3.0 (unreleased)
 * updated Debian Jessie to version 8.6
-* updated Lets Encrypt Certbot to version 0.9.1
+* updated Lets Encrypt Certbot to version 0.9.3
 * updated PostgreSQL to version 9.6.0
 * updated Redis to version 3.2.4
 * updated OpenSSL to version 1.0.2j
