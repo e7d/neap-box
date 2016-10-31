@@ -1,4 +1,4 @@
-## v1.3.0 (unreleased)
+## v1.3.0 (2016-10-31)
 * updated Debian Jessie to version 8.6
 * updated VirtualBox Guest additions to version 5.1.8
 * updated Lets Encrypt Certbot to version 0.9.3
