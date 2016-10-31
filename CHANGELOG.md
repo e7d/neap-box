@@ -14,7 +14,8 @@
 * updated Newman to version 3.2.0
 * updated FFmpeg to version 2.8.8
 * updated UnrealIRCd to version 4.0.7
-* cleaned Vagrantfile
+* added a "Neap" group attribution to the VirtualBox machine
+* fixed Vagrantfile configuration
 
 ## v1.2.13 (2016-09-23)
 * updated VirtualBox Guest additions to version 5.1.6

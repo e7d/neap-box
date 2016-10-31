@@ -33,6 +33,10 @@ Vagrant.configure(2) do |config|
             vb.name = "Neap Box"
             vb.cpus = cpus
             vb.memory = "1024"
+            vb.customize [
+                "modifyvm", :id,
+                "--groups", "/Neap",
+            ]
         end
 
         #  VirtualBox Guest update
