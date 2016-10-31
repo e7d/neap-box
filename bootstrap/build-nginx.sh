@@ -9,9 +9,9 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
-NGINX_VERSION=1.10.1 # http://nginx.org/en/download.html
-OPENSSL_VERSION=1.0.2h # https://openssl.org/source/
-NGINX_RTMP_VERSION=1.1.9 # https://github.com/arut/nginx-rtmp-module/releases
+NGINX_VERSION=1.10.2 # http://nginx.org/en/download.html
+OPENSSL_VERSION=1.0.2j # https://openssl.org/source/
+NGINX_RTMP_VERSION=1.1.10 # https://github.com/arut/nginx-rtmp-module/releases
 
 try
 (

@@ -1,3 +1,22 @@
+## v1.3.0 (2016-10-31)
+* updated Debian Jessie to version 8.6
+* updated VirtualBox Guest additions to version 5.1.8
+* updated Lets Encrypt Certbot to version 0.9.3
+* updated PostgreSQL to version 9.6.1
+* updated MailCatcher to version 0.6.5
+* updated Redis to version 3.2.4
+* updated nginx to version 1.10.2
+* updated OpenSSL to version 1.0.2j
+* updated nginx-rtmp-module to version 1.1.10
+* updated PHP and PHP-FPM to version 7.0.12
+* updated NodeJS to version 6.9.1
+* updated NPM to version 3.10.9
+* updated Newman to version 3.2.0
+* updated FFmpeg to version 2.8.8
+* updated UnrealIRCd to version 4.0.7
+* added a "Neap" group attribution to the VirtualBox machine
+* fixed Vagrantfile configuration
+
 ## v1.2.13 (2016-09-23)
 * updated VirtualBox Guest additions to version 5.1.6
 * updated PostgreSQL to version 9.5.4
@@ -23,7 +42,7 @@
 * updated Xdebug to version 2.4.1
 * updated Composer to version 1.2.0
 * updated NodeJS to version 6.3.1
-* fixed ffmpeg repository (deb-multimedia) keyring
+* fixed FFmpeg repository (deb-multimedia) keyring
 * updated UnrealIRCd to version 4.0.5
 * updated Anope to version 2.0.4
 
@@ -87,7 +106,7 @@
 * updated PHP and PHP-FPM to version 7.0.6
 * updated Composer to version 1.0.3
 * updated NPM to version 3.8.7
-* updated ffmpeg to version 2.8.7
+* updated FFmpeg to version 2.8.7
 
 ## v1.2.5 (2016-04-28)
 * downgraded nginx to version 1.9.10 to ensure nginx-rtmp-module compatibility
@@ -114,7 +133,7 @@
 * updated NPM to version 3.8.2
 
 ## v1.2.2 (2016-03-15)
-* fixed ffmpeg setup
+* fixed FFmpeg setup
 * normalized Let's Encrypt setup
 * normalized folders structure
 * fixed erroneous phpredis setup
@@ -136,7 +155,7 @@
 ## v1.2.0 (2016-02-17)
 * updated nginx to version 1.9.11
 * updated PostgreSQL to version 9.5.1
-* updated ffmpegto version 2.8.6
+* updated FFmpeg to version 2.8.6
 * added MailCatcher, with version 0.6.4
 * fixed Let's Encrypt recipe
 * improved bootstrap:
