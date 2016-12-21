@@ -1,4 +1,5 @@
 ## v1.3.1 (unreleased)
+* added apt packages clean
 
 ## v1.3.0 (2016-10-31)
 * updated Debian Jessie to version 8.6
