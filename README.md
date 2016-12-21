@@ -71,5 +71,5 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
     * [NPM](https://www.npmjs.com/) 4.0.5, as JavaScript package Manager
     * [Newman](https://github.com/postmanlabs/newman) 3.3.1, as [Postman](http://getpostman.com/) collection runner
 * [FFmpeg](https://www.ffmpeg.org/) 2.8.9, as media converter
-* [UnrealIRCd](https://www.unrealircd.org/) 4.0.7, as IRC server daemon, with:
+* [UnrealIRCd](https://www.unrealircd.org/) 4.0.9, as IRC server daemon, with:
     * [Anope](https://www.anope.org/) 2.0.4, as IRC services daemon
