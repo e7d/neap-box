@@ -7,6 +7,7 @@
 * updated Composer to version 1.2.4
 * updated NodeJS to version 6.9.2
 * updated NPM to version 4.0.5
+* updated Newman to version 3.3.1
 
 ## v1.3.0 (2016-10-31)
 * updated Debian Jessie to version 8.6
