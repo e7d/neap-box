@@ -4,6 +4,7 @@
 * updated Redis to version 3.2.6
 * updated PHP and PHP-FPM to version 7.0.14
 * updated Xdebug to version 2.5.0
+* updated Composer to version 1.2.4
 
 ## v1.3.0 (2016-10-31)
 * updated Debian Jessie to version 8.6
