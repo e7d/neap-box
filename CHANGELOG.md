@@ -10,6 +10,7 @@
 * updated Newman to version 3.3.1
 * updated FFmpeg to version 2.8.9
 * updated UnrealIRCd to version 4.0.9
+* fixed config settings for UnrealIRCd 4.0.9
 
 ## v1.3.0 (2016-10-31)
 * updated Debian Jessie to version 8.6
