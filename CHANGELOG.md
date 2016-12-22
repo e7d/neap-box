@@ -1,3 +1,5 @@
+## v1.3.2 (unreleased)
+
 ## v1.3.1 (2016-12-22)
 * added apt packages clean
 * updated VirtualBox Guest additions to version 5.1.12
