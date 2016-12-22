@@ -17,6 +17,10 @@ try
 	cp /vagrant/resources/shutdown.sh /usr/local/sbin/shutdown
 	chmod +x /usr/local/sbin/shutdown
 
+	echo "Clean local packages list"
+	apt-get clean
+	sudo rm -rf /var/lib/apt/lists/*
+
 	echo "Update packages to the latest version"
 	export DEBIAN_FRONTEND=noninteractive
 	apt-get -y -q update

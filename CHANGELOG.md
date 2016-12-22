@@ -1,10 +1,24 @@
+## v1.3.1 (2016-12-22)
+* added apt packages clean
+* updated VirtualBox Guest additions to version 5.1.12
+* updated Redis to version 3.2.6
+* updated PHP and PHP-FPM to version 7.0.14
+* updated Xdebug to version 2.5.0
+* updated Composer to version 1.2.4
+* updated NodeJS to version 6.9.2
+* updated NPM to version 4.0.5
+* updated Newman to version 3.3.1
+* updated FFmpeg to version 2.8.9
+* updated UnrealIRCd to version 4.0.9
+* fixed config settings for UnrealIRCd 4.0.9
+
 ## v1.3.0 (2016-10-31)
 * updated Debian Jessie to version 8.6
 * updated VirtualBox Guest additions to version 5.1.8
 * updated Lets Encrypt Certbot to version 0.9.3
 * updated PostgreSQL to version 9.6.1
-* updated MailCatcher to version 0.6.5
 * updated Redis to version 3.2.4
+* updated MailCatcher to version 0.6.5
 * updated nginx to version 1.10.2
 * updated OpenSSL to version 1.0.2j
 * updated nginx-rtmp-module to version 1.1.10
