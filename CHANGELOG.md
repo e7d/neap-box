@@ -1,4 +1,4 @@
-## v1.3.1 (unreleased)
+## v1.3.1 (2016-12-22)
 * added apt packages clean
 * updated VirtualBox Guest additions to version 5.1.12
 * updated Redis to version 3.2.6
