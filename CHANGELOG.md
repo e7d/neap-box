@@ -1,6 +1,6 @@
 ## v1.3.1 (unreleased)
 * added apt packages clean
-* updated VirtualBox Guest additions to version 5.1.10
+* updated VirtualBox Guest additions to version 5.1.12
 * updated Redis to version 3.2.6
 * updated PHP and PHP-FPM to version 7.0.14
 * updated Xdebug to version 2.5.0

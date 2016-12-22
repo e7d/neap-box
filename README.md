@@ -53,7 +53,7 @@ Neap box uses Vagrant's [shell provisioner](https://docs.vagrantup.com/v2/provis
 Once Vagrant is done provisioning the VM, you will have a box containing:
 
 * [Debian](https://www.debian.org/) Jessie 8.6, as operating system, with:
-    * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.1.10
+    * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.1.12
 * [Let's Encrypt Certbot](https://certbot.eff.org/) 0.9.3, as SSL certificate generator
 * [jq](https://stedolan.github.io/jq/) 1.5, as JSON processor
 * [PostgreSQL](http://www.postgresql.org/) 9.6.1, as database system
