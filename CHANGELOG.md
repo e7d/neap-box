@@ -1,4 +1,5 @@
 ## v1.3.2 (unreleased)
+* fixed apt dependencies update
 
 ## v1.3.1 (2016-12-22)
 * added apt packages clean
