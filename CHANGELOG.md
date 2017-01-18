@@ -1,5 +1,6 @@
 ## v1.4.0 (unreleased)
 * updated Debian Jessie to version 8.7
+* updated VirtualBox Guest additions to version 5.1.14
 
 ## v1.3.1 (2016-12-22)
 * added apt packages clean
