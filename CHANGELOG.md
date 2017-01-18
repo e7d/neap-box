@@ -6,6 +6,7 @@
 * updated NodeJS to version 6.9.4
 * updated NPM to version 4.1.1
 * updated Newman to version 3.4.2
+* updated FFmpeg to version 2.8.10
 
 ## v1.3.1 (2016-12-22)
 * added apt packages clean
