@@ -2,6 +2,7 @@
 * updated Debian Jessie to version 8.7
 * updated VirtualBox Guest additions to version 5.1.14
 * updated Lets Encrypt Certbot to version 0.10.1
+* updated nginx to version 1.11.8
 * updated Composer to version 1.3.1
 * updated NodeJS to version 6.9.4
 * updated NPM to version 4.1.1
