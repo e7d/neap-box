@@ -3,6 +3,7 @@
 * updated VirtualBox Guest additions to version 5.1.14
 * updated Lets Encrypt Certbot to version 0.10.1
 * updated Composer to version 1.3.1
+* updated NodeJS to version 6.9.4
 
 ## v1.3.1 (2016-12-22)
 * added apt packages clean
