@@ -1,4 +1,4 @@
-## v1.3.2 (unreleased)
+## v1.4.0 (unreleased)
 
 ## v1.3.1 (2016-12-22)
 * added apt packages clean
