@@ -52,9 +52,9 @@ Neap box uses Vagrant's [shell provisioner](https://docs.vagrantup.com/v2/provis
 
 Once Vagrant is done provisioning the VM, you will have a box containing:
 
-* [Debian](https://www.debian.org/) Jessie 8.6, as operating system, with:
-    * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.1.12
-* [Let's Encrypt Certbot](https://certbot.eff.org/) 0.9.3, as SSL certificate generator
+* [Debian](https://www.debian.org/) Jessie 8.7, as operating system, with:
+    * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.1.14
+* [Let's Encrypt Certbot](https://certbot.eff.org/) 0.10.1, as SSL certificate generator
 * [jq](https://stedolan.github.io/jq/) 1.5, as JSON processor
 * [PostgreSQL](http://www.postgresql.org/) 9.6.1, as database system
 * [Redis](http://redis.io/) 3.2.6, as data structure store
@@ -66,10 +66,10 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
     * [PHP-FPM](http://php-fpm.org/) 7.0.14, as PHP process manager
     * [PhpRedis](https://github.com/phpredis/phpredis) 3.0.0, as PHP extension for Redis
     * [Xdebug](http://xdebug.org/) 2.5.0, as debugger and profiler tool
-    * [Composer](https://getcomposer.org/) 1.2.4, as dependency manager
-* [NodeJS](https://nodejs.org/) 6.9.2, as JavaScript runtime
-    * [NPM](https://www.npmjs.com/) 4.0.5, as JavaScript package Manager
-    * [Newman](https://github.com/postmanlabs/newman) 3.3.1, as [Postman](http://getpostman.com/) collection runner
-* [FFmpeg](https://www.ffmpeg.org/) 2.8.9, as media converter
+    * [Composer](https://getcomposer.org/) 1.3.1, as dependency manager
+* [NodeJS](https://nodejs.org/) 6.9.4, as JavaScript runtime
+    * [NPM](https://www.npmjs.com/) 4.1.1, as JavaScript package Manager
+    * [Newman](https://github.com/postmanlabs/newman) 3.4.2, as [Postman](http://getpostman.com/) collection runner
+* [FFmpeg](https://www.ffmpeg.org/) 2.8.10, as media converter
 * [UnrealIRCd](https://www.unrealircd.org/) 4.0.9, as IRC server daemon, with:
     * [Anope](https://www.anope.org/) 2.0.4, as IRC services daemon
