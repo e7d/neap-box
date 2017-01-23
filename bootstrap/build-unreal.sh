@@ -9,7 +9,7 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
-UNREAL_VERSION=4.0.9 # https://www.unrealircd.org/download/4.0/
+UNREAL_VERSION=4.0.10 # https://www.unrealircd.org/download/4.0/
 
 try
 (
