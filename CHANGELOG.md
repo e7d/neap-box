@@ -10,6 +10,7 @@
 * updated Newman to version 3.4.2
 * updated FFmpeg to version 2.8.10
 * updated UnrealIRCd to version 4.0.10
+* updated Anope to version 2.0.5
 * fixed composer alias behavior in composer.bashrc
 
 ## v1.3.1 (2016-12-22)
