@@ -15,8 +15,8 @@ try
 
 	echo "Add 'ondrej' repository to Aptitude"
 	wget --quiet -O - https://packages.sury.org/php/apt.gpg | apt-key add -
-	echo "deb https://packages.sury.org/php jessie all" >/etc/apt/sources.list.d/ondrej.list
-	echo "deb-src https://packages.sury.org/php jessie all" >>/etc/apt/sources.list.d/ondrej.list
+	echo "deb https://packages.sury.org/php jessie main" >/etc/apt/sources.list.d/ondrej.list
+	echo "deb-src https://packages.sury.org/php jessie main" >>/etc/apt/sources.list.d/ondrej.list
 	apt-get -y -q update
 
 	echo "Install packages"
