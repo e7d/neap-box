@@ -19,7 +19,7 @@ function composer() {
 
 	function cleanup() {
 		if [ -f /tmp/xdebug-composer.ini ]; then
-			sudo mv /tmp/xdebug-composer.ini /etc/php/7.0/cli/conf.d/20-xdebug.ini
+			sudo mv /tmp/xdebug-composer.ini /etc/php/7.1/cli/conf.d/20-xdebug.ini
 		fi
 	}
 
@@ -28,8 +28,8 @@ function composer() {
 		set -e
 
 		COMPOSER="$(which composer)" || { echo "Could not find composer in path" >&2 ; return 1 ; }
-		if [ -f /etc/php/7.0/cli/conf.d/20-xdebug.ini ]; then
-			sudo mv /etc/php/7.0/cli/conf.d/20-xdebug.ini /tmp/xdebug-composer.ini
+		if [ -f /etc/php/7.1/cli/conf.d/20-xdebug.ini ]; then
+			sudo mv /etc/php/7.1/cli/conf.d/20-xdebug.ini /tmp/xdebug-composer.ini
 		fi
 		$COMPOSER "$@"
 		STATUS=$?
