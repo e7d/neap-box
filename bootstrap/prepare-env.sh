@@ -29,8 +29,8 @@ try
 	apt-get -y -q upgrade
 
 	echo "Install prerequisite packages"
-	apt-get -y -q install build-essential cmake curl facter g++ gcc git libcurl4-openssl-dev libpcre++-dev \
-	                      libpcre3-dev libreadline-gplv2-dev libsqlite3-dev libssl-dev make pkg-config \
+	apt-get -y -q install apt-transport-https build-essential cmake curl facter g++ gcc git libcurl4-openssl-dev \
+	                      libpcre++-dev libpcre3-dev libreadline-gplv2-dev libsqlite3-dev libssl-dev make pkg-config \
 	                      ruby-dev unzip zlib1g-dev
 
 	echo "Tweak SSH daemon"
