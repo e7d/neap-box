@@ -4,6 +4,7 @@
 * updated Lets Encrypt Certbot to version 0.10.1
 * updated nginx to version 1.11.8
 * updated PHP and PHP-FPM to version 7.0.15
+* changed from "dotdeb" to "ondrej" repository for PHP and PHP-FPM
 * updated Composer to version 1.3.1
 * updated NodeJS to version 6.9.4
 * updated NPM to version 4.1.1

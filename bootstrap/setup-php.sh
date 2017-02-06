@@ -13,10 +13,10 @@ try
 (
 	throwErrors
 
-	echo "Add 'dotdeb' repository to Aptitude"
-	wget --quiet -O - https://www.dotdeb.org/dotdeb.gpg | apt-key add -
-	echo "deb http://packages.dotdeb.org jessie all" >/etc/apt/sources.list.d/dotdeb.list
-	echo "deb-src http://packages.dotdeb.org jessie all" >>/etc/apt/sources.list.d/dotdeb.list
+	echo "Add 'ondrej' repository to Aptitude"
+	wget --quiet -O - https://packages.sury.org/php/apt.gpg | apt-key add -
+	echo "deb https://packages.sury.org/php jessie all" >/etc/apt/sources.list.d/ondrej.list
+	echo "deb-src https://packages.sury.org/php jessie all" >>/etc/apt/sources.list.d/ondrej.list
 	apt-get -y -q update
 
 	echo "Install packages"
