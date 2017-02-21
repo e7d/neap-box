@@ -4,6 +4,7 @@
 * updated Lets Encrypt Certbot to version 0.11.1
 * updated PostgreSQL to version 9.6.2
 * updated nginx to version 1.11.10
+* updated OpenSSL to version 1.0.2k
 * changed from "dotdeb" to "sury" repository for PHP and PHP-FPM
 * updated PHP and PHP-FPM to version 7.1.2
 * updated Composer to version 1.3.2
