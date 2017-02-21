@@ -3,6 +3,7 @@
 * updated VirtualBox Guest additions to version 5.1.14
 * updated Lets Encrypt Certbot to version 0.11.1
 * updated PostgreSQL to version 9.6.2
+* updated Redis to version 3.2.8
 * updated nginx to version 1.11.10
 * updated OpenSSL to version 1.0.2k
 * changed from "dotdeb" to "sury" repository for PHP and PHP-FPM
