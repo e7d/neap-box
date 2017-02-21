@@ -8,7 +8,7 @@
 * updated PHP and PHP-FPM to version 7.1.2
 * updated Composer to version 1.3.2
 * updated NodeJS to version 6.9.5
-* updated NPM to version 4.1.1
+* updated NPM to version 4.2.0
 * updated Newman to version 3.4.2
 * updated FFmpeg to version 2.8.10
 * updated UnrealIRCd to version 4.0.11
