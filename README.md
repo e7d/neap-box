@@ -56,7 +56,7 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
     * [VirtualBox](https://www.virtualbox.org/) Guest Additions 5.1.14
 * [Let's Encrypt Certbot](https://certbot.eff.org/) 0.11.1, as SSL certificate generator
 * [jq](https://stedolan.github.io/jq/) 1.5, as JSON processor
-* [PostgreSQL](http://www.postgresql.org/) 9.6.1, as database system
+* [PostgreSQL](http://www.postgresql.org/) 9.6.2, as database system
 * [Redis](http://redis.io/) 3.2.6, as data structure store
 * [MailCatcher](https://mailcatcher.me/) 0.6.5 as mail catching server
 * [nginx](http://nginx.org/) 1.11.8, as web server, with:
