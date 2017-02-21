@@ -3,7 +3,7 @@
 * updated VirtualBox Guest additions to version 5.1.14
 * updated Lets Encrypt Certbot to version 0.10.1
 * updated nginx to version 1.11.8
-* changed from "dotdeb" to "ondrej" repository for PHP and PHP-FPM
+* changed from "dotdeb" to "sury" repository for PHP and PHP-FPM
 * updated PHP and PHP-FPM to version 7.1.1
 * updated Composer to version 1.3.1
 * updated NodeJS to version 6.9.4
