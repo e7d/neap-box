@@ -10,8 +10,8 @@ if [ 0 != $(id -u) ]; then
 fi
 
 NGINX_VERSION=1.11.10 # http://nginx.org/en/download.html
-NGINX_RTMP_VERSION=1.1.10 # https://github.com/arut/nginx-rtmp-module/releases
 OPENSSL_VERSION=1.1.0e # https://openssl.org/source/
+NGINX_RTMP_VERSION=1.1.11 # https://github.com/arut/nginx-rtmp-module/releases
 
 try
 (

@@ -6,6 +6,7 @@
 * updated Redis to version 3.2.8
 * updated nginx to version 1.11.10
 * updated OpenSSL to version 1.1.0e
+* updated nginx-rtmp-module to version 1.1.11
 * changed from "dotdeb" to "sury" repository for PHP and PHP-FPM
 * updated PHP and PHP-FPM to version 7.1.2
 * updated Composer to version 1.3.2
