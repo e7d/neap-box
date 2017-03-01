@@ -5,7 +5,7 @@
 * updated PostgreSQL to version 9.6.2
 * updated Redis to version 3.2.8
 * updated nginx to version 1.11.10
-* updated OpenSSL to version 1.0.2k
+* updated OpenSSL to version 1.1.0e
 * changed from "dotdeb" to "sury" repository for PHP and PHP-FPM
 * updated PHP and PHP-FPM to version 7.1.2
 * updated Composer to version 1.3.2
