@@ -10,7 +10,7 @@
 * changed from "dotdeb" to "sury" repository for PHP and PHP-FPM
 * updated PHP and PHP-FPM to version 7.1.2
 * updated Composer to version 1.3.2
-* updated NodeJS to version 6.9.5
+* updated NodeJS to version 6.10.0
 * updated NPM to version 4.2.0
 * updated Newman to version 3.4.3
 * updated FFmpeg to version 2.8.11
