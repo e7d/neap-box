@@ -9,7 +9,7 @@
 * updated nginx-rtmp-module to version 1.1.11
 * changed from "dotdeb" to "sury" repository for PHP and PHP-FPM
 * updated PHP and PHP-FPM to version 7.1.5
-* c
+* updated PhpRedis to version 3.1.2
 * updated Xdebug to version 2.5.1
 * updated Composer to version 1.4.2
 * updated NodeJS to version 6.10.3
@@ -17,7 +17,7 @@
 * updated Newman to version 3.6.0
 * added Yarn in version 0.24.5
 * updated FFmpeg to version 2.8.11
-* updated UnrealIRCd to version 4.0.11
+* updated UnrealIRCd to version 4.0.12
 * updated Anope to version 2.0.5
 * fixed composer alias behavior in composer.bashrc
 
