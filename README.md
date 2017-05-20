@@ -57,7 +57,7 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
 * [Let's Encrypt Certbot](https://certbot.eff.org/) 0.14.1, as SSL certificate generator
 * [jq](https://stedolan.github.io/jq/) 1.5, as JSON processor
 * [PostgreSQL](http://www.postgresql.org/) 9.6.3, as database system
-* [Redis](http://redis.io/) 3.2.8, as data structure store
+* [Redis](http://redis.io/) 3.2.9, as data structure store
 * [MailCatcher](https://mailcatcher.me/) 0.6.5 as mail catching server
 * [nginx](http://nginx.org/) 1.11.10, as web server, with:
     * [OpenSSL](https://www.openssl.org/) 1.1.0e, as SSL module
