@@ -4,7 +4,7 @@
 * updated Lets Encrypt Certbot to version 0.14.1
 * updated PostgreSQL to version 9.6.3
 * updated Redis to version 3.2.9
-* updated nginx to version 1.11.10
+* updated nginx to version 1.11.13
 * updated OpenSSL to version 1.1.0e
 * updated nginx-rtmp-module to version 1.1.11
 * changed from "dotdeb" to "sury" repository for PHP and PHP-FPM
