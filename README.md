@@ -65,7 +65,7 @@ Once Vagrant is done provisioning the VM, you will have a box containing:
 * [PHP](http://php.net/) 7.1.5, as server-side scripting language, with:
     * [PHP-FPM](http://php-fpm.org/) 7.1.5, as PHP process manager
     * [PhpRedis](https://github.com/phpredis/phpredis) 3.0.0, as PHP extension for Redis
-    * [Xdebug](http://xdebug.org/) 2.5.0, as debugger and profiler tool
+    * [Xdebug](http://xdebug.org/) 2.5.1, as debugger and profiler tool
     * [Composer](https://getcomposer.org/) 1.3.2, as dependency manager
 * [NodeJS](https://nodejs.org/) 6.10.0, as JavaScript runtime
     * [NPM](https://www.npmjs.com/) 4.3.0, as JavaScript package Manager

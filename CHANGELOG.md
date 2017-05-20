@@ -9,6 +9,7 @@
 * updated nginx-rtmp-module to version 1.1.11
 * changed from "dotdeb" to "sury" repository for PHP and PHP-FPM
 * updated PHP and PHP-FPM to version 7.1.5
+* updated Xdebug to version 2.5.1
 * updated Composer to version 1.3.2
 * updated NodeJS to version 6.10.0
 * updated NPM to version 4.3.0
