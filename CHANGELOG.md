@@ -1,5 +1,5 @@
 ## v1.4.0 (unreleased)
-* updated Debian Jessie to version 8.7
+* updated Debian Jessie to version 8.8
 * updated VirtualBox Guest additions to version 5.1.14
 * updated Lets Encrypt Certbot to version 0.11.1
 * updated PostgreSQL to version 9.6.2
