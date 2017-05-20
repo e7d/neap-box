@@ -12,7 +12,7 @@
 * updated Xdebug to version 2.5.1
 * updated Composer to version 1.4.2
 * updated NodeJS to version 6.10.0
-* updated NPM to version 4.3.0
+* updated NPM to version 4.6.1
 * updated Newman to version 3.4.3
 * updated FFmpeg to version 2.8.11
 * updated UnrealIRCd to version 4.0.11
