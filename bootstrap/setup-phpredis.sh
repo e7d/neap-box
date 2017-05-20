@@ -9,8 +9,7 @@ if [ 0 != $(id -u) ]; then
 	exit 1
 fi
 
-PHPREDIS_TAG=3.0.0 # https://github.com/phpredis/phpredis/releases
-PHPREDIS_VERSION=3.0.0
+PHPREDIS_VERSION=3.1.2 # https://github.com/phpredis/phpredis/releases
 
 try
 (
@@ -18,11 +17,11 @@ try
 
 	echo "Download sources"
 	cd /usr/src
-	wget -nv https://github.com/phpredis/phpredis/archive/${PHPREDIS_TAG}.tar.gz -O phpredis-${PHPREDIS_VERSION}.tar.gz
+	wget -nv https://github.com/phpredis/phpredis/archive/${PHPREDIS_VERSION}.tar.gz -O phpredis-${PHPREDIS_VERSION}.tar.gz
 	tar -zxvf phpredis-${PHPREDIS_VERSION}.tar.gz
 
 	echo "Build library"
-	cd phpredis-${PHPREDIS_TAG}
+	cd phpredis-${PHPREDIS_VERSION}
 	phpize
 	./configure
 	make -j$(nproc)
