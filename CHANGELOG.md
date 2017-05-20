@@ -14,6 +14,7 @@
 * updated NodeJS to version 6.10.3
 * updated NPM to version 4.6.1
 * updated Newman to version 3.6.0
+* added Yarn in version 0.24.5
 * updated FFmpeg to version 2.8.11
 * updated UnrealIRCd to version 4.0.11
 * updated Anope to version 2.0.5

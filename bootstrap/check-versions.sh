@@ -27,6 +27,7 @@ COMPOSER=$(echo `composer 2>&1` | sed 's/.*Composer version \([^ ]*\).*/\1/')
 NODEJS=$(echo `node -v` | sed 's/v\([^,]*\).*/\1/')
 NPM=$(npm -v)
 NEWMAN=$(newman --version)
+YARN=$(yarn -V)
 FFMPEG=$(echo `ffmpeg -version` | sed 's/.*ffmpeg version \([^ ]*\).*/\1/')
 UNREALIRCD=$(echo `sudo -u irc /etc/unrealircd/bin/unrealircd -v 2>&1` | sed 's/.*UnrealIRCd-\([^ ]*\).*/\1/')
 ANOPE=$(echo `/etc/anope/bin/services -v` | sed 's/Anope-\([^ ]*\).*/\1/')
@@ -50,6 +51,7 @@ echo '  | `-- Composer: '$COMPOSER
 echo '  +-- NodeJS: '$NODEJS
 echo '  | +-- NPM: '$NPM
 echo '  | `-- Newman: '$NEWMAN
+echo '  +-- Yarn: '$YARN
 echo '  +-- FFmpeg: '$FFMPEG
 echo '  `-- UnrealIRCd: '$UNREALIRCD
 echo '    `-- Anope: '$ANOPE
