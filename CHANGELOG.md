@@ -1,5 +1,22 @@
-## v1.3.2 (unreleased)
-* fixed apt dependencies update
+## v1.4.0 (unreleased)
+* updated Debian Jessie to version 8.7
+* updated VirtualBox Guest additions to version 5.1.14
+* updated Lets Encrypt Certbot to version 0.11.1
+* updated PostgreSQL to version 9.6.2
+* updated Redis to version 3.2.8
+* updated nginx to version 1.11.10
+* updated OpenSSL to version 1.1.0e
+* updated nginx-rtmp-module to version 1.1.11
+* changed from "dotdeb" to "sury" repository for PHP and PHP-FPM
+* updated PHP and PHP-FPM to version 7.1.2
+* updated Composer to version 1.3.2
+* updated NodeJS to version 6.10.0
+* updated NPM to version 4.3.0
+* updated Newman to version 3.4.3
+* updated FFmpeg to version 2.8.11
+* updated UnrealIRCd to version 4.0.11
+* updated Anope to version 2.0.5
+* fixed composer alias behavior in composer.bashrc
 
 ## v1.3.1 (2016-12-22)
 * added apt packages clean
