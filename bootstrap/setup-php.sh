@@ -24,9 +24,6 @@ try
 	                      php7.1-intl php7.1-json php7.1-mbstring php7.1-opcache php7.1-pgsql php7.1-sqlite3 \
 	                      php7.1-xml php7.1-zip php-xdebug
 
-	echo "Disable OPcache"
-	sed -i 's/;\?opcache.enable=.\+/opcache.enable=0/g' /etc/php/7.1/fpm/php.ini
-
 	echo "Restart PHP-FPM service"
 	service php7.1-fpm restart
 )
