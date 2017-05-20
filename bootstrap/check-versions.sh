@@ -20,13 +20,14 @@ NGINX=$(echo `nginx -v 2>&1` | sed 's/.*nginx\/\(.*\)/\1/')
 OPENSSL=$(echo `nginx -V 2>&1` | sed 's/.*openssl-\([^ ]*\).*/\1/')
 NGINX_RTMP=$(echo `nginx -V 2>&1` | sed 's/.*nginx-rtmp-module-\(.*\)/\1/')
 PHP=$(echo `php -v` | sed 's/PHP \([^-]*\).*/\1/')
-PHPFPM=$(echo `php-fpm7.0 -v` | sed 's/PHP \([^-]*\).*/\1/')
+PHPFPM=$(echo `php-fpm7.1 -v` | sed 's/PHP \([^-]*\).*/\1/')
 PHPREDIS=$(echo `php -i | grep 'Redis Version'` | sed 's/Redis Version => \(.*\)/\1/')
 XDEBUG=$(echo `php -v` | sed 's/.*Xdebug v\([^,]*\).*/\1/')
 COMPOSER=$(echo `composer 2>&1` | sed 's/.*Composer version \([^ ]*\).*/\1/')
 NODEJS=$(echo `node -v` | sed 's/v\([^,]*\).*/\1/')
 NPM=$(npm -v)
 NEWMAN=$(newman --version)
+YARN=$(yarn -V)
 FFMPEG=$(echo `ffmpeg -version` | sed 's/.*ffmpeg version \([^ ]*\).*/\1/')
 UNREALIRCD=$(echo `sudo -u irc /etc/unrealircd/bin/unrealircd -v 2>&1` | sed 's/.*UnrealIRCd-\([^ ]*\).*/\1/')
 ANOPE=$(echo `/etc/anope/bin/services -v` | sed 's/Anope-\([^ ]*\).*/\1/')
@@ -50,6 +51,7 @@ echo '  | `-- Composer: '$COMPOSER
 echo '  +-- NodeJS: '$NODEJS
 echo '  | +-- NPM: '$NPM
 echo '  | `-- Newman: '$NEWMAN
+echo '  +-- Yarn: '$YARN
 echo '  +-- FFmpeg: '$FFMPEG
 echo '  `-- UnrealIRCd: '$UNREALIRCD
 echo '    `-- Anope: '$ANOPE

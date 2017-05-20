@@ -60,6 +60,9 @@ try
 	echox "${text_cyan}Setup Newman"
 	/vagrant/bootstrap/setup-newman.sh
 
+	echox "${text_cyan}Setup Yarn"
+	/vagrant/bootstrap/setup-yarn.sh
+
 	echox "${text_cyan}Setup ffmpeg"
 	/vagrant/bootstrap/setup-ffmpeg.sh
 

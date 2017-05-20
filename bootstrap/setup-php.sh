@@ -13,25 +13,19 @@ try
 (
 	throwErrors
 
-	echo "Add 'dotdeb' repository to Aptitude"
-	wget --quiet -O - https://www.dotdeb.org/dotdeb.gpg | apt-key add -
-	echo "deb http://packages.dotdeb.org jessie all" >/etc/apt/sources.list.d/dotdeb.list
-	echo "deb-src http://packages.dotdeb.org jessie all" >>/etc/apt/sources.list.d/dotdeb.list
+	echo "Add 'sury' repository to Aptitude"
+	wget --quiet -O - https://packages.sury.org/php/apt.gpg | apt-key add -
+	echo "deb https://packages.sury.org/php jessie main" >/etc/apt/sources.list.d/sury.list
+	echo "deb-src https://packages.sury.org/php jessie main" >>/etc/apt/sources.list.d/sury.list
 	apt-get -y -q update
 
 	echo "Install packages"
-	apt-get -y -q install php7.0 php7.0-cli php7.0-common php7.0-curl php7.0-dev php7.0-fpm php7.0-gd \
-	                      php7.0-intl php7.0-json php7.0-mbstring php7.0-opcache php7.0-pgsql php7.0-sqlite3 \
-	                      php7.0-xdebug php7.0-xml php7.0-zip
-
-	echo "Remove unused additional packages"
-	apt-get -y -q autoremove --purge php5-*
-
-	echo "Disable OPcache"
-	sed -i 's/;\?opcache.enable=.\+/opcache.enable=0/g' /etc/php/7.0/fpm/php.ini
+	apt-get -y -q install php7.1 php7.1-cli php7.1-common php7.1-curl php7.1-dev php7.1-fpm php7.1-gd \
+	                      php7.1-intl php7.1-json php7.1-mbstring php7.1-opcache php7.1-pgsql php7.1-sqlite3 \
+	                      php7.1-xml php7.1-zip php-xdebug
 
 	echo "Restart PHP-FPM service"
-	service php7.0-fpm restart
+	service php7.1-fpm restart
 )
 catch || {
 case $ex_code in

@@ -23,14 +23,14 @@ try
 
 	echo "Update packages to the latest version"
 	export DEBIAN_FRONTEND=noninteractive
-	apt-get -y -q update
+	apt-get -y -q update --fix-missing
 	apt-get -y -q -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
 	apt-get -y -q dist-upgrade
 	apt-get -y -q upgrade
 
 	echo "Install prerequisite packages"
-	apt-get -y -q install build-essential cmake curl facter g++ gcc git libcurl4-openssl-dev libpcre++-dev \
-	                      libpcre3-dev libreadline-gplv2-dev libsqlite3-dev libssl-dev make pkg-config \
+	apt-get -y -q install apt-transport-https build-essential cmake curl facter g++ gcc git libcurl4-openssl-dev \
+	                      libpcre++-dev libpcre3-dev libreadline-gplv2-dev libsqlite3-dev libssl-dev make pkg-config \
 	                      ruby-dev unzip zlib1g-dev
 
 	echo "Tweak SSH daemon"
