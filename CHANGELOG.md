@@ -11,7 +11,7 @@
 * updated PHP and PHP-FPM to version 7.1.5
 * updated Xdebug to version 2.5.1
 * updated Composer to version 1.4.2
-* updated NodeJS to version 6.10.0
+* updated NodeJS to version 6.10.3
 * updated NPM to version 4.6.1
 * updated Newman to version 3.4.3
 * updated FFmpeg to version 2.8.11
