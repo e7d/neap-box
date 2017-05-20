@@ -14,7 +14,7 @@ function catch()
 }
 
 function composer() {
-	# Trap interrupts (like Ctrl+C) to restore Xdebug correctly
+	# Register trap interrupts (like Ctrl+C) to restore Xdebug correctly
 	trap cleanup INT
 
 	function cleanup() {
@@ -41,5 +41,6 @@ function composer() {
 		return $ex_code
 	}
 
+	# Unregister trap interrupts
 	trap - INT
 }
