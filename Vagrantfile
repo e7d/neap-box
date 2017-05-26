@@ -54,7 +54,7 @@ end
 
 class DebianVbguest < VagrantVbguest::Installers::Debian
     def install(opts=nil, &block)
-        communicate.sudo("apt-get -y -q purge virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11", opts, &block)
+        communicate.sudo("apt-get -yq purge virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11", opts, &block)
         @vb_uninstalled = true
         super
     end

@@ -16,10 +16,10 @@ try
     echo "Add repository to Aptitude"
     wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add -
     echo "deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main" >/etc/apt/sources.list.d/pgdg.list
-    apt-get -y -q update
+    apt-get -yq update
 
     echo "Install packages"
-    apt-get -y -q install postgresql-9.6 postgresql-client-9.6 postgresql-client-common postgresql-common \
+    apt-get -yq install postgresql-9.6 postgresql-client-9.6 postgresql-client-common postgresql-common \
                           postgresql-contrib-9.6
 )
 catch || {

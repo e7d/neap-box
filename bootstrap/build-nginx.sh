@@ -18,7 +18,7 @@ try
 	throwErrors
 
 	echo "Install nginx environment"
-	apt-get -y -q install nginx-common
+	apt-get -yq install nginx-common
 
 	echo "Download source code"
 	cd /usr/src

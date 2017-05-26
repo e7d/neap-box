@@ -15,7 +15,7 @@ try
 
 	echo "Install NPM package manager"
 	curl -sL https://deb.nodesource.com/setup_6.x | bash -
-	apt-get -y -q install nodejs
+	apt-get -yq install nodejs
 	npm install -g npm@latest
 )
 catch || {

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # require curl
-apt-get -y -q install curl >/dev/null
+apt-get -yq install curl >/dev/null
 
 . /vagrant/resources/colors.sh
 

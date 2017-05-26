@@ -20,15 +20,15 @@ rm -rf /dev/.udev/
 rm /lib/udev/rules.d/75-persistent-net-generator.rules
 
 echo "Purge old kernels"
-apt-get -y -q purge $(dpkg -l|egrep '^ii  linux-(im|he)'|awk '{print $2}'|grep -v `uname -r`)
+apt-get -yq purge $(dpkg -l|egrep '^ii  linux-(im|he)'|awk '{print $2}'|grep -v `uname -r`)
 update-grub
 
 echo "Update packages to the latest version"
 export DEBIAN_FRONTEND=noninteractive
-apt-get -y -q update
-apt-get -y -q -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
-apt-get -y -q upgrade
-apt-get -y -q dist-upgrade
+apt-get -yq update
+apt-get -yq -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
+apt-get -yq upgrade
+apt-get -yq dist-upgrade
 
 echo "Clean packages"
 apt-get -yq autoremove --purge

@@ -19,10 +19,10 @@ try
 	dpkg -i deb-multimedia-keyring_2016.8.1_all.deb
 	echo "deb http://www.deb-multimedia.org jessie main non-free"   >/etc/apt/sources.list.d/ffmpeg.list
 	echo "deb http://www.deb-multimedia.org jessie-backports main" >>/etc/apt/sources.list.d/ffmpeg.list
-	apt-get -y -q update
+	apt-get -yq update
 
 	echo "Install package"
-	apt-get -y -q install ffmpeg
+	apt-get -yq install ffmpeg
 )
 catch || {
 	case $ex_code in
