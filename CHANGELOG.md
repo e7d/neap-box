@@ -1,3 +1,5 @@
+## v1.4.1 (unreleased)
+
 ## v1.4.0 (2017-05-20)
 * updated Debian Jessie to version 8.8
 * updated VirtualBox Guest additions to version 5.1.22
