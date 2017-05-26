@@ -1,4 +1,5 @@
 ## v1.4.1 (unreleased)
+* improved cleaning script
 
 ## v1.4.0 (2017-05-20)
 * updated Debian Jessie to version 8.8

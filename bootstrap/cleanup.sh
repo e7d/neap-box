@@ -31,8 +31,9 @@ apt-get -y -q upgrade
 apt-get -y -q dist-upgrade
 
 echo "Clean packages"
-apt-get -y -q autoremove
-apt-get -y -q clean
+apt-get -yq autoremove --purge
+dpkg -l | grep '^rc' | awk '{print $2}' | xargs dpkg --purge
+apt-get -yq clean
 
 echo "Remove APT related files"
 find /var/lib/apt -type f | xargs rm -f
